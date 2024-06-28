@@ -63,8 +63,6 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(0, rotationAmount, 0);
     }
 
-
-
     private void Move()
     {
         Vector3 moveDirection = transform.forward;
@@ -82,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            // Tăng dần tốc độ đến _walkSpeed
             if (_moveSpeed < _walkSpeed)
             {
                 _moveSpeed += 5 * Time.deltaTime;
@@ -91,7 +88,6 @@ public class PlayerMovement : MonoBehaviour
                     _moveSpeed = _walkSpeed;
                 }
             }
-            // Giảm dần tốc độ đến _walkSpeed nếu moveSpeed lớn hơn _walkSpeed
             else if (_moveSpeed > _walkSpeed)
             {
                 _moveSpeed -= 5 * Time.deltaTime;

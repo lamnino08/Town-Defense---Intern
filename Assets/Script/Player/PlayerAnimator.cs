@@ -2,23 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimator : MonoBehaviour, IAnimator
+public class PlayerAnimator : ArmyDynamicAnimator
 {
-    [SerializeField] private Animator animator;
-
-    [SerializeField] private float _walkVelociy;
-    [SerializeField] private float _runVelociy;
-    [SerializeField] private float _velocity = 0;
     [SerializeField] private float _acceletion;  
     [SerializeField] private float _deceletion;
-    private int velocityHash;
 
-    private void Start() 
-    {
-        velocityHash = Animator.StringToHash("Velocity");
-    }
-
-    public void Walk()
+    public override void Walk()
     {
         if (_velocity > _walkVelociy)
         {
@@ -29,10 +18,10 @@ public class PlayerAnimator : MonoBehaviour, IAnimator
             {
                 _velocity += _acceletion * Time.deltaTime;
             }
-        animator.SetFloat(velocityHash, _velocity);
+        _animator.SetFloat(_velocityHash, _velocity);
     }
 
-    public void Run()
+    public override void Run()
     {
         if (_velocity < _walkVelociy)
         {
@@ -44,10 +33,10 @@ public class PlayerAnimator : MonoBehaviour, IAnimator
                 _velocity += _acceletion * Time.deltaTime;
             }
         }
-        animator.SetFloat(velocityHash, _velocity);
+        _animator.SetFloat(_velocityHash, _velocity);
     }
 
-    public void Idle()
+    public override void Idle()
     {
         if (_velocity > 0)
         {
@@ -57,6 +46,7 @@ public class PlayerAnimator : MonoBehaviour, IAnimator
         {
             _velocity = 0;
         }
-        animator.SetFloat(velocityHash, _velocity);
+        _animator.SetFloat(_velocityHash, _velocity);
     }
+
 }
