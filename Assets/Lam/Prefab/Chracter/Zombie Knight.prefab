@@ -407,6 +407,7 @@ MonoBehaviour:
   _initialHealth: 100
   _maxHealth: 100
   _currentHealth: 0
+  healthBarUI: {fileID: 2067129899509499165}
   healthBar: {fileID: 2067129901356785382}
 --- !u!114 &2067129900867388065
 MonoBehaviour:

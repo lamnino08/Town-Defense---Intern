@@ -24,7 +24,7 @@ public abstract class ArmyStaticMovement : ArmyMovement, IArmyMovement, ICharact
             {
                 if (!_isAttacking)
                 {
-                    Debug.Log("here");
+                    // Debug.Log("here");
                     _attack.Acttack(target.gameObject);
                     _isAttacking = true;
                 }

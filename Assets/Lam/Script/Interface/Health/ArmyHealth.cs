@@ -9,6 +9,7 @@ public abstract class ArmyHealth : MonoBehaviour, IHealth
     [SerializeField] protected float _maxHealth;
     [SerializeField] protected float _currentHealth;
     protected bool isDead = false;
+    [SerializeField] protected GameObject healthBarUI;
     [SerializeField] protected Slider healthBar;
     protected ArmyAnimator animator;
 
@@ -18,6 +19,7 @@ public abstract class ArmyHealth : MonoBehaviour, IHealth
         _currentHealth =_initialHealth;
         healthBar.maxValue = _maxHealth;
         healthBar.value = _currentHealth;
+        healthBarUI.SetActive(false);
     }
 
     public virtual void TakeDamage(float damage)
@@ -40,6 +42,8 @@ public abstract class ArmyHealth : MonoBehaviour, IHealth
     {
         if (healthBar != null)
         {
+            healthBarUI.SetActive(false);
+            healthBarUI.GetComponent<HealBarLookCamera>().SetTime();
             healthBar.value = _currentHealth;
         }
     }

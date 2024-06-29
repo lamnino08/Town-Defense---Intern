@@ -210,6 +210,7 @@ MonoBehaviour:
   _initialHealth: 100
   _maxHealth: 100
   _currentHealth: 0
+  healthBarUI: {fileID: 2141248114538717230}
   healthBar: {fileID: 2141248115447037286}
 --- !u!114 &2141248113626954182
 MonoBehaviour:
@@ -229,6 +230,7 @@ MonoBehaviour:
     m_Bits: 256
   target: {fileID: 0}
   _distanceStoppingToStop: 6
+  speedMove: 0
   _isMoving: 0
   _isAttacking: 0
   _previouseTarget: {fileID: 0}

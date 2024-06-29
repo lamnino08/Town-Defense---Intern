@@ -5182,6 +5182,7 @@ MonoBehaviour:
     m_Bits: 256
   target: {fileID: 0}
   _distanceStoppingToStop: 1.5
+  speedMove: 0
   _isMoving: 0
   _isAttacking: 0
   _previouseTarget: {fileID: 0}
@@ -5203,6 +5204,7 @@ MonoBehaviour:
   _initialHealth: 100
   _maxHealth: 100
   _currentHealth: 0
+  healthBarUI: {fileID: 1627654252245691350}
   healthBar: {fileID: 1627654252281539540}
 --- !u!114 &1627654251520149691
 MonoBehaviour:

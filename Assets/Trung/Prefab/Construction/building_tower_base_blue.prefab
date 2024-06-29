@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3794919659824946589}
   - component: {fileID: 217748134326702648}
   - component: {fileID: 2657527918034216690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: building_tower_base_blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
