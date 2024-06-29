@@ -230,7 +230,7 @@ MonoBehaviour:
     m_Bits: 256
   target: {fileID: 0}
   _distanceStoppingToStop: 6
-  speedMove: 0
+  speedMove: 1.5
   _isMoving: 0
   _isAttacking: 0
   _previouseTarget: {fileID: 0}

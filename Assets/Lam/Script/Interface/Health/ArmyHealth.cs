@@ -42,7 +42,7 @@ public abstract class ArmyHealth : MonoBehaviour, IHealth
     {
         if (healthBar != null)
         {
-            healthBarUI.SetActive(false);
+            healthBarUI.SetActive(true);
             healthBarUI.GetComponent<HealBarLookCamera>().SetTime();
             healthBar.value = _currentHealth;
         }

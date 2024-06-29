@@ -11,7 +11,7 @@ public abstract class Attack : MonoBehaviour
     protected Coroutine isAttackProcess;
     protected ParticleSystem AttackEffect;
 
-    private void Start() {
+    protected virtual void Start() {
         _animator = GetComponent<ArmyAnimator>();
         AttackEffect = GetComponentInChildren<ParticleSystem>();
     }
@@ -38,16 +38,11 @@ public abstract class Attack : MonoBehaviour
         IHealth health = enemy.GetComponent<IHealth>();
         while (true)
         {
-            // if (AttackEffect)
-            // {
-            //     AttackEffect.Play();
-            // }
             _animator.Attack();
             if (health != null)
             {
                 health.TakeDamage(_damage); 
             }
-            // _animator.Attack(false);
             yield return new WaitForSeconds(_acttackSpeed);
         }
     }

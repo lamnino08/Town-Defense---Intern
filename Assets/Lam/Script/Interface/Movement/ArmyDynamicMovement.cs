@@ -54,8 +54,8 @@ public abstract class ArmyDynamicMovement : ArmyMovement, IArmyMovement, ICharac
                 _previouseTarget = target;
             }
 
-            float distanceToTarget = Vector3.Distance(transform.position, target.position);
-            if (distanceToTarget < _distanceStoppingToStop)
+            Collider[] colliders = Physics.OverlapSphere(transform.position, _distanceStoppingToStop, layerMaskOfEnemy);
+            if (colliders.Length != 0)
             {
                 DirectToTarget();
                 if (_navMeshAgent.enabled)

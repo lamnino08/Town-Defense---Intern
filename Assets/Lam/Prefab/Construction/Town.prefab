@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 4065810066619930107}
   - component: {fileID: 6997674692772480727}
   - component: {fileID: 1262678016987830385}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ Transform:
   m_GameObject: {fileID: 1658929997785271158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4087193739173904343}
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.656
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18226206, g: 0.6509434, b: 0.107467055, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0.22745098}
+  m_Color: {r: 0.8301887, g: 0.4734032, b: 0.027411906, a: 0.79607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -614,7 +614,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 647469810022196654, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 647469810022196654, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914283600357221656, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1914283600357221656, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -690,7 +690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914283600358473175, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1914283600358473175, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -698,7 +698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914283600478700044, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1914283600478700044, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -706,7 +706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2266937330464711624, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2266937330464711624, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -714,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2297112950227549116, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2297112950227549116, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -722,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2568331325702345132, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568331325702345132, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -730,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4878284372754665752, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4878284372754665752, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -738,7 +738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6153819308541291871, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6153819308541291871, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -746,7 +746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6343057227515858269, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6343057227515858269, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -754,7 +754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8591014366517327908, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8591014366517327908, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8808793082553345694, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8808793082553345694, guid: b90dc505a1159c7479bd47215ac5b046, type: 3}
       propertyPath: m_StaticEditorFlags

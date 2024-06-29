@@ -140,7 +140,7 @@ MonoBehaviour:
   rangeFindEnemy: 30
   layerMaskOfEnemy:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   target: {fileID: 0}
   _distanceStoppingToStop: 6
   speedMove: 1.5

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoldierFootKnightAttack : Attack
+public class SoldierFootKnightAttack : AttackKnight
 {
  
 }
