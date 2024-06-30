@@ -24,19 +24,19 @@ public class OrderUnitDrag : MonoBehaviour
 
     private void Update() 
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             _startPos = Input.mousePosition;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             _endPos = Input.mousePosition;
             DrawVisual();
             // DrawVSeletion();
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(1))
         {
             SelectUnitInBox();
             _startPos = Vector2.zero;

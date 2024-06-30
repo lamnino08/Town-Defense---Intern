@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\assets\\trung\\scripts\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|solutionrelative:assets\\trung\\scripts\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\assets\\trung\\scripts\\buildgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|solutionrelative:assets\\trung\\scripts\\buildgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\assets\\trung\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|solutionrelative:assets\\trung\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\assets\\trung\\scripts\\ui\\ui_building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|solutionrelative:assets\\trung\\scripts\\ui\\ui_building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\assets\\trung\\scripts\\ui\\ui_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|solutionrelative:assets\\trung\\scripts\\ui\\ui_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\assets\\trung\\scripts\\ui\\ui_shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|solutionrelative:assets\\trung\\scripts\\ui\\ui_shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|c:\\users\\pc\\desktop\\new\\town-defense---intern\\assets\\trung\\scripts\\ui\\ui_build.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|solutionrelative:assets\\trung\\scripts\\ui\\ui_build.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\assets\\lam\\script\\order unit\\orderunitdrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04780316-14E0-B76E-DA9A-B6A1DC6A9A09}|Assembly-CSharp.csproj|solutionrelative:assets\\lam\\script\\order unit\\orderunitdrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UI_Build.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\UI\\UI_Build.cs",
+              "RelativeDocumentMoniker": "Assets\\Trung\\Scripts\\UI\\UI_Build.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\UI\\UI_Build.cs",
+              "RelativeToolTip": "Assets\\Trung\\Scripts\\UI\\UI_Build.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowD0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T03:43:48.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Building.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\Building.cs",
+              "RelativeDocumentMoniker": "Assets\\Trung\\Scripts\\Building.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\Building.cs",
+              "RelativeToolTip": "Assets\\Trung\\Scripts\\Building.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAACgAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T03:38:47.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UI_Building.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\UI\\UI_Building.cs",
+              "RelativeDocumentMoniker": "Assets\\Trung\\Scripts\\UI\\UI_Building.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\UI\\UI_Building.cs",
+              "RelativeToolTip": "Assets\\Trung\\Scripts\\UI\\UI_Building.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T03:32:23.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UI_Shop.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\UI\\UI_Shop.cs",
+              "RelativeDocumentMoniker": "Assets\\Trung\\Scripts\\UI\\UI_Shop.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\UI\\UI_Shop.cs",
+              "RelativeToolTip": "Assets\\Trung\\Scripts\\UI\\UI_Shop.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T20:09:22.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UI_Main.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\UI\\UI_Main.cs",
+              "RelativeDocumentMoniker": "Assets\\Trung\\Scripts\\UI\\UI_Main.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\UI\\UI_Main.cs",
+              "RelativeToolTip": "Assets\\Trung\\Scripts\\UI\\UI_Main.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T20:08:06.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BuildGrid.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\BuildGrid.cs",
+              "RelativeDocumentMoniker": "Assets\\Trung\\Scripts\\BuildGrid.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\BuildGrid.cs",
+              "RelativeToolTip": "Assets\\Trung\\Scripts\\BuildGrid.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAxwBkAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T19:39:22.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderUnitDrag.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Lam\\Script\\Order Unit\\OrderUnitDrag.cs",
+              "RelativeDocumentMoniker": "Assets\\Lam\\Script\\Order Unit\\OrderUnitDrag.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Lam\\Script\\Order Unit\\OrderUnitDrag.cs",
+              "RelativeToolTip": "Assets\\Lam\\Script\\Order Unit\\OrderUnitDrag.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAowHEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T18:51:40.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CameraController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\CameraController.cs",
+              "RelativeDocumentMoniker": "Assets\\Trung\\Scripts\\CameraController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New\\Town-Defense---Intern\\Assets\\Trung\\Scripts\\CameraController.cs",
+              "RelativeToolTip": "Assets\\Trung\\Scripts\\CameraController.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAQwGwAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T18:40:00.159Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
