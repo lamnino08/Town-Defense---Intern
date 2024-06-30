@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4921109750114801972}
   - component: {fileID: 4567126176718920222}
   - component: {fileID: 4950976148950036941}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall Conner Out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 778013523075605129}
   - component: {fileID: 2859078946184282768}
   - component: {fileID: 2757075267035343986}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7233899623093058225}
   - component: {fileID: 967389858960911681}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 6788379065129195203}
   - component: {fileID: 5925785158601904710}
   - component: {fileID: 6209223398757227648}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 2466882957144356575}
   - component: {fileID: 3938740438176039477}
   - component: {fileID: 2633415843889050753}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Health bar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,6 +517,10 @@ PrefabInstance:
       value: wall_straight
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 80d4620e814e0894caa191baae1ffe2f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80d4620e814e0894caa191baae1ffe2f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -585,6 +589,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 80d4620e814e0894caa191baae1ffe2f, type: 3}
       propertyPath: m_Name
       value: wall_straight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80d4620e814e0894caa191baae1ffe2f, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 80d4620e814e0894caa191baae1ffe2f, type: 3}
       propertyPath: m_StaticEditorFlags

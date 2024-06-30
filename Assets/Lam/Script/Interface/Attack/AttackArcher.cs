@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public abstract class AttackArcher : Attack
 {
@@ -13,11 +11,10 @@ public abstract class AttackArcher : Attack
         {
             _animator.Attack();
             GameObject arrow = Instantiate(arrowPrefab, bowTransform.position, bowTransform.rotation * new Quaternion(0,-90,0,0));
-            ArrowMovement arrowScript = arrow.GetComponent<ArrowMovement>();
+            AArrowMovement arrowScript = arrow.GetComponent<AArrowMovement>();
             if (arrowScript)
             {
-                arrowScript.damage = _damage;
-                arrowScript.target = enemy.transform;
+                arrowScript.UpdateTarget(_damage, enemy.transform);
             }
             yield return new WaitForSeconds(_acttackSpeed);
         }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1974039681164522611}
   - component: {fileID: 3227648496108125142}
   - component: {fileID: 805614906577112860}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: wall_straight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5173222162253361185}
   - component: {fileID: 3064895532921197249}
   - component: {fileID: 7601718007574870382}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Health bar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 1611103191582403529}
   - component: {fileID: 2446600582191604844}
   - component: {fileID: 437101010987225254}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: wall_straight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 4016057193350049781}
   - component: {fileID: 4091328007164069424}
   - component: {fileID: 8538819432734501037}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2886801697766058767}
   - component: {fileID: 6753842018990005211}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 5563174959159929077}
   - component: {fileID: 9000510708222960722}
   - component: {fileID: 6311362036018189706}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 796479415427482451}
   - component: {fileID: 6447510267201234736}
   - component: {fileID: 2059044850417244027}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall Conner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
