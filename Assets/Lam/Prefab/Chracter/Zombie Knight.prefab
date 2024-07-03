@@ -352,7 +352,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2067129900867388066}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.6
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -375,7 +375,7 @@ NavMeshObstacle:
   m_Enabled: 0
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.68, y: 1.505, z: 0.68}
+  m_Extents: {x: 0.65, y: 1.505, z: 0.65}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -454,12 +454,15 @@ MonoBehaviour:
   rangeFindEnemy: 20
   layerMaskOfEnemy:
     serializedVersion: 2
-    m_Bits: 1664
+    m_Bits: 640
   target: {fileID: 0}
   _distanceStoppingToStop: 0.4
   speedMove: 1.5
   _isMoving: 0
   _isAttacking: 0
+  _layerAttack:
+    serializedVersion: 2
+    m_Bits: 2688
   _previouseTarget: {fileID: 0}
 --- !u!1 &2067129901356785377
 GameObject:
@@ -5498,11 +5501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202160467730394420, guid: 69390285c200ba94f8389a4fafdc81e6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5202160467730394420, guid: 69390285c200ba94f8389a4fafdc81e6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5202160467730394420, guid: 69390285c200ba94f8389a4fafdc81e6, type: 3}
       propertyPath: m_LocalPosition.x

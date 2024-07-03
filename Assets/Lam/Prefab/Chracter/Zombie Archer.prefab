@@ -81,7 +81,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 3508233193672078036}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.59
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -140,12 +140,15 @@ MonoBehaviour:
   rangeFindEnemy: 30
   layerMaskOfEnemy:
     serializedVersion: 2
-    m_Bits: 1664
+    m_Bits: 640
   target: {fileID: 0}
   _distanceStoppingToStop: 6
   speedMove: 1.5
   _isMoving: 0
   _isAttacking: 0
+  _layerAttack:
+    serializedVersion: 2
+    m_Bits: 2688
   _previouseTarget: {fileID: 0}
 --- !u!114 &3508233193672078057
 MonoBehaviour:
@@ -556,6 +559,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3508233193672078060}
     m_Modifications:
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6960176705440949889, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090831245053302857, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090831245053302857, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090831245053302857, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090831245053302857, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090831245053302857, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9090831245053624448, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -611,6 +674,7 @@ PrefabInstance:
     - {fileID: 1438891877788483067, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
     - {fileID: 5145953274959172723, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
     - {fileID: 8876153446694076003, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
+    - {fileID: 6519274407005842763, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 54ba5cf202b106e4795b7fdb50e4af7c, type: 3}
 --- !u!4 &3063115670313008260 stripped
 Transform:

@@ -408,7 +408,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.66, z: 0}
 --- !u!54 &1822125473019186868
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1c63721feaf0f448c15569fccd213a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 2
+  _damage: 10
   _acttackSpeed: 1
   arrowPrefab: {fileID: 100000, guid: 33168d86aad17994ebb29dddeeb334a9, type: 3}
   bowTransform: {fileID: 8326651508168659149}
@@ -468,8 +468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c98e19825ac614c96ffd6510cb22f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialHealth: 100
-  _maxHealth: 100
+  _initialHealth: 10
+  _maxHealth: 10
   _currentHealth: 0
   healthBarUI: {fileID: 6711608121484202042}
   healthBar: {fileID: 1195777235605583474}
@@ -491,7 +491,7 @@ MonoBehaviour:
     m_Bits: 640
   target: {fileID: 0}
   _previouseTarget: {fileID: 0}
-  _distanceStoppingToStop: 4
+  _distanceStoppingToStop: 8
   speedMove: 1.5
   _isMoving: 0
   _isAttacking: 0
