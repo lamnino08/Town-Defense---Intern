@@ -11,18 +11,21 @@ namespace Trung.Scene
         private float _cellSize = 1f; public float cellSize { get { return _cellSize; } }
 
         public List<Building> buildings = new List<Building>();
-
+        public GameObject cubeRoot;
         public Vector3 GetStartPosition(int x, int y)
         {
             Vector3 position = transform.position;
             position += (transform.right.normalized * x * _cellSize) + (transform.forward.normalized * y * _cellSize);
+            //Debug.Log("start: " +  position);
             return position;
         }
 
         public Vector3 GetCenterPosition(int x, int y, int rows, int columns)
         {
             Vector3 position = GetStartPosition(x, y);
+           
             position += (transform.right.normalized * columns * _cellSize / 2f) + (transform.forward.normalized * rows * _cellSize / 2f);
+            //Debug.Log("center: " + position);
             return position;
         }
 
@@ -42,9 +45,9 @@ namespace Trung.Scene
         public bool IsWorldPositionIsOnPlane(Vector3 position, int x, int y, int rows, int columns)
         {
             position = transform.InverseTransformPoint(position);
-            Debug.Log("position: " + position);
+            //Debug.Log("position: " + position);
             Rect rect = new Rect(x, y, columns, rows);
-            Debug.Log(rect);
+            //Debug.Log(rect);
             if (rect.Contains(new Vector2(position.x, position.z)))
             {
                 return true;
@@ -68,7 +71,6 @@ namespace Trung.Scene
                     {
                         return false;
                     }
-
                 }
             }
             return true;
