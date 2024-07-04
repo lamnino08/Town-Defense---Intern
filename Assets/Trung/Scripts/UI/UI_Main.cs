@@ -3,6 +3,7 @@ namespace Trung.Scene
     using System.Collections;
     using System.Collections.Generic;
     using TMPro;
+    using Trung.Scene.XTrung.Scene;
     using UnityEngine;
     using UnityEngine.UI;
 

@@ -19,7 +19,7 @@ namespace Trung.Scene
 
         [SerializeField] private float _zoomSpeed = 100;
         [SerializeField] private float _zoomSmooth = 5;
-        private float _zoom = 5;
+        public float _zoom = 5;
         private float _zoomMax = 25;
         private float _zoomMin = 1;
 
@@ -107,7 +107,7 @@ namespace Trung.Scene
                 if (_building)
                 {
                     _buildBasePosition = CameraScreenPositionToPlanePosition(_inputs.Main.PointerPosition.ReadValue<Vector2>());
-                    Debug.Log("_buildBasePosition: " + _buildBasePosition);
+                    //Debug.Log("Build Base: " + _buildBasePosition);
                     if (UI_Main.instance._grid.IsWorldPositionIsOnPlane(_buildBasePosition, Building.instance.currentX, Building.instance.currentY, Building.instance.rows, Building.instance.columns))
                     {
                         Building.instance.StartMovingOnGrid();

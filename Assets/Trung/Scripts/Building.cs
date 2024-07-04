@@ -2,6 +2,7 @@ namespace Trung.Scene
 {
     using System.Collections;
     using System.Collections.Generic;
+    using Trung.Scene.XTrung.Scene;
     using UnityEngine;
 
     public class Building : MonoBehaviour
@@ -18,14 +19,12 @@ namespace Trung.Scene
         }
 
         private BuildGrid _grid = null;
-
         [SerializeField] private int _rows = 3; public int rows { get { return _rows; } }
         [SerializeField] private int _columns = 3; public int columns { get { return _columns; } }
 
         [SerializeField] private MeshRenderer _baseArea = null;
 
         [SerializeField] private Level[] _levels = null;
-
         private int _currentX = 0; public int currentX { get { return _currentX; } }
         private int _currentY = 0; public int currentY { get { return _currentY; } }
         private int _X = 0;
@@ -38,7 +37,6 @@ namespace Trung.Scene
             _X = x;
             _Y = y;
             Vector3 position = UI_Main.instance._grid.GetCenterPosition(x, y, _rows, _columns);
-            Debug.Log("_grid, center: " + position);
             transform.position = position;
             SetBaseColor();
         }
@@ -53,7 +51,6 @@ namespace Trung.Scene
         {
             _instance = null;
             UI_Build.instance.SetStatus(false);
-            UI_Build.instance.SetStatus(false);
             CameraController.instance.isPlacingBuilding = false;
             Destroy(gameObject);
         }
@@ -62,8 +59,8 @@ namespace Trung.Scene
         {
             Vector3 dir = UI_Main.instance._grid.transform.TransformPoint(currentPosition) - UI_Main.instance._grid.transform.TransformPoint(basePosition);
 
-            int xDis = Mathf.RoundToInt(dir.z / UI_Main.instance._grid.cellSize);
-            int yDis = Mathf.RoundToInt(-dir.x / UI_Main.instance._grid.cellSize);
+            int xDis = Mathf.RoundToInt(dir.x / UI_Main.instance._grid.cellSize);
+            int yDis = Mathf.RoundToInt(dir.z / UI_Main.instance._grid.cellSize);
 
             _currentX = _X + xDis;
             _currentY = _Y + yDis;
