@@ -24,6 +24,7 @@ public class ZombieAppearSystem : MonoBehaviour
 
     private IEnumerator SpawnZombiesCoroutine()
     {
+        level++;
         foreach (var zombieData in zombieDataList)
         {
             for (int i = 0; i < zombieData.qty; i++)

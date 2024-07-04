@@ -7,7 +7,7 @@ public abstract class ArmyHealth : MonoBehaviour, IHealth
 {
     [SerializeField] protected float _initialHealth;
     [SerializeField] protected float _maxHealth;
-    [SerializeField] protected float _currentHealth;
+    protected float _currentHealth;
     protected bool isDead = false;
     [SerializeField] protected GameObject healthBarUI;
     [SerializeField] protected Slider healthBar;

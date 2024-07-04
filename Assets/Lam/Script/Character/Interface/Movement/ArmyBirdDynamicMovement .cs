@@ -6,11 +6,11 @@ using UnityEngine.AI;
 // [RequireComponent( typeof(NavMeshAgent), typeof(NavMeshObstacle))]
 public abstract class ArmyBirdDynamicMovement : ArmyMovement, IArmyMovement, ICharacterMovement, ICharacterDynamicMovement
 {
-    [SerializeField] protected Transform _previouseTarget;
+    protected Transform _previouseTarget;
     [SerializeField] protected float _distanceStoppingToStop;
     [SerializeField] protected float speedMove;
-    [SerializeField] protected bool _isMoving = false;
-    [SerializeField] protected bool _isAttacking = false;
+    protected bool _isMoving = false;
+    protected bool _isAttacking = false;
     protected IDynamicAnimator _animatorDynamic;
     protected override void Start()
     {

@@ -311,17 +311,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   target: {fileID: 0}
-  _distanceStoppingToStop: 0.4
-  speedMove: 1.5
-  _isMoving: 0
-  _isAttacking: 0
   _layerAttack:
     serializedVersion: 2
     m_Bits: 256
-  _previouseTarget: {fileID: 0}
-  isOrder: 0
-  _orderTager: {x: 0, y: 0, z: 0}
-  _selectCircle: {fileID: 0}
+  _distanceStoppingToStop: 0.4
+  speedMove: 1.5
 --- !u!114 &1627654251520149690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,7 +330,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialHealth: 100
   _maxHealth: 100
-  _currentHealth: 0
   healthBarUI: {fileID: 1627654252245691350}
   healthBar: {fileID: 1627654252281539540}
 --- !u!114 &1627654251520149691
@@ -649,6 +642,10 @@ PrefabInstance:
     - target: {fileID: 5202160467730394419, guid: 69390285c200ba94f8389a4fafdc81e6, type: 3}
       propertyPath: m_Name
       value: slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202160467730394419, guid: 69390285c200ba94f8389a4fafdc81e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5202160467730394420, guid: 69390285c200ba94f8389a4fafdc81e6, type: 3}
       propertyPath: m_RootOrder

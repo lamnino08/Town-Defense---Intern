@@ -48,7 +48,7 @@ public class OerderUnitClick : MonoBehaviour
                 Vector3 TargetPos = GetMouseWorldPosition();
                 // Debug.Log(TargetPos);
 
-                List<Vector3> listtarget = GetPosAround(TargetPos, new float[] {2f, 4f, 6f},new int[] {5, 10, 20});
+                List<Vector3> listtarget = GetPosAround(TargetPos, new float[] {1f, 2f, 3f},new int[] {5, 10, 20});
                 int targetIndex = 0;
                 foreach (GameObject unit in unitSlection.listSelection)
                 {

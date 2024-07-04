@@ -7,19 +7,20 @@ using UnityEngine.AI;
 [RequireComponent( typeof(NavMeshAgent), typeof(NavMeshObstacle))]
 public abstract class ArmyDynamicMovement : ArmyMovement, IArmyMovement, ICharacterMovement, ICharacterDynamicMovement
 {
+    [SerializeField] protected LayerMask _layerAttack;
+    [SerializeField] protected float _distanceStoppingToStop;
+    [SerializeField] protected float speedMove;
     protected NavMeshAgent _navMeshAgent;
     protected NavMeshObstacle _navMeshObstacle;
     protected IDynamicAnimator _animatorDynamic;
-    [SerializeField] protected float _distanceStoppingToStop;
-    [SerializeField] protected float speedMove;
-    [SerializeField] protected bool _isMoving = false;
-    [SerializeField] protected bool _isAttacking = false;
+    protected bool _isMoving = false;
+    protected bool _isAttacking = false;
     protected bool _isStartEnabelChase = false;
     protected bool _isStartDisEnabelChase = false;
     protected bool _isWaitForDefineEnegy = false;
     protected bool _isStartWaitForDefineEnegy = false;
-    [SerializeField] protected LayerMask _layerAttack;
-    [SerializeField] protected Transform _previouseTarget;
+    
+    protected Transform _previouseTarget;
 
     protected override void Start() 
     {

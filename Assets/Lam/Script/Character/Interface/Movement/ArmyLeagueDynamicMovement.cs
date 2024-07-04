@@ -6,9 +6,9 @@ using UnityEngine.AI;
 [RequireComponent( typeof(NavMeshAgent), typeof(NavMeshObstacle))]
 public abstract class ArmyLeagueDynamicMovement : ArmyDynamicMovement
 {
-    [SerializeField] protected bool isOrder = false;
-    [SerializeField] protected Vector3 _orderTager;
-    [SerializeField] GameObject _selectCircle;
+    protected bool isOrder = false;
+    protected Vector3 _orderTager;
+    GameObject _selectCircle;
     protected override void Start()
     {
         base.Start();

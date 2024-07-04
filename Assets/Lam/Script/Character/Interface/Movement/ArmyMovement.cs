@@ -5,7 +5,7 @@ public abstract class ArmyMovement : MonoBehaviour, IArmyMovement, ICharacterMov
 {
     [SerializeField] protected float rangeFindEnemy;
     [SerializeField] protected LayerMask layerMaskOfEnemy;
-    [SerializeField]
+    // [SerializeField]
     public Transform target;    
     protected IArmyAnimator _animatorArmy;
     protected ICharacterAnimator _animatorCharacter;

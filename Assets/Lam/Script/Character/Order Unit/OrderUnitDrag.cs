@@ -24,20 +24,20 @@ public class OrderUnitDrag : MonoBehaviour
 
     private void Update() 
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Input.GetKey(KeyCode.LeftShift))
         {
             // Debug.Log("here");
             _startPos = Input.mousePosition;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && Input.GetKey(KeyCode.LeftShift))
         {
             _endPos = Input.mousePosition;
             DrawVisual();
             // DrawVSeletion();
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && Input.GetKey(KeyCode.LeftShift))
         {
             SelectUnitInBox();
             _startPos = Vector2.zero;
@@ -96,24 +96,3 @@ public class OrderUnitDrag : MonoBehaviour
 
    
 }
-
-
-// if (Input.mousePosition.x < _startPos.x)
-//         {
-//             selectionBox.xMin = Input.mousePosition.x;
-//             selectionBox.xMax = _startPos.x;
-//         } else
-//         {
-//             selectionBox.xMin = _startPos.x;
-//             selectionBox.xMax = Input.mousePosition.x;
-//         }
-
-//         if (Input.mousePosition.y < _startPos.y)
-//         {
-//             selectionBox.yMin = Input.mousePosition.y;
-//             selectionBox.yMax = _startPos.y;
-//         } else
-//         {
-//             selectionBox.yMin = _startPos.y;
-//             selectionBox.yMax = Input.mousePosition.y;
-//         }
