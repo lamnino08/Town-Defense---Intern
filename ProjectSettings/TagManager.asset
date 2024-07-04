@@ -8,6 +8,7 @@ TagManager:
   - Penhouse
   - league
   - enemy
+  - Gate
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - League
   - Enemy
   - Construction
-  - 
-  - 
+  - Wall
+  - Gate
   - 
   - 
   - 
