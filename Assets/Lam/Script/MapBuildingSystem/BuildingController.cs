@@ -36,8 +36,6 @@ public class BuildingController : MonoBehaviour
         {
             _renderer.material.color = Color.red;
         }
-
-        
     }
 
     private void OnMouseDown()
@@ -111,8 +109,12 @@ public class BuildingController : MonoBehaviour
     {
         if (CheckData())
         {
+            float x = (dataObject.width & 1) == 1 ? transform.position.x : transform.position.x - 0.5f;
+            float y = (dataObject.height & 1) == 1 ? transform.position.z : transform.position.z - 0.5f;
+            Vector2 cellMain = new Vector2(x,y);
+
             List<Vector2> area = GridSystem.AreaByPosition(transform.position, dataObject.width, dataObject.height);
-            GridSystem.instance.PlaceBuilding(area, dataObject.id, transform.position);
+            GridSystem.instance.PlaceBuilding(area, dataObject.id, cellMain);
 
             ActBuildingUI.instance._currentBuildingAction = null;
             PlacementSystem.instance._currentBuil = null;

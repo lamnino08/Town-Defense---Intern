@@ -77,7 +77,14 @@ public class JsonReader
         string json = JsonUtility.ToJson(nodeDataWrapper, true);
         string filePath = Path.Combine(Application.streamingAssetsPath, _filePath);
         File.WriteAllText(filePath, json);
+    }
 
-        Debug.Log("JSON file generated at: " + filePath);
+    public void WriteNewData(List<NodeData> nodes)
+    {
+        NodeDataWrapper nodeDataWrapper = new NodeDataWrapper();
+        nodeDataWrapper.nodes = nodes;
+
+        string json = JsonUtility.ToJson(nodeDataWrapper, true);
+        File.WriteAllText(_filePath, json);
     }
 }

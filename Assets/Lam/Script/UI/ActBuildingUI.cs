@@ -24,6 +24,9 @@ public class ActBuildingUI : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    /// <summary>
+    /// Set UI for like confirm, cancel button on UI when Place or click a building
+    /// </summary>
     public void StartPlaceBuilding(BuildingController buildingScript)
     {
         _currentBuildingAction = buildingScript;
@@ -35,9 +38,13 @@ public class ActBuildingUI : MonoBehaviour
         _cancelBtn.SetActive(false);
     }
 
+    /// <summary>
+    /// Confirm button click on UI
+    /// </summary>
     public void CoinfirmPlaceBuidling()
     {
         _currentBuildingAction.Place();
+
         //UI
         // _buildingActionUI.SetActive(_buildingActionUI);
         // _upgradeBtn.SetActive(false);

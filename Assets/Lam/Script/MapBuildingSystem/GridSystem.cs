@@ -73,7 +73,7 @@ public class GridSystem : MonoBehaviour
         foreach (NodeData node in _nodes)
         {
             int id = node.id;
-            if (id != 0)
+            if (id != 0 && id != 1000)
             {
                 int level = node.level;
                 float x = node.x;
@@ -81,6 +81,7 @@ public class GridSystem : MonoBehaviour
                 int direction = node.direction;
 
                 ObjectData objectNode = _constructionData.GetObjectDataById(id);
+                Debug.Log(id);
                 GameObject prefabToInstantiate = objectNode.prefab;
                 
                 x = (objectNode.width & 1) == 1 ? x : x - 0.5f;
@@ -88,7 +89,7 @@ public class GridSystem : MonoBehaviour
 
                 if (prefabToInstantiate != null)
                 {
-                    Vector3 spawnPosition = new Vector3(x, y, 0f);
+                    Vector3 spawnPosition = new Vector3(x, 0, y);
 
                     GameObject instantiatedObject = Instantiate(prefabToInstantiate, spawnPosition, Quaternion.identity);
                 }
@@ -130,7 +131,11 @@ public class GridSystem : MonoBehaviour
             float y = cell.y;
             NodeData node = _nodes.Find(e => e.x == x && e.y == y);
             node.id = 1000;
-            Debug.Log($"{node.x}  {node.y}  {node.id}");
+            // Debug.Log($"{node.x}  {node.y}  {node.id}");
         }
+        _nodes.Find(e => e.x == pos.x && e.y == pos.y).id = id;
+
+        JsonReader jsonReader = new JsonReader("GridData.json");
+        jsonReader.WriteNewData(_nodes);
     }
 }
