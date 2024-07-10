@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 
 public class GridSystem : MonoBehaviour
 {
@@ -24,6 +25,49 @@ public class GridSystem : MonoBehaviour
         InitializeGrid();
     }
 
+     /// <summary>
+    /// Get all cell a building mark
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <param name="width"></param>
+    /// <param name="height"></param>
+    /// <returns></returns> List pos of cell <summary>
+    public static List<Vector2> AreaByPosition(Vector3 pos, int width, int height)
+    {
+        float x = pos.x;
+        float y = pos.z;
+        float minX;
+        float minY;
+
+        minX = x - width/2;
+        if ((width & 1) == 0)
+        {
+            minX += 0.5f;
+        }
+
+        minY = y - height/2;
+        if ((height & 1) == 0)
+        {
+            minY += 0.5f;
+        }
+
+        List<Vector2> result = new List<Vector2>();
+        for(float i = minY; i<  (minY + height); i++)
+        {
+            for (float j = minX; j< (minX + width); j++)
+            {
+                Vector2 node = new Vector2(i,j);
+                result.Add(node);
+            }
+        }
+        return result;
+    }
+
+    /// <summary>
+    /// Spawn building in to scene from data of json file
+    /// </summary> <summary>
+    /// 
+    /// </summary>
     public void InitializeGrid()
     {
         foreach (NodeData node in _nodes)
@@ -37,7 +81,7 @@ public class GridSystem : MonoBehaviour
                 int direction = node.direction;
 
                 ObjectData objectNode = _constructionData.GetObjectDataById(id);
-                GameObject prefabToInstantiate = objectNode.prefab[level-1];
+                GameObject prefabToInstantiate = objectNode.prefab;
                 
                 x = (objectNode.width & 1) == 1 ? x : x - 0.5f;
                 y = (objectNode.height & 1) == 1 ? y : y - 0.5f;
@@ -57,14 +101,36 @@ public class GridSystem : MonoBehaviour
         }
     }
 
-    public bool IsPositionIsPlace(Vector3 position)
+    /// <summary>
+    /// Check a cell was placed
+    /// </summary>
+    /// <param name="position"></param>
+    /// <returns> true or false</returns>
+    public bool IsAllowedPlace(Vector2 position)
     {
         // Debug.Log(position);
         float x = position.x;
-        float y = position.z;
+        float y = position.y;
         
         NodeData dataCell = _nodes.Find(e => e.x == x && e.y == y);
         if (dataCell == null) return false;
         return  dataCell.id == 0 ? true : false;
+    }
+
+    /// <summary>
+    /// Place a building on ground
+    /// </summary>
+    /// <param name="area"></param>
+    /// <param name="id"></param>
+    public void PlaceBuilding(List<Vector2> area, int id, Vector2 pos)
+    {
+        foreach(Vector2 cell in area)
+        {
+            float x = cell.x;
+            float y = cell.y;
+            NodeData node = _nodes.Find(e => e.x == x && e.y == y);
+            node.id = 1000;
+            Debug.Log($"{node.x}  {node.y}  {node.id}");
+        }
     }
 }
