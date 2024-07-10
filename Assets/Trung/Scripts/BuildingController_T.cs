@@ -61,14 +61,14 @@ namespace Trung.Scene
 
         private void CheckData(Vector3 mousePosInGrid)
         {
-            if (GridSystem.instance.IsPositionIsPlace(mousePosInGrid))
-            {
-                _renderer.material.color = Color.green;
-            }
-            else
-            {
-                _renderer.material.color = Color.red;
-            }
+            // // if (GridSystem.instance.IsPositionIsPlace(mousePosInGrid))
+            // {
+            //     _renderer.material.color = Color.green;
+            // }
+            // else
+            // {
+            //     _renderer.material.color = Color.red;
+            // }
         }
 
         private void SetPlaneColor()

@@ -58,9 +58,9 @@ public class JsonReader
         NodeDataWrapper nodeDataWrapper = new NodeDataWrapper();
         nodeDataWrapper.nodes = new List<NodeData>();
 
-        for (int y = 0; y < 45; y++)
+        for (int y = -4; y < 45; y++)
         {
-            for (int x = 0; x < 45; x++)
+            for (int x = -4; x < 45; x++)
             {
                 NodeData node = new NodeData
                 {

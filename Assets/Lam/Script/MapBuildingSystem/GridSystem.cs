@@ -20,8 +20,8 @@ public class GridSystem : MonoBehaviour
         }
 
         JsonReader jsonReader = new JsonReader("GridData.json");
-        // jsonReader.GenerateMapData();
-        _nodes = jsonReader.ReadNodesFromJson(); // Path to your JSON file
+        jsonReader.GenerateMapData();
+        // _nodes = jsonReader.ReadNodesFromJson(); // Path to your JSON file
         InitializeGrid();
     }
 
