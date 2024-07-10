@@ -25,7 +25,11 @@ public class PlacementSystem : MonoBehaviour
 
     private void Update()
     {
-        // Update logic if necessary
+        if (_camera != null)
+        {
+            Vector3 mousePositionInWorld = GetPositionGrid();
+            Debug.Log("Position On Grid: " + mousePositionInWorld);
+        }
     }
 
     
