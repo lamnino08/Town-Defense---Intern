@@ -61,7 +61,11 @@ namespace Trung.Scene
 
         private void CheckData(Vector3 mousePosInGrid)
         {
+<<<<<<< HEAD
             // if (GridSystem.instance.IsPositionIsPlace(mousePosInGrid))
+=======
+            // // if (GridSystem.instance.IsPositionIsPlace(mousePosInGrid))
+>>>>>>> abae370de6de986f28ddc3cb5eac32b4a02b2bcd
             // {
             //     _renderer.material.color = Color.green;
             // }
