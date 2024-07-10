@@ -20,7 +20,7 @@ public class ObjectData
     // [field: SerializeField]
     public float[] health {get; private set; }
     [field: SerializeField]
-    public GameObject[] prefab {get; private set;}
+    public GameObject prefab {get; private set;}
 
 }
 
@@ -30,7 +30,11 @@ public class ConstructionData : MonoBehaviour
 
     public ObjectData GetObjectDataById(int id)
     {
-        Debug.Log("here");
         return _listConstruction.Find(d => d.id == id);
+    }
+
+    public ObjectData GetObjectDataByIndex(int index)
+    {
+        return _listConstruction[index];
     }
 }

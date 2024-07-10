@@ -8,7 +8,7 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField] private ConstructionData _data;
     [SerializeField] private GameObject mousePrefab;
     private Camera _camera;
-    private GameObject _currentBuil;
+    public GameObject _currentBuil;
 
     private void Awake()
     {
@@ -32,9 +32,10 @@ public class PlacementSystem : MonoBehaviour
         }
     }
 
-    
-
-    // Button build a building by Id 
+    /// <summary>
+    /// Spawn a building when click build a building a building on UI
+    /// </summary>
+    /// <param name="id"></param>
     public void StartPlaceBuilding(int id)
     {
         ObjectData data = _data.GetObjectDataById(id);
@@ -42,14 +43,11 @@ public class PlacementSystem : MonoBehaviour
         {
             Destroy(_currentBuil);
         }
-        _currentBuil = Instantiate(data.prefab[0], Vector3.zero, Quaternion.identity);
+        _currentBuil = Instantiate(data.prefab, Vector3.zero, Quaternion.identity);
         BuildingController script = _currentBuil.GetComponent<BuildingController>();
+        script.SetData(data);
 
-        script.idBuilding = id;
-        if ((data.width & 1) == 0)
-        {
-            script._offset = new Vector3(-0.5f, 0, -0.5f);
-        }
+        ActBuildingUI.instance.StartPlaceBuilding(script);
     }
 
     private Vector3 GetMouseOnWorld()
