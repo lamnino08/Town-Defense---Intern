@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8833750283843223205}
   - component: {fileID: 8808511404941359709}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &4941435794991688271
+--- !u!1 &3604800471963393025
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,25 +96,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8720571107245274269}
-  - component: {fileID: 3865731616737800645}
-  - component: {fileID: 5836564441432896945}
-  - component: {fileID: 4270821342163576534}
-  m_Layer: 0
+  - component: {fileID: 3781154097442635026}
+  - component: {fileID: 5152547041624666905}
+  - component: {fileID: 6222910618425811912}
+  - component: {fileID: 8916321985533040655}
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8720571107245274269
+--- !u!4 &3781154097442635026
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4941435794991688271}
-  m_LocalRotation: {x: -0.00000008146034, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 3604800471963393025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
@@ -122,21 +122,21 @@ Transform:
   m_Father: {fileID: 4919084635655832912}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3865731616737800645
+--- !u!33 &5152547041624666905
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4941435794991688271}
+  m_GameObject: {fileID: 3604800471963393025}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5836564441432896945
+--- !u!23 &6222910618425811912
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4941435794991688271}
+  m_GameObject: {fileID: 3604800471963393025}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -150,7 +150,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1414c376f660260429c81bda3cef2d67, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,18 +172,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4270821342163576534
+--- !u!64 &8916321985533040655
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4941435794991688271}
-  m_Material: {fileID: 13400000, guid: ed43e17a8789d5845a91c48f62ae2a70, type: 2}
+  m_GameObject: {fileID: 3604800471963393025}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5256140792324188483
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 5267551776959081930}
   - component: {fileID: 2566017468380824674}
   - component: {fileID: 121155353982838348}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,9 +276,9 @@ GameObject:
   - component: {fileID: 9074933889508752085}
   - component: {fileID: 2818660737262191543}
   - component: {fileID: 3374091038765770981}
-  - component: {fileID: 3152378253208373906}
-  m_Layer: 9
-  m_Name: Archer Building
+  - component: {fileID: -2052652827381522665}
+  m_Layer: 3
+  m_Name: _Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,12 +291,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5696993903520604138}
-  m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8720571107245274269}
+  - {fileID: 3781154097442635026}
   - {fileID: 5179473605468405719}
   - {fileID: 5792727203725321885}
   - {fileID: 7038061486687956776}
@@ -385,7 +385,7 @@ MonoBehaviour:
   _currentHealth: 0
   healthBarUI: {fileID: 8849710193581232643}
   healthBar: {fileID: 8808511404941359709}
---- !u!114 &3152378253208373906
+--- !u!114 &-2052652827381522665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -394,13 +394,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5696993903520604138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87fe4257fed469438e792613f1a8192, type: 3}
+  m_Script: {fileID: 11500000, guid: dbecbfe2f877bbc4b91e18b498731058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _offset: {x: 0, y: 0, z: 0}
   _isDragging: 0
-  _renderer: {fileID: 5836564441432896945}
+  _renderer: {fileID: 6222910618425811912}
+  width_x: 2
+  height_z: 2
   idBuilding: 0
+  canEdit: 1
 --- !u!1 &8849710193581232643
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +417,7 @@ GameObject:
   - component: {fileID: 3328902005461348035}
   - component: {fileID: 5098924121224258416}
   - component: {fileID: 9157458797033100543}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Health bar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +531,7 @@ GameObject:
   - component: {fileID: 6857323497068687612}
   - component: {fileID: 656797822701644851}
   - component: {fileID: 1308532876906078583}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,6 +661,10 @@ PrefabInstance:
       value: q
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c12be602fea0d24caf4fe76eec22d36, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c12be602fea0d24caf4fe76eec22d36, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -726,6 +733,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3ce42796372e8f24eade0e4d0de67883, type: 3}
       propertyPath: m_Name
       value: building_stage_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ce42796372e8f24eade0e4d0de67883, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3ce42796372e8f24eade0e4d0de67883, type: 3}
       propertyPath: m_IsActive
