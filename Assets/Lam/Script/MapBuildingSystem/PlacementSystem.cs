@@ -23,14 +23,14 @@ public class PlacementSystem : MonoBehaviour
         _camera = Camera.main;
     }
 
-    private void Update()
-    {
-        if (_camera != null)
-        {
-            Vector3 mousePositionInWorld = GetPositionGrid();
-            Debug.Log("Position On Grid: " + mousePositionInWorld);
-        }
-    }
+    // private void Update()
+    // {
+    //     if (_camera != null)
+    //     {
+    //         Vector3 mousePositionInWorld = GetPositionGrid();
+    //         // Debug.Log("Position On Grid: " + mousePositionInWorld);
+    //     }
+    // }
 
     /// <summary>
     /// Spawn a building when click build a building a building on UI
@@ -43,7 +43,9 @@ public class PlacementSystem : MonoBehaviour
         {
             Destroy(_currentBuil);
         }
-        _currentBuil = Instantiate(data.prefab, Vector3.zero, Quaternion.identity);
+    
+        Vector3 worldPosition = GetPositionGrid() + new Vector3(7,0, 7);
+        _currentBuil = Instantiate(data.prefab, new Vector3(worldPosition.x, 0, worldPosition.z), Quaternion.identity);
         BuildingController script = _currentBuil.GetComponent<BuildingController>();
         script.SetData(data);
 

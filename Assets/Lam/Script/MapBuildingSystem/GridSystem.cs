@@ -20,8 +20,8 @@ public class GridSystem : MonoBehaviour
         }
 
         JsonReader jsonReader = new JsonReader("GridData.json");
-        jsonReader.GenerateMapData();
-        // _nodes = jsonReader.ReadNodesFromJson(); // Path to your JSON file
+        // jsonReader.GenerateMapData();
+        _nodes = jsonReader.ReadNodesFromJson(); // Path to your JSON file
         InitializeGrid();
     }
 
@@ -39,24 +39,15 @@ public class GridSystem : MonoBehaviour
         float minX;
         float minY;
 
-        minX = x - width/2;
-        if ((width & 1) == 0)
-        {
-            minX += 0.5f;
-        }
-
-        minY = y - height/2;
-        if ((height & 1) == 0)
-        {
-            minY += 0.5f;
-        }
-
+        minX = x - width/2f + 0.5f;
+        minY = y - height/2f + 0.5f;
+        // Debug.Log($"Here {pos} {minX} {minY} {width/2} {height/2}");
         List<Vector2> result = new List<Vector2>();
         for(float i = minY; i<  (minY + height); i++)
         {
             for (float j = minX; j< (minX + width); j++)
             {
-                Vector2 node = new Vector2(i,j);
+                Vector2 node = new Vector2(j,i);
                 result.Add(node);
             }
         }
@@ -78,10 +69,10 @@ public class GridSystem : MonoBehaviour
                 int level = node.level;
                 float x = node.x;
                 float y = node.y;
-                int direction = node.direction;
+                float direction = node.direction;
 
                 ObjectData objectNode = _constructionData.GetObjectDataById(id);
-                Debug.Log(id);
+                // Debug.Log(id);
                 GameObject prefabToInstantiate = objectNode.prefab;
                 
                 x = (objectNode.width & 1) == 1 ? x : x - 0.5f;
@@ -90,8 +81,10 @@ public class GridSystem : MonoBehaviour
                 if (prefabToInstantiate != null)
                 {
                     Vector3 spawnPosition = new Vector3(x, 0, y);
-
+                    // Debug.Log(spawnPosition);
                     GameObject instantiatedObject = Instantiate(prefabToInstantiate, spawnPosition, Quaternion.identity);
+                    BuildingController scriptController = instantiatedObject.GetComponent<BuildingController>();
+                    scriptController.SpawnFromJson(level, objectNode);
                 }
                 else
                 {
@@ -114,7 +107,13 @@ public class GridSystem : MonoBehaviour
         float y = position.y;
         
         NodeData dataCell = _nodes.Find(e => e.x == x && e.y == y);
-        if (dataCell == null) return false;
+            Debug.Log(" x y"+x+"  "+y);
+        if (dataCell == null)
+        {
+            Debug.Log("Not fine x y"+x+"  "+y);
+            return false;
+        } 
+        // if (dataCell.id != 0) Debug.Log(dataCell.id);
         return  dataCell.id == 0 ? true : false;
     }
 
@@ -133,9 +132,33 @@ public class GridSystem : MonoBehaviour
             node.id = 1000;
             // Debug.Log($"{node.x}  {node.y}  {node.id}");
         }
+        // Debug.Log("Cell main confirm: "+ pos);
         _nodes.Find(e => e.x == pos.x && e.y == pos.y).id = id;
 
         JsonReader jsonReader = new JsonReader("GridData.json");
         jsonReader.WriteNewData(_nodes);
     }
+
+    public void UnPlaceBuilding(List<Vector2> area)
+    {
+        foreach(Vector2 cell in area)
+        {
+            float x = cell.x;
+            float y = cell.y;
+            NodeData node = _nodes.Find(e => e.x == x && e.y == y);
+            node.id = 0;
+            // Debug.Log($"Node where reset when click: {node.id} {node.x} {node.y}");
+            // Debug.Log($"{node.x}  {node.y}  {node.id}");
+        }
+        // foreach(NodeData e in _nodes)
+        // {
+        //     if (e.id != 0)
+        //     {
+        //         Debug.Log($"Node id != 0 afer reset: {e.id} {e.x};{e.y}");
+        //     }
+        // }
+        JsonReader jsonReader = new JsonReader("GridData.json");
+        jsonReader.WriteNewData(_nodes);
+    }
+
 }

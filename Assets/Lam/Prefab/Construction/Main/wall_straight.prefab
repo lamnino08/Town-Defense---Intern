@@ -167,8 +167,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5431013, y: 1.7010795, z: 0.5901072}
-  m_Center: {x: -0.014689222, y: 0.8205398, z: -0.008329809}
+  m_Size: {x: 0.96506155, y: 1.7010795, z: 0.96889424}
+  m_Center: {x: 0.009024143, y: 0.8205398, z: 0.0039303303}
 --- !u!208 &8005024465719923193
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.25, y: 0.85, z: 0.26}
+  m_Extents: {x: 0.49, y: 0.85, z: 0.515}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -238,7 +238,12 @@ MonoBehaviour:
   level: 0
   _isDragging: 0
   _renderer: {fileID: 7654650480163344557}
-  idBuilding: 0
+  dataObject:
+    <id>k__BackingField: 0
+    <height>k__BackingField: 0
+    <width>k__BackingField: 0
+    <health>k__BackingField: []
+    <prefab>k__BackingField: {fileID: 0}
 --- !u!1 &2030739694531069415
 GameObject:
   m_ObjectHideFlags: 0

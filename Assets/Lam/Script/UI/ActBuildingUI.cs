@@ -52,4 +52,18 @@ public class ActBuildingUI : MonoBehaviour
         // _cancelBtn.SetActive(false);
     }
 
+    /// <summary>
+    /// Set UI for like confirm, cancel button on UI when Place or click a building
+    /// </summary>
+    public void ClickOnBuilding(BuildingController buildingScript)
+    {
+        _currentBuildingAction = buildingScript;
+
+        //UI
+        _buildingActionUI.SetActive(_buildingActionUI);
+        _upgradeBtn.SetActive(true);
+        _confirmBtn.SetActive(true);
+        _cancelBtn.SetActive(false);
+    }
+
 }

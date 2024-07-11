@@ -9,6 +9,7 @@ public abstract class ArmyStaticMovement : ArmyMovement, IArmyMovement, ICharact
     protected virtual void Update()
     {
         DirectToTarget();
+        DefineEnemy();
         if (target != null)
         {
             if (target != previousTarget)
@@ -30,7 +31,6 @@ public abstract class ArmyStaticMovement : ArmyMovement, IArmyMovement, ICharact
             }
         } else
         {
-            DefineEnemy();
 
             if (_isAttacking)
             {

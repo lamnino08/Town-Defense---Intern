@@ -39,7 +39,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.505}
+  m_AnchoredPosition: {x: 0, y: 3.69}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &9212279578618685006
@@ -341,9 +341,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offset: {x: 0, y: 0, z: 0}
+  level: 0
   _isDragging: 0
   _renderer: {fileID: 7879614896992362729}
-  idBuilding: 0
+  dataObject:
+    <id>k__BackingField: 0
+    <height>k__BackingField: 0
+    <width>k__BackingField: 0
+    <health>k__BackingField: []
+    <prefab>k__BackingField: {fileID: 0}
 --- !u!1 &5613408476462889557
 GameObject:
   m_ObjectHideFlags: 0

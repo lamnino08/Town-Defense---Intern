@@ -71,6 +71,16 @@ public abstract class ArmyEnemyDynamic : ArmyDynamicMovement
                 {
                     _navMeshAgent.isStopped = false;
                     _navMeshAgent.SetDestination(target.position);
+                    // NavMeshPath path = new NavMeshPath();
+                    // if (NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path))
+                    // {                   
+                    //     if (path != null)
+                    //     {
+                    //         Debug.Log("here");
+                    //     } else
+                    //     {
+                    //     }
+                    // }
 
                     if (_isAttacking)
                     {
@@ -117,7 +127,7 @@ public abstract class ArmyEnemyDynamic : ArmyDynamicMovement
         foreach(Collider element in list)
         {
             Transform eleTranf = element.transform;
-            if (eleTranf == target || element.CompareTag("Gate"))
+            if (eleTranf == target)
             {
                 return eleTranf;
             }

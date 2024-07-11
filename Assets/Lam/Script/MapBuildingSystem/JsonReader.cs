@@ -10,7 +10,7 @@ public class NodeData
     public int level;
     public float x;
     public float y;
-    public int direction;
+    public float direction;
 }
 
 [System.Serializable]
@@ -65,7 +65,7 @@ public class JsonReader
                 NodeData node = new NodeData
                 {
                     id = 0,
-                    level = 1,
+                    level = 0,
                     x = x + 0.5f,
                     y = y + 0.5f,
                     direction = 0
