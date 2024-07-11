@@ -1,0 +1,4 @@
+repository "Du_an_game@nhatnamsoccer@cloud"
+  path "/"
+    br "/main"
+    co "/main"
