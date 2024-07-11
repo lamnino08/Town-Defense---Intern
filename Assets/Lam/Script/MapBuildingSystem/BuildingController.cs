@@ -18,6 +18,7 @@ public class BuildingController : MonoBehaviour
 
     private Vector3 _firstPostion;
     private Vector3 _previous;
+    [SerializeField] Color _validColor;
 
     private void Start()
     {
@@ -31,12 +32,11 @@ public class BuildingController : MonoBehaviour
         if ((dataObject.width & 1) == 0) _offset.x += 0.5f;
         if ((dataObject.height & 1) == 0) _offset.z += 0.5f;
         transform.position += _offset;
-        Debug.Log(_offset);
-        // Debug.Log(transform.position);
 
         if (CheckData())
         {
-            _renderer.material.color = Color.green;
+            Place();
+            _renderer.material.color = _validColor;
         } else 
         {
             _renderer.material.color = Color.red;
@@ -50,20 +50,21 @@ public class BuildingController : MonoBehaviour
         dataObject = data;
         if ((dataObject.width & 1) == 0) _offset.x += 0.5f;
         if ((dataObject.height & 1) == 0) _offset.z += 0.5f;
+
+        _renderer.material.color = _validColor;
+
     }
 
     private void OnMouseDown()
     {
         _isDragging = true;
-        _renderer.material.color = Color.green;
+        _renderer.material.color = _validColor;
         List<Vector2> rs = GridSystem.AreaByPosition(transform.position, dataObject.width, dataObject.height);
-        _firstPostion = transform.position;   
-
-        // List<Vector2> areaold = GridSystem.AreaByPosition(transform.position, dataObject.width, dataObject.height);
-        // Debug.Log(areaold.Count);
         
         if (_isPlaceed)
         {
+            Debug.Log("isplace");
+            _firstPostion = transform.position;   
             ActBuildingUI.instance.ClickOnBuilding(this);
             GridSystem.instance.UnPlaceBuilding(rs);
         }
@@ -78,7 +79,7 @@ public class BuildingController : MonoBehaviour
             Movement(mousePosInGrid);
             if (CheckData())
             {
-                _renderer.material.color = Color.green;
+                _renderer.material.color = _validColor;
             } else 
             {
                 _renderer.material.color = Color.red;
@@ -127,7 +128,7 @@ public class BuildingController : MonoBehaviour
     private void OnMouseUp()
     {
         transform.position = new Vector3(transform.position.x, 0, transform.position.z);
-        
+        Place();
         // ActBuildingUI.instance.StartPlaceBuilding(this);
     }
 
@@ -135,12 +136,9 @@ public class BuildingController : MonoBehaviour
     {
         if (CheckData())
         {
-            
-
             float x = (dataObject.width & 1) == 1 ? transform.position.x : transform.position.x + 0.5f;
             float y = (dataObject.height & 1) == 1 ? transform.position.z : transform.position.z + 0.5f;
             Vector2 cellMain = new Vector2(x,y);
-            Debug.Log(transform.position);
             List<Vector2> area = GridSystem.AreaByPosition(transform.position, dataObject.width, dataObject.height);
             GridSystem.instance.PlaceBuilding(area, dataObject.id, cellMain);
 
@@ -152,8 +150,13 @@ public class BuildingController : MonoBehaviour
             return true;
         } else
         {
-            Debug.Log("here");
+            if (_firstPostion == Vector3.zero)
+            {
+                Destroy(gameObject);
+                return false;
+            }
             transform.position = _firstPostion;
+            _renderer.material.color = Color.red;
             return false;
         }
     }

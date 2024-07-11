@@ -402,7 +402,13 @@ MonoBehaviour:
   level: 0
   _isDragging: 0
   _renderer: {fileID: 2281953163093355866}
-  idBuilding: 0
+  dataObject:
+    <id>k__BackingField: 0
+    <height>k__BackingField: 0
+    <width>k__BackingField: 0
+    <health>k__BackingField: []
+    <prefab>k__BackingField: {fileID: 0}
+  _validColor: {r: 0.13725491, g: 0.25490198, b: 0.11372549, a: 0}
 --- !u!1 &8553259973498828838
 GameObject:
   m_ObjectHideFlags: 0
