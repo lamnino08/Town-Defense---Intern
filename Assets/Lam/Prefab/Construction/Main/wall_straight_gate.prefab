@@ -199,7 +199,7 @@ MonoBehaviour:
   _leagueMask:
     serializedVersion: 2
     m_Bits: 128
-  _rangeDetect: 0.3
+  _rangeDetect: 2
   _animaton: {fileID: 0}
 --- !u!114 &-7052749171403735018
 MonoBehaviour:
@@ -223,7 +223,6 @@ MonoBehaviour:
     <width>k__BackingField: 0
     <health>k__BackingField: []
     <prefab>k__BackingField: {fileID: 0}
-  _validColor: {r: 0.09803922, g: 0.25490198, b: 0.11372549, a: 0}
 --- !u!1 &2527456366661384296
 GameObject:
   m_ObjectHideFlags: 0

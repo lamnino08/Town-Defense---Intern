@@ -103,10 +103,8 @@ public class GridSystem : MonoBehaviour
         float y = position.y;
         
         NodeData dataCell = _nodes.Find(e => e.x == x && e.y == y);
-            // Debug.Log(" x y"+x+"  "+y);
         if (dataCell == null)
         {
-            // Debug.Log("Not fine x y"+x+"  "+y);
             return false;
         } 
         return  dataCell.id == 0 ? true : false;
@@ -119,31 +117,73 @@ public class GridSystem : MonoBehaviour
     /// <param name="id"></param>
     public void PlaceBuilding(List<Vector2> area, int id, Vector2 pos)
     {
+        Debug.Log("place");
         foreach(Vector2 cell in area)
         {
             float x = cell.x;
             float y = cell.y;
-            NodeData node = _nodes.Find(e => e.x == x && e.y == y);
-            node.id = 1000;
+            NodeData nodeAround = NodeByCell(x,y);
+            nodeAround.id = 1000;
         }
-        _nodes.Find(e => e.x == pos.x && e.y == pos.y).id = id;
+            NodeData node = NodeByCell(pos.x,pos.y);
+            // if (node == null)
+            // {
+            //     Debug.Log($"not found {pos.x} {pos.y}");
+            // }
+            Debug.Log($"{node.x} {node.y}");
+            node.id = id;
 
         JsonReader jsonReader = new JsonReader("GridData.json");
         jsonReader.WriteNewData(_nodes);
     }
 
+    /// <summary>
+    /// Delete data a building from data 
+    /// </summary>
+    /// <param name="area"></param>
     public void UnPlaceBuilding(List<Vector2> area)
     {
+        Debug.Log("unplace");
         foreach(Vector2 cell in area)
         {
             float x = cell.x;
             float y = cell.y;
-            NodeData node = _nodes.Find(e => e.x == x && e.y == y);
+            NodeData node = NodeByCell(x,y);
+            // if (node == null)
+            // {
+            //     Debug.Log($"not found {x} {y}");
+            // }
             node.id = 0;
         }
     
         JsonReader jsonReader = new JsonReader("GridData.json");
         jsonReader.WriteNewData(_nodes);
+    }
+
+    /// <summary>
+    /// coordinate to index of list node
+    /// </summary>
+    /// <param name="x">coordinate x</param>
+    /// <param name="y">coordinate y</param>
+    /// <returns></returns>
+    private NodeData NodeByCell(float x, float y)
+    {
+        float roundedX = RoundToNearestHalf(x);
+        float roundedY = RoundToNearestHalf(y);
+
+        int index = Mathf.FloorToInt(roundedY + 3.5f)*49 + Mathf.FloorToInt(roundedX + 3.5f);
+        // Debug.Log($"{roundedX} {roundedY} {index} {_nodes[index].x} {_nodes[index].y}");
+        return _nodes[index];
+    }
+
+    /// <summary>
+    /// Round a number like 4.99999 to 4.5
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns></returns>
+    public float RoundToNearestHalf(float number)
+    {
+        return Mathf.Round(number * 2f) / 2f;
     }
 
 }

@@ -179,7 +179,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.563, y: 0.34300002, z: 0.397}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.0050000004, y: 0.34300002, z: 0.018000001}
   m_TimeToStationary: 0.5
@@ -242,7 +242,6 @@ MonoBehaviour:
     <width>k__BackingField: 0
     <health>k__BackingField: []
     <prefab>k__BackingField: {fileID: 0}
-  _validColor: {r: 0.13725491, g: 0.25490198, b: 0.11372549, a: 0}
 --- !u!1 &2883726433790507987
 GameObject:
   m_ObjectHideFlags: 0

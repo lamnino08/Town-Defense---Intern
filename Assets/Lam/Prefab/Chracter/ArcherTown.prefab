@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2141248113626954178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.4, y: 0.153, z: 33.67}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8554806733891779220}
@@ -59,8 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aedf1bbd778f32458c4347622cf099c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 5
-  _acttackSpeed: 3
+  _damage: 10
+  _acttackSpeed: 2
   arrowPrefab: {fileID: 100000, guid: 28a44b5bd1eb8df459b5a32e1c14a4f0, type: 3}
   bowTransform: {fileID: 7137857505105553401}
 --- !u!114 &610494941117637029
@@ -92,6 +92,18 @@ PrefabInstance:
     - target: {fileID: 2441635548230255278, guid: f018b28bfc3861d4688ce6b3a54f63f9, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441635548230255278, guid: f018b28bfc3861d4688ce6b3a54f63f9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441635548230255278, guid: f018b28bfc3861d4688ce6b3a54f63f9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441635548230255278, guid: f018b28bfc3861d4688ce6b3a54f63f9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2441635548230255278, guid: f018b28bfc3861d4688ce6b3a54f63f9, type: 3}
       propertyPath: m_LocalPosition.x

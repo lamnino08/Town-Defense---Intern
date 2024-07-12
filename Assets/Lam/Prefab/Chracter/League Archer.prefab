@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ecff678a7fbe3418e988d1902d31ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
+  _damage: 20
   _acttackSpeed: 3
   arrowPrefab: {fileID: 100000, guid: 28a44b5bd1eb8df459b5a32e1c14a4f0, type: 3}
   bowTransform: {fileID: 4574728472448464629}

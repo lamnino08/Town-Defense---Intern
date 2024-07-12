@@ -37,12 +37,12 @@ public abstract class ArmyDynamicMovement : ArmyMovement, IArmyMovement, ICharac
 
     protected virtual void Update()
     {
+            if (_navMeshAgent.enabled && _navMeshObstacle.enabled) _navMeshObstacle .enabled = false;
         ChaseTarget();
     }
 
     public virtual void ChaseTarget()
     {
-        // Debug.Log(Time.deltaTime);
         if (target != null)
         {
             DefineEnemy();

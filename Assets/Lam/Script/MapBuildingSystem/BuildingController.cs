@@ -11,14 +11,18 @@ public class BuildingController : MonoBehaviour
     private Camera _camera;
     public Vector3 _offset = Vector3.zero;
     public  int level;
+    static Color _normalColor = new Color(50f/255f, 65f/255f, 49f/255f);
+    static Color _validColor = new Color(60f/255f, 70f/255f, 49f/255f);
+    // static Color _validColor = new Color(50f/255f, 70f/255f, 49f/255f);
+    static Color _inValidColor = new Color(104f/255f, 43f/255f, 17f/255f);
     [SerializeField] private bool _isDragging;
     [SerializeField] private Renderer _renderer;
     public ObjectData dataObject; 
     private bool _isPlaceed = false;
+    public bool isPlaced {get => _isPlaceed;}
 
     private Vector3 _firstPostion;
     private Vector3 _previous;
-    [SerializeField] Color _validColor;
 
     private void Start()
     {
@@ -36,10 +40,12 @@ public class BuildingController : MonoBehaviour
         if (CheckData())
         {
             Place();
+            ActBuildingUI.instance.AllowRemove(true);
             _renderer.material.color = _validColor;
         } else 
         {
-            _renderer.material.color = Color.red;
+            ActBuildingUI.instance.AllowRemove(false);
+            _renderer.material.color = _inValidColor;
         }
     }
 
@@ -63,7 +69,7 @@ public class BuildingController : MonoBehaviour
         
         if (_isPlaceed)
         {
-            Debug.Log("isplace");
+            // Debug.Log("here");
             _firstPostion = transform.position;   
             ActBuildingUI.instance.ClickOnBuilding(this);
             GridSystem.instance.UnPlaceBuilding(rs);
@@ -82,7 +88,7 @@ public class BuildingController : MonoBehaviour
                 _renderer.material.color = _validColor;
             } else 
             {
-                _renderer.material.color = Color.red;
+                _renderer.material.color = _inValidColor;
             }
             _previous = mousePosInGrid;
             
@@ -142,22 +148,31 @@ public class BuildingController : MonoBehaviour
             List<Vector2> area = GridSystem.AreaByPosition(transform.position, dataObject.width, dataObject.height);
             GridSystem.instance.PlaceBuilding(area, dataObject.id, cellMain);
 
-            ActBuildingUI.instance._currentBuildingAction = null;
+            // ActBuildingUI.instance._currentBuildingAction = null;
             PlacementSystem.instance._currentBuil = null;
             _isPlaceed = true;
-
-            // _renderer.material.color = new Color(0.2f, 0.7f, 0.2f);
+            ActBuildingUI.instance.AllowRemove(true);
             return true;
         } else
         {
             if (_firstPostion == Vector3.zero)
             {
-                Destroy(gameObject);
+                // Destroy(gameObject);
                 return false;
             }
             transform.position = _firstPostion;
-            _renderer.material.color = Color.red;
+            _renderer.material.color = _validColor;
             return false;
         }
+    }
+
+    public void Remove()
+    {
+        if (_isPlaceed)
+        {
+            List<Vector2> rs = GridSystem.AreaByPosition(transform.position, dataObject.width, dataObject.height);
+            GridSystem.instance.UnPlaceBuilding(rs);
+        } 
+        Destroy(gameObject);
     }
 }

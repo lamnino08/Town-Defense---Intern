@@ -60,6 +60,7 @@ public abstract class ArmyEnemyDynamic : ArmyDynamicMovement
                 if (!_isAttacking)
                 {
                     _isAttacking = true;
+                    Debug.Log(enemyClose.gameObject.name);
                     _attack.Acttack(enemyClose.gameObject);
                 }
 

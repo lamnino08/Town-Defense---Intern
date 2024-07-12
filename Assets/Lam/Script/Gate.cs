@@ -7,13 +7,13 @@ public class Gate : MonoBehaviour
     [SerializeField] private LayerMask _leagueMask;
     [SerializeField] private float _rangeDetect;
     [SerializeField] private Animator _animaton;
-    private bool _isOpen;
+    private bool _isOpen = false;
     private int _openHash;
     private int _closeHash;
 
     private void Start() 
     {
-        _animaton = transform.GetChild(0).GetComponent<Animator>();
+        _animaton = transform.GetChild(1).GetComponent<Animator>();
         _openHash = Animator.StringToHash("open");
         _closeHash = Animator.StringToHash("close");
     }

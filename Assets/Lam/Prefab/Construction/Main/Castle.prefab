@@ -84,7 +84,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 1.505, y: 0.77, z: 1.375}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -1.08, y: 0.73, z: 0}
   m_TimeToStationary: 0.5
@@ -147,7 +147,6 @@ MonoBehaviour:
     <width>k__BackingField: 0
     <health>k__BackingField: []
     <prefab>k__BackingField: {fileID: 0}
-  _validColor: {r: 0.13725491, g: 0.25490198, b: 0.11372549, a: 0}
 --- !u!114 &6730366904165546445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,7 +578,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa03ee4ad9801a64c8c53d9c007d317d, type: 2}
+  - {fileID: 2100000, guid: b7ba5c3cd2f54bc42807a3fbbe0c92b0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

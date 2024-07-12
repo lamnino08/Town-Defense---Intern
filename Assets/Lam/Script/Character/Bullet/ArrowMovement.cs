@@ -12,7 +12,7 @@ public class ArrowMovement : AArrowMovement
     {
         base.Start();
         startTime = Time.time;
-        maxHeight = 1;
+        maxHeight = 2;
         // maxHeight = startPos.y + 1/((startPos.y - endPos.y) / 8) ;
     }
 
