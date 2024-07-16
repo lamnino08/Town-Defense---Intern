@@ -29,6 +29,10 @@ public class InputManagement : MonoBehaviour
         playerInput.Disable();
     }
 
+    private void Update() 
+    {
+        HandleAllInput();
+    }
     public void HandleAllInput()
     {
         HandleMoveMentInput();

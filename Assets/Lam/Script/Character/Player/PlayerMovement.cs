@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    InputManagement inputManager;
+    [SerializeField] InputManagement inputManager;
 
-    private Vector3 _moveDirection;
     [SerializeField] private Transform _cameraObject;
-    private Rigidbody _playerRigidbody;
-    [SerializeField] private float _walkSpeed = 3;
     [SerializeField] private float _moveSpeed = 3;
-    [SerializeField] private float _runSpeed = 5;
+    // [SerializeField] private float _runSpeed = 5;
 
     [SerializeField] private float _rotateSpeed = 150;
     [SerializeField] private PlayerAnimator playerAnimator;
 
     private void Awake() 
     {
-        inputManager = GetComponent<InputManagement>();
-        _playerRigidbody = GetComponent<Rigidbody>();
+        playerAnimator = GetComponent<PlayerAnimator>();
+    }
+
+    private void Update() 
+    {
+        HandleAllMovement();
     }
 
     public void HandleAllMovement()
@@ -43,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
         } else 
         {
             playerAnimator.Idle();
-            _moveSpeed = 0;
         }
     }
 
@@ -66,37 +66,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         Vector3 moveDirection = transform.forward;
-        moveDirection.y = 0;
-       if (inputManager.isRunning)
-        {
-            if (_moveSpeed < _runSpeed)
-            {
-                _moveSpeed += 10 * Time.deltaTime;
-                if (_moveSpeed > _runSpeed)
-                {
-                    _moveSpeed = _runSpeed;
-                }
-            }
-        }
-        else
-        {
-            if (_moveSpeed < _walkSpeed)
-            {
-                _moveSpeed += 5 * Time.deltaTime;
-                if (_moveSpeed > _walkSpeed)
-                {
-                    _moveSpeed = _walkSpeed;
-                }
-            }
-            else if (_moveSpeed > _walkSpeed)
-            {
-                _moveSpeed -= 5 * Time.deltaTime;
-                if (_moveSpeed < _walkSpeed)
-                {
-                    _moveSpeed = _walkSpeed;
-                }
-            }
-        }
+        // moveDirection.y = 0;
         moveDirection *= _moveSpeed * Time.deltaTime;
         transform.position += moveDirection;
     }

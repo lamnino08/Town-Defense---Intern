@@ -129,7 +129,7 @@ Transform:
   m_GameObject: {fileID: 1662506871738236114}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7752878641309372569}
@@ -244,7 +244,6 @@ MonoBehaviour:
     <width>k__BackingField: 0
     <health>k__BackingField: []
     <prefab>k__BackingField: {fileID: 0}
-  _validColor: {r: 0.13725491, g: 0.25490198, b: 0.11372549, a: 0}
 --- !u!1 &2030739694531069415
 GameObject:
   m_ObjectHideFlags: 0

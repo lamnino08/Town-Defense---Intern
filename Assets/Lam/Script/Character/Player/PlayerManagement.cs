@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PlayerManagement : MonoBehaviour
 {
-    private InputManagement inputManagement;
-    private PlayerMovement playerMovement;
+    // private InputManagement inputManagement;
+    // private PlayerMovement playerMovement;
 
-    private void Awake() 
-    {
-        inputManagement = GetComponent<InputManagement>();
-        playerMovement = GetComponent<PlayerMovement>();
-    }
-    private void Update() 
-    {
-        inputManagement.HandleAllInput();
-    }
+    // private void Awake() 
+    // {
+    //     inputManagement = GetComponent<InputManagement>();
+    //     playerMovement = GetComponent<PlayerMovement>();
+    // }
+    // private void Update() 
+    // {
+    //     inputManagement.HandleAllInput();
+    // }
 
-    private void FixedUpdate() 
-    {
-        playerMovement.HandleAllMovement();
-    }
+    // private void FixedUpdate() 
+    // {
+    //     playerMovement.HandleAllMovement();
+    // }
 }

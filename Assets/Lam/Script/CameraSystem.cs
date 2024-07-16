@@ -3,59 +3,32 @@ using Cinemachine;
 
 public class CameraSystem : MonoBehaviour
 {
-    public InputManagement inputManager;
-    public float fixedHeight = 19f; 
-    public float moveSpeed = 6f;
-    public float moveSpeedIncrement = 0.1f;
-    public float moveSpeedMin = 0.5f;
-    public float moveSpeedMax = 5f;
-    private float targetFieldOfView;
-    bool _isShift = false;
+    public Transform target;  // Transform mà bạn muốn camera theo dõi
+    public float fixedHeight = 19f;
+    public float followDistance = 10f;  // Khoảng cách giữa camera và mục tiêu
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
 
-    private void Start()
-    {
-        Vector3 initialPosition = transform.position;
-        initialPosition.y = fixedHeight;
-        transform.position = initialPosition;
-
-        targetFieldOfView = 50f; 
-        cinemachineVirtualCamera.m_Lens.FieldOfView = targetFieldOfView;
-    }
+    // private void Start()
+    // {
+    //     if (target != null)
+    //     {
+    //         SetUpCinemachine();
+    //     }
+    // }
 
     private void Update()
     {
-        inputManager.HandleAllInput();
-        if (inputManager != null)
+        if (target != null)
         {
-            MoveCamera();
-            // HandleCameraZoom_FieldOfView();
+            FollowTarget();
         }
     }
-     private void MoveCamera()
-    {
-        float verticalInput = inputManager.verticalInput;
-        float horizontalInput = inputManager.horizontalInput;
-        // Vector2 inputVector = moveAction.ReadValue<Vector2>();
-        Vector3 moveDirection = new Vector3(-verticalInput, 0, horizontalInput).normalized;
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            if (!_isShift)
-            {
-                moveSpeed = moveSpeed * 2.5f;
-                _isShift = true;
-            }
-        } else
-        {
-            if (_isShift)
-            {
-                _isShift = false;
-                moveSpeed = moveSpeed / 2.5f;
-            }
-        }
-        Vector3 moveOffset = moveDirection * moveSpeed * Time.deltaTime;
 
-        transform.position += moveOffset;
-        transform.position = new Vector3(transform.position.x, fixedHeight, transform.position.z);
+    private void FollowTarget()
+    {
+        // Chỉ cập nhật vị trí của camera theo vị trí của mục tiêu
+        Vector3 targetPosition = target.position;
+        targetPosition.y = fixedHeight;
+        transform.position = targetPosition + new Vector3(followDistance, 0, -followDistance);
     }
 }

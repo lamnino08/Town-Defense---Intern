@@ -23,29 +23,31 @@ public class PlayerAnimator : ArmyDynamicAnimator
 
     public override void Run()
     {
-        if (_velocity < _walkVelociy)
-        {
-            _velocity += (_acceletion + 0.3f) * Time.deltaTime;
-        } else
-        {
-            if (_velocity < _runVelociy)
-            {
-                _velocity += _acceletion * Time.deltaTime;
-            }
-        }
+        // if (_velocity < _walkVelociy)
+        // {
+        //     _velocity += (_acceletion + 0.3f) * Time.deltaTime;
+        // } else
+        // {
+        //     if (_velocity < _runVelociy)
+        //     {
+        //         _velocity += _acceletion * Time.deltaTime;
+        //     }
+        // }
+        _velocity = 5;
         _animator.SetFloat(_velocityHash, _velocity);
     }
 
     public override void Idle()
     {
-        if (_velocity > 0)
-        {
-            _velocity -= (_deceletion);
-        }  
-        if (_velocity < 0)
-        {
+
+        // if (_velocity > 0)
+        // {
+        //     _velocity -= (_deceletion);
+        // }  
+        // if (_velocity < 0)
+        // {
             _velocity = 0;
-        }
+        // }
         _animator.SetFloat(_velocityHash, _velocity);
     }
 
