@@ -6,7 +6,7 @@ public class PlacementSystem : MonoBehaviour
     public static PlacementSystem instance { get => _instance; }
     [SerializeField] private Grid _grid;
     [SerializeField] private ConstructionData _data;
-    [SerializeField] private GameObject mousePrefab;
+    [SerializeField] private Collider _planeCollider;
     private Camera _camera;
     public GameObject _currentBuil;
 
@@ -54,14 +54,14 @@ public class PlacementSystem : MonoBehaviour
 
     private Vector3 GetMouseOnWorld()
     {
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        Plane plane = new Plane(Vector3.up, 0); // Adjusted to Vector3.up
+        // Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        // Plane plane = new Plane(Vector3.up, 0); // Adjusted to Vector3.up
 
-        float distance;
-        if (plane.Raycast(ray, out distance))
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (_planeCollider.Raycast(ray, out hit, Mathf.Infinity))
         {
-            Vector3 hitPoint = ray.GetPoint(distance);
-            return hitPoint;
+             return hit.point;
         }
 
         return Vector3.zero;
@@ -72,6 +72,7 @@ public class PlacementSystem : MonoBehaviour
         Vector3 mousePosition = GetMouseOnWorld();
         Vector3Int cellPosition = _grid.WorldToCell(mousePosition);
         Vector3 cellCenterPosition = _grid.GetCellCenterWorld(cellPosition); 
+        cellCenterPosition.y = 0;
         return cellCenterPosition;
     }
 }

@@ -5,4 +5,5 @@ using UnityEngine;
 public interface ICharacterAnimator
 {
     void Idle();
+    void Dead();
 }

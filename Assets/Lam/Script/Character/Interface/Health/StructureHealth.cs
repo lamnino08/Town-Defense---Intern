@@ -45,7 +45,7 @@ public abstract class StructureHealth : MonoBehaviour, IHealth
         }
     }
 
-    protected virtual void UpdateHealthBar()
+    public virtual void UpdateHealthBar()
     {
         if (healthBar != null)
         {
