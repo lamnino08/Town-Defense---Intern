@@ -63,39 +63,45 @@ public class BuildingController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _isDragging = true;
-        _renderer.material.color = _validColor;
-        List<Vector2> rs = GridSystem.AreaByPosition(transform.position, dataObject.width, dataObject.height);
-        
-        if (_isPlaceed)
+        if (!_isPlaceed)
         {
-            // Debug.Log("here");
-            _firstPostion = transform.position;   
-            ActBuildingUI.instance.ClickOnBuilding(this);
-            GridSystem.instance.UnPlaceBuilding(rs);
+            _isDragging = true;
+            _renderer.material.color = _validColor;
+            List<Vector2> rs = GridSystem.AreaByPosition(transform.position, dataObject.width, dataObject.height);
+            
+            if (_isPlaceed)
+            {
+                // Debug.Log("here");
+                _firstPostion = transform.position;   
+                ActBuildingUI.instance.ClickOnBuilding(this);
+                GridSystem.instance.UnPlaceBuilding(rs);
+            }
         }
     }
 
     private void OnMouseDrag()
     {
-        Vector3 mousePosInGrid = PlacementSystem.instance.GetPositionGrid();
-        if (_previous != mousePosInGrid)
+        if (!_isPlaceed)
         {
-            // Debug.Log(_previous+"    "+mousePosInGrid); 
-            Movement(mousePosInGrid);
-            if (CheckData())
+            Vector3 mousePosInGrid = PlacementSystem.instance.GetPositionGrid();
+            if (_previous != mousePosInGrid)
             {
-                _renderer.material.color = _validColor;
-            } else 
-            {
-                _renderer.material.color = _inValidColor;
+                // Debug.Log(_previous+"    "+mousePosInGrid); 
+                Movement(mousePosInGrid);
+                if (CheckData())
+                {
+                    _renderer.material.color = _validColor;
+                } else 
+                {
+                    _renderer.material.color = _inValidColor;
+                }
+                _previous = mousePosInGrid;
+                
             }
-            _previous = mousePosInGrid;
-            
-        }
-        if (Input.GetMouseButtonDown(1) && dataObject.id == 7)
-        {
-            Rotate();
+            if (Input.GetMouseButtonDown(1) && dataObject.id == 7)
+            {
+                Rotate();
+            }
         }
     }
 
@@ -133,8 +139,11 @@ public class BuildingController : MonoBehaviour
 
     private void OnMouseUp()
     {
-        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
-        Place();
+        if (!_isPlaceed)
+        {
+            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+            Place();
+        }
         // ActBuildingUI.instance.StartPlaceBuilding(this);
     }
 

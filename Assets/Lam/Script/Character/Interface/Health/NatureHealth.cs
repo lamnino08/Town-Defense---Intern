@@ -10,21 +10,28 @@ public abstract class NatureHealth : MonoBehaviour
     [SerializeField] protected GameObject healthBarUI;
     [SerializeField] protected Slider healthBar;
     protected Animator animator;
+    protected Coroutine isAttackProcess;
     protected int _isDeadHash;
+    protected Nature _nature;
     // NavMeshObstacle _navMeshObsticle;
 
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
         _isDeadHash = Animator.StringToHash("isDead");
-
+        _currentHealth = _maxHealth;
+        _nature = GetComponent<Nature>();
+        
+        healthBar.maxValue = _maxHealth;
+        healthBar.value = _currentHealth;
         healthBarUI.SetActive(false);
+
     }
 
     public float TakeDamage(float _damage)
     {
         float timeToManufacture = _maxHealth/_damage;
-        StartCoroutine(ProcessManufacture(timeToManufacture));
+        isAttackProcess = StartCoroutine(ProcessManufacture(timeToManufacture));
         return timeToManufacture;
     }
 
@@ -45,8 +52,17 @@ public abstract class NatureHealth : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
-            // Phá hủy đối tượng sau khi mất hết máu
+            _nature.Manufacture();
             Destroy(gameObject);
+        }
+    }
+
+    public void StopTakeDamge()
+    {
+        if (isAttackProcess != null)
+        {
+            healthBarUI.SetActive(false);
+            StopCoroutine(isAttackProcess);
         }
     }
 

@@ -18,6 +18,6 @@ public class NatureAnimator : MonoBehaviour, ICharacterAnimator
 
     public void Idle()
     {
-
+        
     }
 }

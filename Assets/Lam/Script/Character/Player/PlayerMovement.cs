@@ -8,18 +8,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] InputManagement inputManager;
     [SerializeField] private float _moveSpeed = 3;
     [SerializeField] private float _rotateSpeed = 150;
-    [SerializeField] private PlayerAnimator playerAnimator;
+    [SerializeField] private PlayerWork _playerWork;
+    [SerializeField] private PlayerAnimator _playerAnimator;
      [SerializeField] private NavMeshAgent _navmeshAgent;
     [SerializeField] private LayerMask _EnemyMask;
     [SerializeField] private LayerMask _natureMask;
     private Vector3 _destination;
-    private Transform _natureTarget;
+    [SerializeField] private Transform _natureTarget;
     [SerializeField] private bool isMoving = false;
 
     private void Awake() 
     {
-        playerAnimator = GetComponent<PlayerAnimator>();
+        _playerAnimator = GetComponent<PlayerAnimator>();
         _navmeshAgent = GetComponent<NavMeshAgent>();
+        _playerWork = GetComponent<PlayerWork>();
     }
 
     private void Update() 
@@ -31,42 +33,66 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _navmeshAgent.isStopped = false;
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, _natureMask))
+            if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _natureMask))
             {
-                _natureTarget = hitInfo.transform;
+                if (hitInfo.transform != _natureTarget || hitInfo.transform.CompareTag("plane"))
+                {
+                    if (_natureTarget != null)
+                    {
+                        _playerWork.StopManufacture(_natureTarget);
+                    }
+                    _natureTarget = hitInfo.transform;
+                    MoveToTarget();
+                } 
             } else
             {
-                _natureTarget = null;
+                if (_natureTarget != null)
+                {
+                    _playerWork.StopManufacture(_natureTarget);
+                    _natureTarget = null;
+                }
             }
 
-            _destination = PlacementSystem.instance.GetPositionGrid();
-            Debug.Log(_destination);
-            _navmeshAgent.SetDestination(_destination);
-
-            if (!isMoving)
-            {
-                playerAnimator.Run();
-                isMoving = true;
-            }
+            
         }
 
         float distanceDestination = Vector3.Distance(transform.position, _destination);
         if (distanceDestination < 0.2f && isMoving)
         {
             isMoving = false;
-            playerAnimator.Idle();
+            _playerAnimator.Idle();
+        }
+    }
+
+    private void MoveToTarget()
+    {
+        _navmeshAgent.isStopped = false;
+        _destination = PlacementSystem.instance.GetPositionGrid();
+        _navmeshAgent.SetDestination(_destination);
+
+        if (!isMoving)
+        {
+            _playerAnimator.Run();
+            isMoving = true;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other);
         if (_natureTarget != null && other.transform == _natureTarget)
         {
+            _playerAnimator.Idle();
             _navmeshAgent.isStopped = true;
-            playerAnimator.Attack();
             isMoving = false;
+
+            _playerWork.Manufacture(_natureTarget);
+
+            Vector3 targetPosition = _natureTarget.position;
+            targetPosition.y = transform.position.y; 
+            transform.LookAt(targetPosition);
         }
     }
 }

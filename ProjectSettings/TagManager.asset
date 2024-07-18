@@ -9,6 +9,7 @@ TagManager:
   - league
   - enemy
   - Gate
+  - plane
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Gate
   - Nature
   - Rock
-  - 
+  - Plane
   - 
   - 
   - 

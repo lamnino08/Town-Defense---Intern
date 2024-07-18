@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class PlayerAnimator : ArmyDynamicAnimator, IWorkerAnimator
 {
+    protected int _isWorkHash;
+
+    protected override void Start() 
+    {
+        base.Start();
+        _isWorkHash = Animator.StringToHash("isWork");
+    }
+
     public void Work(bool isWork)
     {
-
+        _animator.SetBool(_isWorkHash, isWork);
     }
 }

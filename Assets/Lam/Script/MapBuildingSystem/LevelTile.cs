@@ -1,8 +1,8 @@
 using UnityEngine.Tilemaps;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Level Tile", menuName = "2D/Tiles/LevelTile")]
-public class LevelTile : Tile
+[CreateAssetMenu(fileName = "New Level Tile", menuName = "2D/Tiles/UnitTile")]
+public class UnitTile : Tile
 {
     public TileType type;
 }
@@ -10,5 +10,5 @@ public class LevelTile : Tile
 public enum TileType
 {
     grass = 0,
-    tree,
+    tree = 1,
 }

@@ -1,12 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor.PackageManager;
+using UnityEngine.Tilemaps;
 
 public class GridSystem : MonoBehaviour
 {
     private static GridSystem _instance;
     public static GridSystem instance {get => _instance;}
     private List<NodeData> _nodes = new List<NodeData>();
+    [SerializeField] Tilemap _natureMap;
     [SerializeField] private ConstructionData _constructionData; // Reference to ConstructionData script
 
     private void Start()
@@ -20,7 +22,7 @@ public class GridSystem : MonoBehaviour
         }
 
         JsonReader jsonReader = new JsonReader("GridData.json");
-        // jsonReader.GenerateMapData();
+        jsonReader.GenerateMapData();
         _nodes = jsonReader.ReadNodesFromJson(); // Path to your JSON file
         InitializeGrid();
     }

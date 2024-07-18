@@ -9,6 +9,13 @@ public class PlayerWork : MonoBehaviour
     protected ICharacterAnimator _animatorCharacter;
     protected Coroutine isManufactureProcess;
     protected ArmyMovement _armyMovement;
+
+    private void Start() 
+    {
+        _animatorWorker = GetComponent<IWorkerAnimator>();
+        _animatorCharacter = GetComponent<ICharacterAnimator>();
+    }
+
     public void Manufacture(Transform nature)
     {
         if (isManufactureProcess == null)
@@ -17,12 +24,19 @@ public class PlayerWork : MonoBehaviour
         }
     }
 
-    public void StopManufacture()
+    public void StopManufacture(Transform nature)
     {
         if (isManufactureProcess != null)
         {
             StopCoroutine(isManufactureProcess);
             isManufactureProcess = null;
+            _animatorWorker.Work(false);
+
+            if (nature)
+            {
+                NatureHealth health = nature.GetComponent<NatureHealth>();
+                health.StopTakeDamge();
+            }
         } 
     }
 
