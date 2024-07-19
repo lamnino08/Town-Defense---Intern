@@ -11763,7 +11763,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1727923609}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &471303304
 MonoBehaviour:
@@ -25594,7 +25594,7 @@ MonoBehaviour:
   m_Follow: {fileID: 431996963}
   m_Lens:
     FieldOfView: 99.41
-    OrthographicSize: 3.46
+    OrthographicSize: 6.1
     NearClipPlane: 1
     FarClipPlane: 1000
     Dutch: 0
@@ -25973,7 +25973,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa03ee4ad9801a64c8c53d9c007d317d, type: 2}
+  - {fileID: 2100000, guid: 8826328d376db9048b79ac936e4c1dcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27296,50 +27296,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4214021587554833866, guid: ed9df2831207a5a4a9e8346cabdb0717, type: 3}
   m_PrefabInstance: {fileID: 108205018}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1584586774
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1584586776}
-  - component: {fileID: 1584586775}
-  m_Layer: 0
-  m_Name: Grid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!156049354 &1584586775
-Grid:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584586774}
-  m_Enabled: 0
-  m_CellSize: {x: 1, y: 1, z: 1}
-  m_CellGap: {x: 0, y: 0, z: 0}
-  m_CellLayout: 0
-  m_CellSwizzle: 1
---- !u!4 &1584586776
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584586774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1727923609}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1586667840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4214021587554833866, guid: ed9df2831207a5a4a9e8346cabdb0717, type: 3}
@@ -29637,7 +29593,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1584586776}
   - {fileID: 1840327155}
   - {fileID: 471303303}
   m_Father: {fileID: 0}
@@ -29952,7 +29907,7 @@ Camera:
   far clip plane: 1000
   field of view: 99.41
   orthographic: 1
-  orthographic size: 3.46
+  orthographic size: 6.1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -31034,7 +30989,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1727923609}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1840327156
 MonoBehaviour:
@@ -31048,7 +31003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd81e77dba49134d92b1c71703a40a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grid: {fileID: 1584586775}
+  _grid: {fileID: 251730171}
   _data: {fileID: 471303304}
   _planeCollider: {fileID: 1491577736}
   _currentBuil: {fileID: 0}

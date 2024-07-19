@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManagerl : MonoBehaviour
 {
-    private static AudioManager _instance;
-    public static AudioManager instance => _instance;
+    private static AudioManagerl _instance;
+    public static AudioManagerl instance => _instance;
 
     private void Start() {
         _instance = this;
