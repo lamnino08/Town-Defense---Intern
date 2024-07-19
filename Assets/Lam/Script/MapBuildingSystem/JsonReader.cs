@@ -2,6 +2,7 @@ using System.Collections;
 using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Experimental.GraphView;
 
 [System.Serializable]
 public class NodeData
@@ -10,7 +11,14 @@ public class NodeData
     public int level;
     public float x;
     public float y;
-    public float direction;
+
+    public NodeData(int id, int level, float x, float y)
+    {
+        this.id = id;
+        this.level = level;
+        this.x = x;
+        this.y = y;
+    }
 }
 
 [System.Serializable]
@@ -53,31 +61,30 @@ public class JsonReader
         return nodeDataList;
     }
 
-    public void GenerateMapData()
-    {
-        NodeDataWrapper nodeDataWrapper = new NodeDataWrapper();
-        nodeDataWrapper.nodes = new List<NodeData>();
+    // public void GenerateMapData()
+    // {
+    //     NodeDataWrapper nodeDataWrapper = new NodeDataWrapper();
+    //     nodeDataWrapper.nodes = new List<NodeData>();
 
-        for (int y = -4; y < 45; y++)
-        {
-            for (int x = -4; x < 45; x++)
-            {
-                NodeData node = new NodeData
-                {
-                    id = 0,
-                    level = 0,
-                    x = x + 0.5f,
-                    y = y + 0.5f,
-                    direction = 0
-                };
-                nodeDataWrapper.nodes.Add(node);
-            }
-        }
+    //     for (int y = -4; y < 45; y++)
+    //     {
+    //         for (int x = -4; x < 45; x++)
+    //         {
+    //             NodeData node = new NodeData
+    //             {
+    //                 id = 0,
+    //                 level = 0,
+    //                 x = x + 0.5f,
+    //                 y = y + 0.5f,
+    //             };
+    //             nodeDataWrapper.nodes.Add(node);
+    //         }
+    //     }
 
-        string json = JsonUtility.ToJson(nodeDataWrapper, true);
-        string filePath = Path.Combine(Application.streamingAssetsPath, _filePath);
-        File.WriteAllText(filePath, json);
-    }
+    //     string json = JsonUtility.ToJson(nodeDataWrapper, true);
+    //     string filePath = Path.Combine(Application.streamingAssetsPath, _filePath);
+    //     File.WriteAllText(filePath, json);
+    // }
 
     public void WriteNewData(List<NodeData> nodes)
     {

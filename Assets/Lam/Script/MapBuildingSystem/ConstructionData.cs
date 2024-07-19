@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 // using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [Serializable]
 public class ObjectData
@@ -21,7 +22,7 @@ public class ObjectData
     public float[] health {get; private set; }
     [field: SerializeField]
     public GameObject prefab {get; private set;}
-
+    public UnitTile tile;
 }
 
 public class ConstructionData : MonoBehaviour

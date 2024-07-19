@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
+
 
 
 // using System.Numerics;
@@ -38,8 +40,8 @@ public class BuildingManager : MonoBehaviour
         newPosition.y = 0;
         transform.position = newPosition;
         _plane.NormalColor();
-
-
+        NodeData node = new NodeData(dataObject.id, 1, transform.position.x, transform.position.z);
+        ConstructionSave.instance.AddBuilding(node);
 
         Destroy(GetComponent<BuildingController>());
     }

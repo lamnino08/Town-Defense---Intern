@@ -7,12 +7,11 @@ public class ActBuildingUI : MonoBehaviour
     private static ActBuildingUI _instance;
     public static ActBuildingUI instance {get => _instance; }
 
-    private BuildingController _currentBuildingAction;
-
     [SerializeField] private GameObject _buildingActionUI;
     [SerializeField] private GameObject _upgradeBtn;
     // [SerializeField] private GameObject _confirmBtn;
     [SerializeField] private GameObject _removeBtn;
+    [SerializeField] private PlacementSystem _placemenSystem;
 
     private void Start() 
     {
@@ -27,14 +26,9 @@ public class ActBuildingUI : MonoBehaviour
     /// <summary>
     /// Set UI for like confirm, cancel button on UI when Place or click a building
     /// </summary>
-    public void StartPlaceBuilding(BuildingController buildingScript)
+    public void StartPlaceBuilding(int id)
     {
-        _currentBuildingAction = buildingScript;
-
-        //UI
-        _buildingActionUI.SetActive(_buildingActionUI);
-        _upgradeBtn.SetActive(false);
-        // _confirmBtn.SetActive(true);
+        _placemenSystem.StartPlaceBuilding(id);
     }
 
     /// <summary>

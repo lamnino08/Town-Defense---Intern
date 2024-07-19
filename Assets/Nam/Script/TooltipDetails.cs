@@ -22,7 +22,7 @@ public class TooltipDetails : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        TooltipManager.Instance.Show(TitleText, DetailsText);
+        // TooltipManager.Instance.Show(TitleText, DetailsText);
     }
     public void OnPointerExit(PointerEventData eventData)
     {

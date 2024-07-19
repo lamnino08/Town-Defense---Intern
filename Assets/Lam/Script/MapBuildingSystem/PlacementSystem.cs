@@ -23,15 +23,6 @@ public class PlacementSystem : MonoBehaviour
         _camera = Camera.main;
     }
 
-    // private void Update()
-    // {
-    //     if (_camera != null)
-    //     {
-    //         Vector3 mousePositionInWorld = GetPositionGrid();
-    //         // Debug.Log("Position On Grid: " + mousePositionInWorld);
-    //     }
-    // }
-
     /// <summary>
     /// Spawn a building when click build a building a building on UI
     /// </summary>

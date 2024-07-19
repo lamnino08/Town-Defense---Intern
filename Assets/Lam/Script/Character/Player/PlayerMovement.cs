@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,7 +34,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return; // Exit if the click is on UI
+            }
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _natureMask))
             {
@@ -54,8 +58,6 @@ public class PlayerMovement : MonoBehaviour
                     _natureTarget = null;
                 }
             }
-
-            
         }
 
         float distanceDestination = Vector3.Distance(transform.position, _destination);

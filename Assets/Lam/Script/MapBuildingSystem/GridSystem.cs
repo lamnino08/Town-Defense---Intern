@@ -22,7 +22,7 @@ public class GridSystem : MonoBehaviour
         }
 
         JsonReader jsonReader = new JsonReader("GridData.json");
-        jsonReader.GenerateMapData();
+        // jsonReader.GenerateMapData();
         _nodes = jsonReader.ReadNodesFromJson(); // Path to your JSON file
         InitializeGrid();
     }
@@ -70,7 +70,6 @@ public class GridSystem : MonoBehaviour
                 int level = node.level;
                 float x = node.x;
                 float y = node.y;
-                float direction = node.direction;
 
                 ObjectData objectNode = _constructionData.GetObjectDataById(id);
                 GameObject prefabToInstantiate = objectNode.prefab;
