@@ -83,7 +83,7 @@ public class GridSystem : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(x, 0, y);
                     GameObject instantiatedObject = Instantiate(prefabToInstantiate, spawnPosition, Quaternion.identity);
                     BuildingController scriptController = instantiatedObject.GetComponent<BuildingController>();
-                    scriptController.SpawnFromJson(level, objectNode);
+                    // scriptController.SpawnFromJson(level, objectNode);
                 }
                 else
                 {

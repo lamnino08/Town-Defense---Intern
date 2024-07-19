@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 4614077433464597716}
   - component: {fileID: 8582891640340143401}
   - component: {fileID: 4407240571104735939}
-  - component: {fileID: -7178159283317398733}
+  - component: {fileID: -401290665533445621}
   m_Layer: 9
   m_Name: House
   m_TagString: Untagged
@@ -365,7 +365,7 @@ MonoBehaviour:
   _currentHealth: 0
   healthBarUI: {fileID: 7801770848204441005}
   healthBar: {fileID: 6285269214746061575}
---- !u!114 &-7178159283317398733
+--- !u!114 &-401290665533445621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,13 +374,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5806208722561866864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87fe4257fed469438e792613f1a8192, type: 3}
+  m_Script: {fileID: 11500000, guid: 4234b15a88f67de49914e1ef1dea6b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _offset: {x: 0, y: 0, z: 0}
   level: 0
-  _isDragging: 0
-  _renderer: {fileID: 2525477885698635549}
+  _renderer: {fileID: 0}
   dataObject:
     <id>k__BackingField: 0
     <height>k__BackingField: 0

@@ -338,8 +338,8 @@ GameObject:
   - component: {fileID: 4507529805078894819}
   - component: {fileID: 8502556875329444613}
   - component: {fileID: 6800569086241914556}
-  - component: {fileID: 3269295564301799350}
   - component: {fileID: 3367095112847607753}
+  - component: {fileID: 5436563659498981149}
   m_Layer: 9
   m_Name: Knight building 1
   m_TagString: Untagged
@@ -453,28 +453,6 @@ MonoBehaviour:
   _currentHealth: 0
   healthBarUI: {fileID: 8553259973498828838}
   healthBar: {fileID: 8441406865672540807}
---- !u!114 &3269295564301799350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3949441240733454769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87fe4257fed469438e792613f1a8192, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _offset: {x: 0, y: 0, z: 0}
-  level: 0
-  _isDragging: 0
-  _renderer: {fileID: 2281953163093355866}
-  dataObject:
-    <id>k__BackingField: 0
-    <height>k__BackingField: 0
-    <width>k__BackingField: 0
-    <health>k__BackingField: []
-    <prefab>k__BackingField: {fileID: 0}
 --- !u!114 &3367095112847607753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +471,26 @@ MonoBehaviour:
   - {fileID: 4156447512060039581}
   - {fileID: 2747270465166539260}
   soldierPrefab: {fileID: 1627654251520149688, guid: 634923e63008abc49ac73af1ba6d7dc3, type: 3}
+--- !u!114 &5436563659498981149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3949441240733454769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4234b15a88f67de49914e1ef1dea6b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  _renderer: {fileID: 0}
+  dataObject:
+    <id>k__BackingField: 0
+    <height>k__BackingField: 0
+    <width>k__BackingField: 0
+    <health>k__BackingField: []
+    <prefab>k__BackingField: {fileID: 0}
 --- !u!1 &5951498990145709947
 GameObject:
   m_ObjectHideFlags: 0

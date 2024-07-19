@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7158133750390035308}
   - component: {fileID: 6181239899372785528}
   - component: {fileID: 587534880733810388}
-  - component: {fileID: -7052749171403735018}
+  - component: {fileID: 2426319191003481344}
   m_Layer: 11
   m_Name: wall_straight_gate
   m_TagString: Gate
@@ -201,7 +201,7 @@ MonoBehaviour:
     m_Bits: 128
   _rangeDetect: 2
   _animaton: {fileID: 0}
---- !u!114 &-7052749171403735018
+--- !u!114 &2426319191003481344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,13 +210,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2521600958711322454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87fe4257fed469438e792613f1a8192, type: 3}
+  m_Script: {fileID: 11500000, guid: 4234b15a88f67de49914e1ef1dea6b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _offset: {x: 0, y: 0, z: 0}
   level: 0
-  _isDragging: 0
-  _renderer: {fileID: 8350193611519809358}
+  _renderer: {fileID: 0}
   dataObject:
     <id>k__BackingField: 0
     <height>k__BackingField: 0

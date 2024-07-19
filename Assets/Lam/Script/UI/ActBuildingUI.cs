@@ -42,7 +42,7 @@ public class ActBuildingUI : MonoBehaviour
     /// </summary>
     public void CoinfirmPlaceBuidling()
     {
-        _currentBuildingAction.Place();
+        // _currentBuildingAction.Place();
 
         //UI
         // _buildingActionUI.SetActive(_buildingActionUI);
@@ -56,8 +56,8 @@ public class ActBuildingUI : MonoBehaviour
     /// </summary>
     public void RemoveBuildingBtn()
     {
-        _currentBuildingAction.Remove();
-        _buildingActionUI.SetActive(false);
+        // _currentBuildingAction.Remove();
+        // _buildingActionUI.SetActive(false);
     }
 
     /// <summary>
@@ -65,16 +65,16 @@ public class ActBuildingUI : MonoBehaviour
     /// </summary>
     public void ClickOnBuilding(BuildingController buildingScript)
     {
-        if (_currentBuildingAction && !_currentBuildingAction.isPlaced)
-        {
-            Destroy(_currentBuildingAction.gameObject);
-        }
-        _currentBuildingAction = buildingScript;
+        // if (_currentBuildingAction && !_currentBuildingAction.isPlaced)
+        // {
+        //     Destroy(_currentBuildingAction.gameObject);
+        // }
+        // _currentBuildingAction = buildingScript;
 
-        //UI
-        _buildingActionUI.SetActive(true);
-        _upgradeBtn.SetActive(true);
-        _removeBtn.SetActive(true);
+        // //UI
+        // _buildingActionUI.SetActive(true);
+        // _upgradeBtn.SetActive(true);
+        // _removeBtn.SetActive(true);
     }
 
     public void AllowRemove(bool active)
@@ -84,11 +84,11 @@ public class ActBuildingUI : MonoBehaviour
 
     public void ExitUI()
     {
-        if (!_currentBuildingAction.isPlaced)
-        {
-            Destroy(_currentBuildingAction.gameObject);
-        }
-        _buildingActionUI.SetActive(false);
+        // if (!_currentBuildingAction.isPlaced)
+        // {
+        //     Destroy(_currentBuildingAction.gameObject);
+        // }
+        // _buildingActionUI.SetActive(false);
     }
 
 }

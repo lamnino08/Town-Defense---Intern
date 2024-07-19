@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 932977982403841127}
   - component: {fileID: 3717220054791606407}
   - component: {fileID: 1718179235600939609}
-  - component: {fileID: 4940558139645994070}
+  - component: {fileID: 3481798399383959708}
   m_Layer: 9
   m_Name: wind 1
   m_TagString: Untagged
@@ -220,7 +220,7 @@ MonoBehaviour:
   _currentHealth: 0
   healthBarUI: {fileID: 9005976358841270164}
   healthBar: {fileID: 2743658898596570650}
---- !u!114 &4940558139645994070
+--- !u!114 &3481798399383959708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,13 +229,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 252996981377476072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87fe4257fed469438e792613f1a8192, type: 3}
+  m_Script: {fileID: 11500000, guid: 4234b15a88f67de49914e1ef1dea6b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _offset: {x: 0, y: 0, z: 0}
   level: 0
-  _isDragging: 0
-  _renderer: {fileID: 456303016270197765}
+  _renderer: {fileID: 0}
   dataObject:
     <id>k__BackingField: 0
     <height>k__BackingField: 0

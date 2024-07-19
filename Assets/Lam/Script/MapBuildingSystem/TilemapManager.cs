@@ -64,13 +64,23 @@ public class TilemapManager : MonoBehaviour
         foreach(SaveTile savetiled in map.groundTiles)
         {
             _natureMap.SetTile(savetiled.pos, savetiled.tile);
-            Debug.Log(savetiled.tile.gameObject.name);
+            // Debug.Log(savetiled.tile.gameObject.name);
         }
 
         foreach(var savetiled in map.unitTiles)
         {
-            // _constructionMap.SetTile(savetiled.pos, savetiled.tile);
+            _constructionMap.SetTile(savetiled.pos, savetiled.tile);
         }
+    }
+
+    public bool CheckPosHasTile(Vector3Int pos)
+    {
+        if (_natureMap.HasTile(pos) || _constructionMap.HasTile(pos))
+        {
+            return false;
+        }
+
+        return false;
     }
 }
 

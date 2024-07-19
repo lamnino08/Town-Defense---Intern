@@ -10,12 +10,14 @@ public abstract class Attack : MonoBehaviour
     protected ArmyAnimator _animator;
     protected Coroutine isAttackProcess;
     protected ParticleSystem AttackEffect;
+    [SerializeField] protected CharacterAudio _audioSource;
     protected ArmyMovement _armyMovement;
 
     protected virtual void Start() {
         _animator = GetComponent<ArmyAnimator>();
         AttackEffect = GetComponentInChildren<ParticleSystem>();
         _armyMovement = GetComponent<ArmyMovement>();
+        _audioSource = GetComponent<CharacterAudio>();
     }
 
     public virtual void Acttack(GameObject enemy)
