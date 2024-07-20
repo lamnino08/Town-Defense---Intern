@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-
-// using System.Numerics;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class BuildingController : MonoBehaviour
 {
@@ -22,7 +17,7 @@ public class BuildingController : MonoBehaviour
         _previous = transform.position;
     }
 
-    private void Update()
+    private void Update() 
     {
         FollowMousePosition();
     }
@@ -34,7 +29,6 @@ public class BuildingController : MonoBehaviour
         _buildingManager = buildingManager;
         if ((width & 1) == 0) _offset.x += 0.5f;
         if ((height & 1) == 0) _offset.z += 0.5f;
-        // Debug.Log(_offset);
 
         transform.position += _offset;
     }
@@ -45,7 +39,6 @@ public class BuildingController : MonoBehaviour
         if (isCheck)
         {
             CheckData();
-          
             isCheck = false;
         }
         if (_previous != mousePosInGrid)
@@ -55,30 +48,31 @@ public class BuildingController : MonoBehaviour
             _previous = mousePosInGrid;
         }
 
-         if (Input.GetMouseButtonDown(1)) // 1 đại diện cho nhấp chuột phải
+
+        if (Input.GetMouseButtonDown(0))
         {
-            // Kiểm tra nếu chuột đang nằm trên đối tượng này
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (EventSystem.current.IsPointerOverGameObject())
             {
-                if (hit.collider.gameObject == gameObject)
-                {
-                    Destroy(gameObject);
-                }
+                return; // Exit if the click is on UI
             }
+            if (CheckData())
+            {
+                _buildingManager.PlaceSuccess();
+            } else
+            {
+                Destroy(gameObject);
+            }
+        }
+        
+        if (Input.GetMouseButtonDown(1)) 
+        {
+            Destroy(gameObject);
         }
     }
 
     private void OnMouseDown() 
     {
-        if (CheckData())
-        {
-            _buildingManager.PlaceSuccess();
-        } else
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
     public bool CheckData()
@@ -88,10 +82,10 @@ public class BuildingController : MonoBehaviour
 
     private void Movement(Vector3 mousePosInGrid)
     {
-        {
+        // {
             Vector3 nepose = new Vector3(mousePosInGrid.x, 0.01f, mousePosInGrid.z);
             transform.position = nepose + _offset;
             _previous = transform.position;
-        }
+        // }
     }
 }

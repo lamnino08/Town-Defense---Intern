@@ -1,14 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
-
-
-
-// using System.Numerics;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -16,16 +7,18 @@ public class BuildingManager : MonoBehaviour
     [SerializeField] private Renderer _renderer;
     public ObjectData dataObject; 
     private PlaneCheckGrid _plane;
+    [SerializeField] SpawnSoldierInBuilding _spawnSoldier;
     private void Start()
     {
         _plane = GetComponentInChildren<PlaneCheckGrid>();
+        _spawnSoldier = GetComponent<SpawnSoldierInBuilding>();
     }
 
     public void StartPlace(ObjectData data)
     {
         dataObject = data;
 
-        BuildingController controller = this.AddComponent<BuildingController>();
+        BuildingController controller = this.gameObject.AddComponent<BuildingController>();
         controller.SetData(dataObject.width, dataObject.height, this);
     }
 
@@ -36,13 +29,28 @@ public class BuildingManager : MonoBehaviour
 
     public void PlaceSuccess()
     {
+        //Place 
         Vector3 newPosition = transform.position;
         newPosition.y = 0;
         transform.position = newPosition;
         _plane.NormalColor();
+
+        // Update data
         NodeData node = new NodeData(dataObject.id, 1, transform.position.x, transform.position.z);
         ConstructionSave.instance.AddBuilding(node);
 
+        //Spawn soldier
+        Spawn();
+
         Destroy(GetComponent<BuildingController>());
+    }
+
+    public void Spawn()
+    {
+        if (_spawnSoldier)
+        {
+            Debug.Log("here");
+            _spawnSoldier.Spawn();
+        }
     }
 }

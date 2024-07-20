@@ -5,10 +5,10 @@ public class PlaneCheckGrid : MonoBehaviour
 {
     [SerializeField] private LayerMask _planMask;
     private Collider _collider;
-    static Color _normalColor = new Color(50f/255f, 65f/255f, 49f/255f);
-    static Color _validColor = new Color(60f/255f, 70f/255f, 49f/255f);
+    static Color _normalColor = new Color(50f/255f, 65f/255f, 49f/255f); // Khi ma dat roi => 
+    static Color _validColor = new Color(60f/255f, 70f/255f, 49f/255f); // Khi ma duoc dat
     // static Color _validColor = new Color(50f/255f, 70f/255f, 49f/255f);
-    static Color _inValidColor = new Color(104f/255f, 43f/255f, 17f/255f);
+    static Color _inValidColor = new Color(104f/255f, 43f/255f, 17f/255f); // Khi ma khong duoc dat
     private Renderer _rendere;
 
     private void Start() 

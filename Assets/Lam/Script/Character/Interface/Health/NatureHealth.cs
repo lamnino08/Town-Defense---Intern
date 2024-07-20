@@ -55,6 +55,7 @@ public abstract class NatureHealth : MonoBehaviour
         if (_currentHealth <= 0)
         {
             _nature.Manufacture();
+            TilemapManager.instance.RemoveTileNatureInPos(Vector3Int.RoundToInt(transform.position));
             Destroy(gameObject);
         }
     }

@@ -34,12 +34,9 @@ public class PlacementSystem : MonoBehaviour
         {
             Destroy(_currentBuil);
         }
-    
-        _currentBuil = Instantiate(data.prefab);
+        _currentBuil = Instantiate(data.prefab, Vector3.zero, Quaternion.identity);
         BuildingManager script = _currentBuil.GetComponent<BuildingManager>();
         script.StartPlace(data);
-
-        // ActBuildingUI.instance.StartPlaceBuilding(script);
     }
 
     private Vector3 GetMouseOnWorld()

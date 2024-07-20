@@ -21,20 +21,29 @@ public class ConstructionSave : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        LoadMap();
     }
 
     public void AddBuilding(NodeData node)
     {
         ScriptableConstruction constructionMapData = Resources.Load<ScriptableConstruction>($"Map/ConstructionData");
-        constructionMapData.constructions.Add(node);
-        ScriptableObjectConstructionUtility.SaveLFile(constructionMapData);
+         if (!constructionMapData.constructions.Contains(node))
+        {
+            constructionMapData.constructions.Add(node);
+            EditorUtility.SetDirty(constructionMapData);
+            AssetDatabase.SaveAssets();
+        }
     }
 
     public void RemoveBuidling(NodeData node)
     {
         ScriptableConstruction constructionMapData = Resources.Load<ScriptableConstruction>($"Map/ConstructionData");
-        constructionMapData.constructions.Remove(node);
-        ScriptableObjectConstructionUtility.SaveLFile(constructionMapData);
+        if (constructionMapData.constructions.Contains(node))
+        {
+            constructionMapData.constructions.Remove(node);
+            EditorUtility.SetDirty(constructionMapData);
+            AssetDatabase.SaveAssets();
+        }
     }
 
     public void ClearMap()
@@ -48,7 +57,8 @@ public class ConstructionSave : MonoBehaviour
         foreach(NodeData e in map.constructions)
         {
             Vector3 pos = new Vector3(e.x, 0, e.y);
-            Instantiate(_constructionData.GetObjectDataById(e.id).prefab);
+            GameObject buildongobj = Instantiate(_constructionData.GetObjectDataById(e.id).prefab,pos,Quaternion.identity);
+            buildongobj.GetComponent<BuildingManager>().Spawn();
         }
     }
 }

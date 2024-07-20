@@ -7,7 +7,7 @@ public class SpawnSoldierInBuilding : MonoBehaviour
     [SerializeField] List<Transform> marks = new List<Transform>();
     [SerializeField] GameObject soldierPrefab;
 
-    void Start()
+    public void Spawn()
     {
         foreach(Transform e in marks)
         {
