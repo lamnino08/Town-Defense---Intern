@@ -7,8 +7,23 @@ using Unity.VisualScripting;
 
 public class TilemapManager : MonoBehaviour 
 {
+    private static TilemapManager _instance;
+    public static TilemapManager instance => instance;
+
     [SerializeField] private Tilemap _natureMap, _constructionMap;
     [SerializeField] private int _levelIndex;
+
+    void Start()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        } else
+        {
+            Destroy(gameObject);
+        }
+        LoadMap();
+    }
 
     public void SaveMap()
     {
@@ -40,6 +55,14 @@ public class TilemapManager : MonoBehaviour
         }
     }
 
+    public void RemoveTileNatureInPos(Vector3Int pos)
+    {
+        if (_natureMap.HasTile(pos))
+        {
+            _natureMap.SetTile(pos, null);
+        }
+    }
+
     public void ClearMap()
     {
         Tilemap[] maps = FindObjectsOfType<Tilemap>();
@@ -52,7 +75,7 @@ public class TilemapManager : MonoBehaviour
 
     public void LoadMap()
     {
-        var map = Resources.Load<ScriptableTile>($"Map/mapData");
+        ScriptableTile map = Resources.Load<ScriptableTile>($"Map/mapData");
         if (map == null)
         {
             Debug.LogError("Map data is not exist");
@@ -90,7 +113,6 @@ public static class ScriptableObjectUtility
     public static void SaveLevelFile(ScriptableTile level)
     {
         AssetDatabase.CreateAsset(level, $"Assets/Resources/Map/mapData.asset");
-
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
