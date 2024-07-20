@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent( typeof(NavMeshAgent), typeof(NavMeshObstacle))]
-public abstract class ArmyDynamicMovement : ArmyMovement, IArmyMovement, ICharacterMovement, ICharacterDynamicMovement
+public abstract class ArmyDynamicMovement : ArmyMovement, ICharacterMovement, ICharacterDynamicMovement
 {
     [SerializeField] protected LayerMask _layerAttack;
     [SerializeField] protected float _distanceStoppingToStop;

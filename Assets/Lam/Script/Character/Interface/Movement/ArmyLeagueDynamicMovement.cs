@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent( typeof(NavMeshAgent), typeof(NavMeshObstacle))]
-public abstract class ArmyLeagueDynamicMovement : ArmyDynamicMovement
+public abstract class ArmyLeagueDynamicMovement : ArmyDynamicMovement, ICharacterUnit
 {
     protected bool isOrder = false;
     protected Vector3 _orderTager;
