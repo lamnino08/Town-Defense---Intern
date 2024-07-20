@@ -340,14 +340,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4234b15a88f67de49914e1ef1dea6b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  _renderer: {fileID: 0}
   dataObject:
     <id>k__BackingField: 0
     <height>k__BackingField: 0
     <width>k__BackingField: 0
     <health>k__BackingField: []
     <prefab>k__BackingField: {fileID: 0}
+    tile: {fileID: 0}
 --- !u!1 &5613408476462889557
 GameObject:
   m_ObjectHideFlags: 0
