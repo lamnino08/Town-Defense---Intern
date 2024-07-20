@@ -215,7 +215,7 @@ MeshCollider:
   m_GameObject: {fileID: 6880847354634219047}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -230,7 +230,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.53, y: 0.62700003, z: 0.605}
+  m_Extents: {x: 0.5, y: 0.62700003, z: 0.5}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
