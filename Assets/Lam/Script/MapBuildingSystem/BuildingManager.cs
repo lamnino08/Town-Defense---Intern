@@ -3,15 +3,14 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
-    public int level;
-    [SerializeField] private Renderer _renderer;
+    private int _level;
+    private Renderer _renderer;
     public ObjectData dataObject; 
     private PlaneCheckGrid _plane;
-    [SerializeField] SpawnSoldierInBuilding _spawnSoldier;
+    SpawnSoldierInBuilding _spawnSoldier;
     private void Start()
     {
         _plane = GetComponentInChildren<PlaneCheckGrid>();
-        _spawnSoldier = GetComponent<SpawnSoldierInBuilding>();
     }
 
     public void StartPlace(ObjectData data)
@@ -47,10 +46,10 @@ public class BuildingManager : MonoBehaviour
 
     public void Spawn()
     {
+        _spawnSoldier = GetComponent<SpawnSoldierInBuilding>();
         if (_spawnSoldier)
         {
-            Debug.Log("here");
             _spawnSoldier.Spawn();
-        }
+        } 
     }
 }

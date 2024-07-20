@@ -224,14 +224,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4234b15a88f67de49914e1ef1dea6b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  _renderer: {fileID: 0}
   dataObject:
     <id>k__BackingField: 0
     <height>k__BackingField: 0
     <width>k__BackingField: 0
     <health>k__BackingField: []
     <prefab>k__BackingField: {fileID: 0}
+    tile: {fileID: 0}
 --- !u!1 &2883726433790507987
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +319,8 @@ GameObject:
   - component: {fileID: 3324220814863312901}
   - component: {fileID: 456303016270197765}
   - component: {fileID: 4912576019617960540}
+  - component: {fileID: 4270922549006763085}
+  - component: {fileID: 4727413724412312399}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -401,11 +402,39 @@ MeshCollider:
   m_GameObject: {fileID: 5034534981482660701}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4270922549006763085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5034534981482660701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad8caa4db3ce1b45ac76613c875ed84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _planMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!65 &4727413724412312399
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5034534981482660701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.8, y: 0.2, z: 9.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6317019621622963223
 GameObject:
   m_ObjectHideFlags: 0
