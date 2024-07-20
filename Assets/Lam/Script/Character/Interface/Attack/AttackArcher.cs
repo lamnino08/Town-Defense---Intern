@@ -11,8 +11,8 @@ public abstract class AttackArcher : Attack
         while (enemy)
         {
             _animator.Attack();
-            _audioSource.PlayClip(AudioManagerl.instance.bowAttack);
             GameObject arrow = Instantiate(arrowPrefab, bowTransform.position, bowTransform.rotation * new Quaternion(0,-90,0,0));
+            AudioAssitance.Instance.PlaySFX("Sound bow");
             AArrowMovement arrowScript = arrow.GetComponent<AArrowMovement>();
             if (arrowScript)
             {

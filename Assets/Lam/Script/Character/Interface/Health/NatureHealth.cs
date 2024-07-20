@@ -11,6 +11,7 @@ public abstract class NatureHealth : MonoBehaviour
     [SerializeField] protected Slider healthBar;
     protected Animator animator;
     protected Coroutine isAttackProcess;
+    protected Coroutine isAttackProcessSound;
     protected int _isDeadHash;
     protected Nature _nature;
     // NavMeshObstacle _navMeshObsticle;
@@ -32,6 +33,7 @@ public abstract class NatureHealth : MonoBehaviour
     {
         float timeToManufacture = _maxHealth/_damage;
         isAttackProcess = StartCoroutine(ProcessManufacture(timeToManufacture));
+        isAttackProcessSound = StartCoroutine(ProcessManufactureSound());
         return timeToManufacture;
     }
 
@@ -57,12 +59,23 @@ public abstract class NatureHealth : MonoBehaviour
         }
     }
 
+    private IEnumerator ProcessManufactureSound()
+    {
+        while (true)
+        {
+            healthBar.value = _currentHealth;
+            AudioAssitance.Instance.PlaySFX("Sound cut tree");
+            yield return new WaitForSeconds(1);
+        }
+    }
+
     public void StopTakeDamge()
     {
         if (isAttackProcess != null)
         {
             healthBarUI.SetActive(false);
             StopCoroutine(isAttackProcess);
+            StopCoroutine(isAttackProcessSound);
         }
     }
 
