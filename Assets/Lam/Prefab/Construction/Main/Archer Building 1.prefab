@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 1991440745210191653}
   m_Layer: 9
   m_Name: Archer Building 1
-  m_TagString: Untagged
+  m_TagString: construction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,7 +313,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.52, z: 0.775}
+  m_Extents: {x: 0.53, y: 0.52, z: 0.58}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1

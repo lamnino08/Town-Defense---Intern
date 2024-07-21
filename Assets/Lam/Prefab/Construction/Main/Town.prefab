@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 3150057527663064897}
   m_Layer: 9
   m_Name: Town
-  m_TagString: Untagged
+  m_TagString: construction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -273,8 +273,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8630227, y: 2.359043, z: 1.7314626}
-  m_Center: {x: 0.014810681, y: 1.1795212, z: 0.008290112}
+  m_Size: {x: 1.52, y: 1.9301708, z: 1.41}
+  m_Center: {x: 0.014810681, y: 0.96508515, z: 0.008290112}
 --- !u!208 &3413513464192983071
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.895, y: 1.15, z: 0.87}
+  m_Extents: {x: 0.555, y: 1.15, z: 0.655}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1

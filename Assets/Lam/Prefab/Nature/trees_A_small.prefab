@@ -292,11 +292,11 @@ GameObject:
   - component: {fileID: 4214021587554833866}
   - component: {fileID: 6434997531107153934}
   - component: {fileID: 8575651399780182124}
-  - component: {fileID: -2859728713065290254}
   - component: {fileID: 2099448831666843156}
   - component: {fileID: 4709964515220512741}
   - component: {fileID: 4427240284889717438}
   - component: {fileID: 1164580329325881462}
+  - component: {fileID: 7207086980839820842}
   m_Layer: 12
   m_Name: trees_A_small
   m_TagString: Untagged
@@ -371,22 +371,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!208 &-2859728713065290254
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6278726611815814993}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.554, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.047000002, y: 0.53400004, z: -0.013}
-  m_TimeToStationary: 0.5
 --- !u!54 &2099448831666843156
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -446,6 +430,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources:
   - {fileID: 11400000, guid: 6361d2a8f1d566342baaca5e605cf559, type: 2}
+--- !u!208 &7207086980839820842
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278726611815814993}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.43, y: 0.554, z: 0.505}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.047000002, y: 0.53400004, z: -0.013}
+  m_TimeToStationary: 0.5
 --- !u!1 &6472602188401025897
 GameObject:
   m_ObjectHideFlags: 0

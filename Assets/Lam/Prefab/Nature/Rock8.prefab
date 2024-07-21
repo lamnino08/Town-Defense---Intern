@@ -97,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.070246, y: 1.6011604, z: 8.1365185}
-  m_Center: {x: -0.06710589, y: 0.75058025, z: -0.3414689}
+  m_Size: {x: 9.070246, y: 0.1, z: 8.1365185}
+  m_Center: {x: -0.06710589, y: 0.05921778, z: -0.34146875}
 --- !u!114 &2504391852778280046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,11 +422,11 @@ GameObject:
   - component: {fileID: 3555743165623846923}
   - component: {fileID: 3555743165624945355}
   - component: {fileID: 3555743165629315755}
-  - component: {fileID: -7372063555472213558}
   - component: {fileID: 8528559642689905492}
   - component: {fileID: -6330208775065881399}
   - component: {fileID: 8316567829621090094}
   - component: {fileID: -4301769869664637471}
+  - component: {fileID: 6283518842617778539}
   m_Layer: 12
   m_Name: Rock8
   m_TagString: Untagged
@@ -515,22 +515,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: e46931e5fb541ca4a87fba28db805a06, type: 3}
---- !u!208 &-7372063555472213558
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3555743165627208715}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.85400003, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.11000001, y: 0.66300005, z: -0.059000004}
-  m_TimeToStationary: 0.5
 --- !u!65 &8528559642689905492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -590,6 +574,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources:
   - {fileID: 11400000, guid: d32e14987ccf5274796aa36644245693, type: 2}
+--- !u!208 &6283518842617778539
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3555743165627208715}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.47, y: 0.85400003, z: 1.33}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.11000001, y: 0.66300005, z: -0.059000004}
+  m_TimeToStationary: 0.5
 --- !u!1 &8777626282942529388
 GameObject:
   m_ObjectHideFlags: 0

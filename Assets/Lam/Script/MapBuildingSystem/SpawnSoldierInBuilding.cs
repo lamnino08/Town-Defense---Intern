@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnSoldierInBuilding : MonoBehaviour
 {
-    [SerializeField] List<Transform> marks = new List<Transform>();
-    [SerializeField] GameObject soldierPrefab;
+    [SerializeField] protected List<Transform> marks = new List<Transform>();
+    [SerializeField] protected GameObject soldierPrefab;
 
-    public void Spawn()
+    public virtual void Spawn()
     {
         foreach(Transform e in marks)
         {

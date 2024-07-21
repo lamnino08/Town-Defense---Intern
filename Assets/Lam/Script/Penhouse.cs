@@ -10,7 +10,7 @@ public class Penhouse : MonoBehaviour
     private int _level; public int level {get => _level;}
     private int _wooden; public int wooden {get => _wooden; }
     private int _gold; public int gold {get => _gold; }
-    private int _rock; public int roc {get => _rock; }
+    private int _rock; public int rock {get => _rock; }
 
 
     private void Awake() 
@@ -20,6 +20,9 @@ public class Penhouse : MonoBehaviour
             Destroy(gameObject);
         } else
         {
+            _wooden = 10;
+            _rock = 10;
+            _gold = 10;
             _instance = this;
         }
     }    
