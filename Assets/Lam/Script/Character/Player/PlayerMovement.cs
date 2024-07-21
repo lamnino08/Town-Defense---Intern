@@ -78,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerAnimator.Run();
             isMoving = true;
+            AudioAssitance.Instance.PlaySFX("Sound walk");
         }
     }
 
