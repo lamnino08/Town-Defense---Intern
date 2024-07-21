@@ -11,16 +11,19 @@ public class Interactionbuilding : MonoBehaviour
     [SerializeField] float tweenDuration;
     void Update()
     {
+         
         // You can add code here for updating the pause menu during gameplay if needed
     }
     public void Open()
     {
+       
         buildingIntro();
         InteractionPanel.SetActive(true);
     }
 
     public async void Exit()
     {
+        
         await buildingOutro();
         InteractionPanel.SetActive(false);
 
