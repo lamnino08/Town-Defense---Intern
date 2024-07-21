@@ -88,7 +88,7 @@ public class TilemapManager : MonoBehaviour
         foreach(SaveTile savetiled in map.groundTiles)
         {
             _natureMap.SetTile(savetiled.pos, savetiled.tile);
-            // Debug.Log(savetiled.tile.gameObject.name);
+            Debug.Log(savetiled.tile.gameObject.name);
         }
 
         foreach(var savetiled in map.unitTiles)
