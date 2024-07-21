@@ -15,14 +15,17 @@ public class Buildingpanel : MonoBehaviour
     }
     public void Open()
     {
+        
         buildingIntro();
         buildingPanels.SetActive(true);
+        AudioAssitance.Instance.PlaySFX("Sound click mouse");
     }
 
     public async void Exit()
     {
        await buildingOutro();
        buildingPanels.SetActive(false);
+       AudioAssitance.Instance.PlaySFX("Sound click mouse");
         
 
     }

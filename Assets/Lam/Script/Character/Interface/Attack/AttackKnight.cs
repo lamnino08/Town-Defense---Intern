@@ -19,6 +19,7 @@ public abstract class AttackKnight : Attack
             IHealth health = _armyMovement.target.GetComponent<IHealth>();
             _animator.Attack();
             effect.Play();
+            AudioAssitance.Instance.PlaySFX("Sound knife ");
             if (health != null)
             {
                 health.TakeDamage(_damage); 
