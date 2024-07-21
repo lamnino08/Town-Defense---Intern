@@ -75,7 +75,6 @@ public class TilemapManager : MonoBehaviour
 
     public void LoadMap()
     {
-        Debug.Log("here");
         ScriptableTile map = Resources.Load<ScriptableTile>($"Map/mapData");
         if (map == null)
         {
