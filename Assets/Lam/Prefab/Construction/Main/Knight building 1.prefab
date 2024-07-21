@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 5436563659498981149}
   m_Layer: 9
   m_Name: Knight building 1
-  m_TagString: Untagged
+  m_TagString: construction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -300,8 +300,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.93, y: 1.2557179, z: 2.14}
-  m_Center: {x: -0.01, y: 0.6278588, z: 0.07}
+  m_Size: {x: 1.4217664, y: 1.2557179, z: 1.4511666}
+  m_Center: {x: -0.019987404, y: 0.6278588, z: -0.06925872}
 --- !u!208 &4507529805078894819
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -312,11 +312,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.99, y: 0.58, z: 1.055}
+  m_Extents: {x: 0.69, y: 0.58, z: 0.715}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.58, z: 0.1}
+  m_Center: {x: 0, y: 0.58, z: -0.01}
   m_TimeToStationary: 0.5
 --- !u!95 &8502556875329444613
 Animator:

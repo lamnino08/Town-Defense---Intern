@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -6598905144487412369}
   m_Layer: 9
   m_Name: Castle
-  m_TagString: Untagged
+  m_TagString: construction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077621540098482617}
   m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70,8 +70,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8868091, y: 0.7889558, z: 2.1739}
-  m_Center: {x: -0.017141342, y: 0.39447767, z: 0.42868483}
+  m_Size: {x: 1.860457, y: 0.7889558, z: 2.03006}
+  m_Center: {x: -0.030317426, y: 0.39447767, z: 0.021460533}
 --- !u!208 &1520685288268370432
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 1.505, y: 0.77, z: 1.375}
+  m_Extents: {x: 0.7, y: 0.77, z: 0.965}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4413887735394962005}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.012, y: 0.02, z: 0.529}
+  m_LocalPosition: {x: 0, y: 0.02, z: 0}
   m_LocalScale: {x: 0.3, y: 1, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -730,11 +730,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140920115011427991, guid: fa7a779d2054dda4f8ba6ca767520a4b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6140920115011427991, guid: fa7a779d2054dda4f8ba6ca767520a4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.015
       objectReference: {fileID: 0}
     - target: {fileID: 6140920115011427991, guid: fa7a779d2054dda4f8ba6ca767520a4b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -742,7 +742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140920115011427991, guid: fa7a779d2054dda4f8ba6ca767520a4b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.486
+      value: 0.061
       objectReference: {fileID: 0}
     - target: {fileID: 6140920115011427991, guid: fa7a779d2054dda4f8ba6ca767520a4b, type: 3}
       propertyPath: m_LocalRotation.w

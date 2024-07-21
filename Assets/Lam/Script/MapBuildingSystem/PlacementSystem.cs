@@ -34,15 +34,20 @@ public class PlacementSystem : MonoBehaviour
         {
             Destroy(_currentBuil);
         }
-        _currentBuil = Instantiate(data.prefab, Vector3.zero, Quaternion.identity);
-        BuildingManager script = _currentBuil.GetComponent<BuildingManager>();
-        script.StartPlace(data);
+        
+        if (data.costToBuild.Check())
+        {
+            _currentBuil = Instantiate(data.prefab, Vector3.zero, Quaternion.identity);
+            BuildingManager script = _currentBuil.GetComponent<BuildingManager>();
+            script.StartPlace(data);
+        } else
+        {
+            Debug.Log("Ngheo qua xay khong duoc nha");
+        }
     }
 
     private Vector3 GetMouseOnWorld()
     {
-        // Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        // Plane plane = new Plane(Vector3.up, 0); // Adjusted to Vector3.up
 
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;

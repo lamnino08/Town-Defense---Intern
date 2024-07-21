@@ -86,7 +86,7 @@ NavMeshAgent:
   m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
-  avoidancePriority: 10
+  avoidancePriority: 1
   m_AngularSpeed: 300
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -238,11 +238,11 @@ MonoBehaviour:
   rangeFindEnemy: 30
   layerMaskOfEnemy:
     serializedVersion: 2
-    m_Bits: 640
+    m_Bits: 131712
   target: {fileID: 0}
   _layerAttack:
     serializedVersion: 2
-    m_Bits: 2688
+    m_Bits: 133760
   _distanceStoppingToStop: 6
   speedMove: 1.5
 --- !u!114 &3508233193672078057

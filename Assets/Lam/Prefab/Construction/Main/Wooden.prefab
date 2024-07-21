@@ -103,10 +103,10 @@ GameObject:
   - component: {fileID: 3717220054791606407}
   - component: {fileID: 1718179235600939609}
   - component: {fileID: -3210093827820036081}
-  - component: {fileID: 6619392349256066731}
+  - component: {fileID: -3211178702047886759}
   m_Layer: 9
   m_Name: Wooden
-  m_TagString: Untagged
+  m_TagString: construction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -160,8 +160,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7347019, y: 1.4005171, z: 1.609178}
-  m_Center: {x: -0.012257338, y: 0.700244, z: -0.043812096}
+  m_Size: {x: 1.1607327, y: 1.4005171, z: 0.9615873}
+  m_Center: {x: -0.055229306, y: 0.700244, z: 0.004176095}
 --- !u!208 &932977982403841127
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.825, y: 0.34300002, z: 0.705}
+  m_Extents: {x: 0.46, y: 0.34300002, z: 0.425}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -233,8 +233,11 @@ MonoBehaviour:
     <width>k__BackingField: 0
     <health>k__BackingField: []
     <prefab>k__BackingField: {fileID: 0}
-    tile: {fileID: 0}
---- !u!114 &6619392349256066731
+    <costToBuild>k__BackingField:
+      rock: 0
+      wooden: 0
+      gold: 0
+--- !u!114 &-3211178702047886759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,7 +246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 252996981377476072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 819dddbfc1a9f0b4db1c5a4bfa0ff50e, type: 3}
+  m_Script: {fileID: 11500000, guid: 80992af8af768ad439e993b02392e6e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   marks:

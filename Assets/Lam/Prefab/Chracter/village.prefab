@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 254262579186852852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1627654251520149698}
@@ -341,7 +341,7 @@ NavMeshAgent:
   m_Radius: 0.6
   m_Speed: 2
   m_Acceleration: 8
-  avoidancePriority: 10
+  avoidancePriority: 1
   m_AngularSpeed: 300
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -350,7 +350,7 @@ NavMeshAgent:
   m_Height: 2.09
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!208 &1627654251520149694
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -382,9 +382,13 @@ MonoBehaviour:
   _natureMask:
     serializedVersion: 2
     m_Bits: 4224
+  _constructionMask:
+    serializedVersion: 2
+    m_Bits: 512
   _Work: {fileID: 0}
   _natureTarget: {fileID: 0}
   _selectCircle: {fileID: 5638806846622889921}
+  listTarget: []
 --- !u!114 &1643830392
 MonoBehaviour:
   m_ObjectHideFlags: 0

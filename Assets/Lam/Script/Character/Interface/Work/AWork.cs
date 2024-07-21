@@ -24,7 +24,7 @@ public abstract class AWork : MonoBehaviour
         }
     }
 
-    public void StopManufacture(Transform nature)
+    public virtual void StopManufacture(Transform nature)
     {
         if (isManufactureProcess != null)
         {
@@ -37,15 +37,17 @@ public abstract class AWork : MonoBehaviour
                 NatureHealth health = nature.GetComponent<NatureHealth>();
                 health.StopTakeDamge();
             }
-        } 
+        }
     }
 
-    protected  IEnumerator DoManufacture(Transform nature)
+    protected virtual IEnumerator DoManufacture(Transform nature)
     { 
         NatureHealth health = nature.GetComponent<NatureHealth>();
         float time = health.TakeDamage(_damage);
         _animatorWorker.Work(true);
         yield return new WaitForSeconds(time);
         _animatorWorker.Work(false);
+        isManufactureProcess = null;
+        
     }
 }
