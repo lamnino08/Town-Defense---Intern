@@ -46,6 +46,11 @@ public class PlacementSystem : MonoBehaviour
         }
     }
 
+    public void PlacebuildingSucces()
+    {
+        _currentBuil = null;
+    }
+
     private Vector3 GetMouseOnWorld()
     {
 
