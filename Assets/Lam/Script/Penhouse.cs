@@ -20,6 +20,9 @@ public class Penhouse : MonoBehaviour
             Destroy(gameObject);
         } else
         {
+            _wooden = 10;
+            _rock = 10;
+            _gold = 10;
             _instance = this;
         }
     }    

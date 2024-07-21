@@ -25,3 +25,7 @@ MonoBehaviour:
     level: 1
     x: -3
     y: -1
+  - id: 2
+    level: 1
+    x: 0
+    y: 8

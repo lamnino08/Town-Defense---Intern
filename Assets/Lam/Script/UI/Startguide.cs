@@ -19,6 +19,4 @@ public class Startguide: MonoBehaviour
         UnityEngine.Debug.Log("quit!");
         UnityEngine.Application.Quit();
     }
-    
-
 }
