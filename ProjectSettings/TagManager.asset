@@ -12,6 +12,7 @@ TagManager:
   - plane
   - planeTile
   - construction
+  - tree
   layers:
   - Default
   - TransparentFX

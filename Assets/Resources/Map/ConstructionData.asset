@@ -15,17 +15,13 @@ MonoBehaviour:
   constructions:
   - id: 10
     level: 1
-    x: 2
-    y: 2
+    x: -3
+    y: 0
   - id: 10
     level: 1
-    x: -4
+    x: -3
     y: 2
-  - id: 11
+  - id: 3
     level: 1
     x: -3
-    y: -1
-  - id: 2
-    level: 1
-    x: 0
-    y: 8
+    y: -2

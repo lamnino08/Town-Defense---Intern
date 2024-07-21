@@ -3,33 +3,41 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static GameManager instance {get => _instance;}
+    public static GameManager instance { get => _instance; }
 
-    private StateGame  state = StateGame.Building;
+    private StateGame state = StateGame.Building;
     private Coroutine _countTime;
+    [SerializeField] private ZombieAppearSystem _zombieAppearSystem;
 
-    private void Awake() 
+    private void Awake()
     {
         if (_instance && _instance != this)
         {
             Destroy(gameObject);
-        } else
+        }
+        else
         {
             _instance = this;
             LoadData();
+            StartCoroutine(SwitchToBattleAfterDelay(10)); // 2 minutes
         }
-    }  
+    }
 
-    private void Update() 
+    private IEnumerator SwitchToBattleAfterDelay(float delay)
     {
-        // if (state == StateGame.Building)
-        // {
+        yield return new WaitForSeconds(delay);
+        state = StateGame.Battle;
+        _zombieAppearSystem.SpawnZombies();
+    }
 
-        // }    
+    private void Update()
+    {
+        // Add logic based on the current state if needed.
     }
 
     public void SaveData()
@@ -65,7 +73,7 @@ public static class ScriptableObjecManagertUtility
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
-}    
+}
 
 enum StateGame
 {

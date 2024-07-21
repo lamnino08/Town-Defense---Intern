@@ -2,24 +2,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, ICharacterUnit
+public abstract class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, ICharacterUnit
 {
     protected NavMeshAgent _navMeshAgent;
     protected NavMeshObstacle _navMeshObstacle;
     protected IDynamicAnimator _animatorDynamic;
-    [SerializeField] private LayerMask _natureMask;
-    [SerializeField] private LayerMask _constructionMask;
-    [SerializeField] private ResidentWork _Work;
-    private Vector3 _destination;
-    [SerializeField] private Transform _natureTarget;
+    [SerializeField] protected LayerMask _natureMask;
+    [SerializeField] protected LayerMask _constructionMask;
+    [SerializeField] protected ResidentWork _Work;
+    protected Vector3 _destination;
+    [SerializeField] protected Transform _natureTarget;
+    [SerializeField] protected Transform _previousNatureTarget;
     [SerializeField] GameObject _selectCircle;
-    private ResidentAnimator _animator;
+    protected ResidentAnimator _animator;
     public List<Transform> listTarget = new List<Transform>();
-    private bool isMoving;
-    private Transform OwnHome;
-    bool isBackToHome = false;
+    protected bool isMoving;
+    protected Transform OwnHome;
+    protected bool isBackToHome = false;
 
-    private void Start() 
+
+    protected void Start() 
     {
         _animator = GetComponent<ResidentAnimator>();
 
@@ -31,7 +33,7 @@ public class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, IChara
         _selectCircle.SetActive(false);
     }
 
-    private void Update() 
+    protected void Update() 
     {
         if (isBackToHome)
         {
@@ -43,55 +45,41 @@ public class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, IChara
                 {
                     isBackToHome = false;
                     _animator.Run();
+                    if (_natureTarget == null)
+                    {
+                        listTarget.RemoveAt(0);
+                        _natureTarget = listTarget[0];
+                    } 
                     _navMeshAgent.SetDestination(_natureTarget.position);
                 }
             }
         } else 
         {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f, _natureMask);
-
-            foreach (var collider in hitColliders)
+            if (_natureTarget != null)
             {
-                if (collider.transform == _natureTarget)
-                {
-                    _navMeshAgent.isStopped = true;
-                    _animator.Idle();
-                    _Work.Manufacture(_natureTarget);
-
-                    if (listTarget.Count ==0)
-                    {
-                        DefineNatureArea();
-                    }
-                }
+                CheckDetectTarget();
+            } else
+            {
+                _Work.StopManufacture();
             }
-        }
-    }
-
-    private void DefineNatureArea()
-    {
-        Collider[] additionalTargets = Physics.OverlapSphere(_natureTarget.position, 5f, _natureMask);
             
-        foreach (var additionalCollider in additionalTargets)
-        {
-            if (!listTarget.Contains(additionalCollider.transform))
-            {
-                listTarget.Add(additionalCollider.transform);
-            }
-        }
 
-        listTarget.Sort((a, b) => 
-        Vector3.Distance(transform.position, a.position).CompareTo(
-        Vector3.Distance(transform.position, b.position)));
+        }
     }
+
+    protected abstract void CheckDetectTarget();
+
+    protected abstract void DefineNatureArea();
 
     public void ChaseTarget()
     {
 
     }
 
-    public void DoneTarget(Transform oldTarget)
+    public void DoneTarget()
     {
-        listTarget.Remove(oldTarget);
+        listTarget.Remove(_previousNatureTarget);
+        _previousNatureTarget = null;
 
         if (listTarget.Count > 0)
         {
@@ -107,8 +95,10 @@ public class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, IChara
     public void SetOrderPostion(Vector3 target)
     {
         _destination = new Vector3(target.x, 0, target.z);
+        _Work.StopManufacture();
         _navMeshAgent.SetDestination(_destination);
         _animator.Run();
+        isBackToHome = false;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _natureMask))

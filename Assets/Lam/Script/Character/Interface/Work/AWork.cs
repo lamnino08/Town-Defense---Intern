@@ -24,30 +24,27 @@ public abstract class AWork : MonoBehaviour
         }
     }
 
-    public virtual void StopManufacture(Transform nature)
+    public virtual void StopManufacture()
     {
         if (isManufactureProcess != null)
         {
             StopCoroutine(isManufactureProcess);
             isManufactureProcess = null;
             _animatorWorker.Work(false);
-
-            if (nature)
-            {
-                NatureHealth health = nature.GetComponent<NatureHealth>();
-                health.StopTakeDamge();
-            }
         }
     }
 
     protected virtual IEnumerator DoManufacture(Transform nature)
     { 
         NatureHealth health = nature.GetComponent<NatureHealth>();
-        float time = health.TakeDamage(_damage);
-        _animatorWorker.Work(true);
-        yield return new WaitForSeconds(time);
-        _animatorWorker.Work(false);
-        isManufactureProcess = null;
-        
+        while (true)
+        {
+            _animatorWorker.Work(true);
+            if (health != null)
+            {
+                health.TakeDamage(_damage); 
+            }
+            yield return new WaitForSeconds(1);
+        }
     }
 }

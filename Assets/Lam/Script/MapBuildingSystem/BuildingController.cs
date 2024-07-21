@@ -58,6 +58,7 @@ public class BuildingController : MonoBehaviour
             if (CheckData())
             {
                 _buildingManager.PlaceSuccess();
+                PlacementSystem.instance.PlacebuildingSucces();
             } else
             {
                 Destroy(gameObject);
@@ -70,10 +71,6 @@ public class BuildingController : MonoBehaviour
         }
     }
 
-    private void OnMouseDown() 
-    {
-        
-    }
 
     public bool CheckData()
     {

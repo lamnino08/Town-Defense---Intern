@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (_natureTarget != null)
                     {
-                        _playerWork.StopManufacture(_natureTarget);
+                        _playerWork.StopManufacture();
                     }
                     _natureTarget = hitInfo.transform;
                     MoveToTarget();
@@ -54,10 +54,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (_natureTarget != null)
                 {
-                    _playerWork.StopManufacture(_natureTarget);
+                    _playerWork.StopManufacture();
                     _natureTarget = null;
                 }
             }
+        }
+
+        if (_natureTarget == null)
+        {
+            _playerWork.StopManufacture();
         }
 
         float distanceDestination = Vector3.Distance(transform.position, _destination);
