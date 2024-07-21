@@ -15,9 +15,9 @@ public class Buildingpanel : MonoBehaviour
     }
     public void Open()
     {
-        
         buildingIntro();
         buildingPanels.SetActive(true);
+        Debug.Log("here");
         AudioAssitance.Instance.PlaySFX("Sound click mouse");
     }
 
@@ -26,8 +26,6 @@ public class Buildingpanel : MonoBehaviour
        await buildingOutro();
        buildingPanels.SetActive(false);
        AudioAssitance.Instance.PlaySFX("Sound click mouse");
-        
-
     }
     
     void buildingIntro()

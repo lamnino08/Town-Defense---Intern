@@ -27,6 +27,15 @@ public class Penhouse : MonoBehaviour
         }
     }    
 
+    public void SetData(int rock, int gold, int wood)
+    {
+        _rock = rock;
+        _gold = gold;
+        _wooden = wood;
+
+        Debug.Log("setUI");
+    }
+
     public void AddWood(int amount)
     {
         _wooden += amount;

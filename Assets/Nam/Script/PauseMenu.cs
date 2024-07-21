@@ -11,7 +11,10 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] float tweenDuration;
     void Update()
     {
-        // You can add code here for updating the pause menu during gameplay if needed
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
+        }
     }
 
     public void Pause()
