@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (EventSystem.current.IsPointerOverGameObject())
+            if (EventSystem.current.IsPointerOverGameObject() || Input.GetKey(KeyCode.LeftShift))
             {
                 return; // Exit if the click is on UI
             }
@@ -83,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
         if (_natureTarget != null && other.transform == _natureTarget)
         {
             _playerAnimator.Idle();

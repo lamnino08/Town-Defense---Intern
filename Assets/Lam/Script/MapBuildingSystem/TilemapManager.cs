@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 public class TilemapManager : MonoBehaviour 
 {
     private static TilemapManager _instance;
-    public static TilemapManager instance => instance;
+    public static TilemapManager instance => _instance;
 
     [SerializeField] private Tilemap _natureMap, _constructionMap;
     [SerializeField] private int _levelIndex;
@@ -87,7 +87,7 @@ public class TilemapManager : MonoBehaviour
         foreach(SaveTile savetiled in map.groundTiles)
         {
             _natureMap.SetTile(savetiled.pos, savetiled.tile);
-            // Debug.Log(savetiled.tile.gameObject.name);
+            Debug.Log(savetiled.tile.gameObject.name);
         }
 
         foreach(var savetiled in map.unitTiles)

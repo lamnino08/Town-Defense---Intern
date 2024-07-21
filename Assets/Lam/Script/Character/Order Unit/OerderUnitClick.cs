@@ -52,9 +52,7 @@ public class OerderUnitClick : MonoBehaviour
                 int targetIndex = 0;
                 foreach (GameObject unit in unitSlection.listSelection)
                 {
-                    // Debug.Log(listtarget[targetIndex]);
-
-                    ArmyLeagueDynamicMovement script = unit.GetComponent<ArmyLeagueDynamicMovement>();
+                    ICharacterUnit script = unit.GetComponent<ICharacterUnit>();
                     script.SetOrderPostion(listtarget[targetIndex]);
                     targetIndex = (targetIndex +1 ) % listtarget.Count;
                 }

@@ -239,7 +239,7 @@ NavMeshAgent:
   m_Radius: 0.6
   m_Speed: 2
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 10
   m_AngularSpeed: 300
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -294,6 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 2
   _acttackSpeed: 1.2
+  _audioSource: {fileID: 0}
 --- !u!114 &1627654251520149693
 MonoBehaviour:
   m_ObjectHideFlags: 0

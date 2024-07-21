@@ -23,10 +23,10 @@ public class OrderUnitSelection : MonoBehaviour
 
     public void ClickSelection(GameObject objectAdd)
     {
-        
-        ArmyLeagueDynamicMovement script = objectAdd.GetComponent<ArmyLeagueDynamicMovement>();
-        if (script)
+        ICharacterUnit script = objectAdd.GetComponent<ICharacterUnit>();
+        if (script != null)
         {
+                Debug.Log("here");
             if (listSelection.Contains(objectAdd))
             {
                 script.SetSelect(false);

@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 2521600958711322454}
   m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4050935950486940293}
@@ -213,14 +213,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4234b15a88f67de49914e1ef1dea6b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  _renderer: {fileID: 0}
   dataObject:
     <id>k__BackingField: 0
     <height>k__BackingField: 0
     <width>k__BackingField: 0
     <health>k__BackingField: []
     <prefab>k__BackingField: {fileID: 0}
+    tile: {fileID: 0}
 --- !u!1 &2527456366661384296
 GameObject:
   m_ObjectHideFlags: 0

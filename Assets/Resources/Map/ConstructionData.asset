@@ -12,12 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1936e0dbd51412e4a9b66760797343ba, type: 3}
   m_Name: ConstructionData
   m_EditorClassIdentifier: 
-  constructions:
-  - id: 2
-    level: 1
-    x: -1
-    y: 2
-  - id: 2
-    level: 1
-    x: -4
-    y: 1
+  constructions: []
