@@ -37,4 +37,6 @@ public class AudioAssitance : MonoBehaviour
         Sound s = Array.Find(sfxSounds, x => x.name == name);
         sfxSoure.PlayOneShot(s.clip);
     }
+    
+
 }

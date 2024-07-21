@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -78,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerAnimator.Run();
             isMoving = true;
-            AudioAssitance.Instance.PlaySFX("Sound walk");
+           
         }
     }
 
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
             _playerAnimator.Idle();
             _navmeshAgent.isStopped = true;
             isMoving = false;
+            
 
             _playerWork.Manufacture(_natureTarget);
 
