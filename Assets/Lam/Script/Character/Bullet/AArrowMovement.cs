@@ -62,10 +62,15 @@ public abstract class AArrowMovement : MonoBehaviour
             Destroy(particleObject, particleSystem.main.duration + particleSystem.main.startLifetime.constantMax);
 
             IHealth enemyHealth = other.GetComponent<IHealth>();
-            if (enemyHealth != null)
+            AudioSource audio = other.GetComponent<AudioSource>();
+            if (enemyHealth != null )
             {
                 enemyHealth.TakeDamage(_damage);
             }
+            if (audio)
+            {
+                audio.PlayOneShot(AudioAssitance.Instance.GetClipByName("hitByAllow"));
+          }
             Destroy(gameObject);
         }
     }
