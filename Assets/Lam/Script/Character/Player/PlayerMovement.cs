@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -9,20 +10,24 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] InputManagement inputManager;
     [SerializeField] private float _moveSpeed = 3;
     [SerializeField] private float _rotateSpeed = 150;
-    [SerializeField] private PlayerWork _playerWork;
-    [SerializeField] private PlayerAnimator _playerAnimator;
-     [SerializeField] private NavMeshAgent _navmeshAgent;
+    
     [SerializeField] private LayerMask _EnemyMask;
     [SerializeField] private LayerMask _natureMask;
+    [SerializeField] private LayerMask _pointMask;
     private Vector3 _destination;
     [SerializeField] private Transform _natureTarget;
-    [SerializeField] private bool isMoving = false;
+    private bool isMoving = false;
+    private PlayerWork _playerWork;
+    private PlayerAnimator _playerAnimator;
+    private NavMeshAgent _navmeshAgent;
+    private PlayerAudio _playerAudio;
 
     private void Awake() 
     {
         _playerAnimator = GetComponent<PlayerAnimator>();
         _navmeshAgent = GetComponent<NavMeshAgent>();
         _playerWork = GetComponent<PlayerWork>();
+        _playerAudio = GetComponent<PlayerAudio>();
     }
 
     private void Update() 
@@ -39,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
                 return; // Exit if the click is on UI
             }
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _natureMask))
+            if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _pointMask))
             {
                 if (hitInfo.transform != _natureTarget || hitInfo.transform.CompareTag("plane"))
                 {
@@ -65,12 +70,33 @@ public class PlayerMovement : MonoBehaviour
             _playerWork.StopManufacture();
         }
 
-        float distanceDestination = Vector3.Distance(transform.position, _destination);
-        if (distanceDestination < 0.2f && isMoving)
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 1, _natureMask);
+        foreach(Collider e in colliders)
         {
-            isMoving = false;
-            _playerAnimator.Idle();
+            if (e.transform == _natureTarget && isMoving)
+            {
+                isMoving = false;
+                _playerAnimator.Idle();
+                _playerAudio.Move(false);
+
+                _navmeshAgent.isStopped = true;
+                _playerWork.Manufacture(_natureTarget);
+
+                Vector3 targetPosition = _natureTarget.position;
+                targetPosition.y = transform.position.y; 
+                transform.LookAt(targetPosition);
+
+                break;
+            }
         }
+
+        if (isMoving && Vector3.Distance(transform.position, _destination) < 0.1f)
+        {
+            _playerAnimator.Idle();
+            _playerAudio.Move(false);
+            isMoving = false;
+        }
+            
     }
 
     private void MoveToTarget()
@@ -82,24 +108,9 @@ public class PlayerMovement : MonoBehaviour
         if (!isMoving)
         {
             _playerAnimator.Run();
+            _playerAudio.Move(true);
             isMoving = true;
         
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (_natureTarget != null && other.transform == _natureTarget)
-        {
-            _playerAnimator.Idle();
-            _navmeshAgent.isStopped = true;
-            isMoving = false;
-
-            _playerWork.Manufacture(_natureTarget);
-
-            Vector3 targetPosition = _natureTarget.position;
-            targetPosition.y = transform.position.y; 
-            transform.LookAt(targetPosition);
         }
     }
 }

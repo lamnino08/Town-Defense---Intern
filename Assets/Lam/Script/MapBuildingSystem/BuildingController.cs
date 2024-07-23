@@ -59,6 +59,7 @@ public class BuildingController : MonoBehaviour
             {
                 _buildingManager.PlaceSuccess();
                 PlacementSystem.instance.PlacebuildingSucces();
+                GetComponent<BuildingAnimator>().Created();
             } else
             {
                 Destroy(gameObject);

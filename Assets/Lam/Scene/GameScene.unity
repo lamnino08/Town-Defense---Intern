@@ -37396,9 +37396,9 @@ Tilemap:
       m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
+      m_TileObjectToInstantiateIndex: 0
       dummyAlignment: 0
-      m_AllTileFlags: 1073741824
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -37426,7 +37426,9 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
-  m_TileObjectToInstantiateArray: []
+  m_TileObjectToInstantiateArray:
+  - m_RefCount: 1
+    m_Data: {fileID: 2077621540098482617, guid: 33f7ba73d518aa149a9669a51961e95a, type: 3}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Origin: {x: -1, y: -1, z: 0}
@@ -43532,11 +43534,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2c3ee16053662124a92d136379ee5067, type: 3}
   - name: Sound Stone break
     clip: {fileID: 8300000, guid: 1914d17c4ff47fc4b8f52743631eab75, type: 3}
-  - name: 'Sound knife '
+  - name: KnightAttackClip
     clip: {fileID: 8300000, guid: d84c5ee72c5ef9d4f85e28b4d373aa75, type: 3}
   - name: Sound when enemy attacked
     clip: {fileID: 8300000, guid: fc2ef09665b9c3045bd3623e2eb87a02, type: 3}
-  - name: Sound bow
+  - name: ArcherAttackClip
     clip: {fileID: 8300000, guid: f1f1cb67246d7bd44b90422ed6276420, type: 3}
   - name: Sound walk
     clip: {fileID: 8300000, guid: 1e1b0c49185084c4d91d17b99bf06063, type: 3}
@@ -48549,6 +48551,10 @@ PrefabInstance:
     - target: {fileID: 5237516739822313518, guid: a30cdf997cf6a0e428d2dd7b65f97d49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237516739822313519, guid: a30cdf997cf6a0e428d2dd7b65f97d49, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a30cdf997cf6a0e428d2dd7b65f97d49, type: 3}

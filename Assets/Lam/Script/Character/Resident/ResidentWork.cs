@@ -12,7 +12,6 @@ public class ResidentWork : AWork
             isManufactureProcess = null;
             ResidentMovement movement = GetComponent<ResidentMovement>();
             movement.DoneTarget();
-            _animatorWorker.Work(false);
         }
     }
 }

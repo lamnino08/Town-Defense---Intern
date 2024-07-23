@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
             LoadData();
-            StartCoroutine(SwitchToBattleAfterDelay(10)); // 2 minutes
+            StartCoroutine(SwitchToBattleAfterDelay(1)); // 2 minutes
         }
     }
 

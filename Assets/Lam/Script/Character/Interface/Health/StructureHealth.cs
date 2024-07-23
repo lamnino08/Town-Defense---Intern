@@ -40,7 +40,8 @@ public abstract class StructureHealth : MonoBehaviour, IHealth
             {
                 // _navMeshObsticle.carving = true;
                 isDead = true;
-                animator.SetTrigger(_isDeadHash);
+                Instantiate(ConstructionData.instance.buildingDestroyEffect, transform.position,Quaternion.identity);
+                Destroy(gameObject);
             }
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class AudioAssitance : MonoBehaviour
 {
     public static AudioAssitance Instance;
-    public Sound[] musicSounds, sfxSounds;
+    [SerializeField] private Sound[] musicSounds, sfxSounds;
     public AudioSource musicSoure, sfxSoure;
     public void Awake()
     {
@@ -36,6 +36,10 @@ public class AudioAssitance : MonoBehaviour
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
         sfxSoure.PlayOneShot(s.clip);
+    }
+    public AudioClip GetClipByName(string name)
+    {
+        return Array.Find(sfxSounds, x => x.name == name).clip;
     }
     
 

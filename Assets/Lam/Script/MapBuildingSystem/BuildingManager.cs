@@ -8,6 +8,7 @@ public class BuildingManager : MonoBehaviour
     public ObjectData dataObject; 
     private PlaneCheckGrid _plane;
     SpawnSoldierInBuilding _spawnSoldier;
+    
     private void Start()
     {
         _plane = GetComponentInChildren<PlaneCheckGrid>();

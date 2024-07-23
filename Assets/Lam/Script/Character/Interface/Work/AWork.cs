@@ -30,7 +30,6 @@ public abstract class AWork : MonoBehaviour
         {
             StopCoroutine(isManufactureProcess);
             isManufactureProcess = null;
-            _animatorWorker.Work(false);
         }
     }
 
@@ -39,12 +38,12 @@ public abstract class AWork : MonoBehaviour
         NatureHealth health = nature.GetComponent<NatureHealth>();
         while (true)
         {
-            _animatorWorker.Work(true);
+            _animatorWorker.Work();
             if (health != null)
             {
                 health.TakeDamage(_damage); 
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }

@@ -12,12 +12,14 @@ public abstract class Attack : MonoBehaviour
     protected ParticleSystem AttackEffect;
     [SerializeField] protected CharacterAudio _audioSource;
     protected ArmyMovement _armyMovement;
+    protected AudioArmy _audioArmy;
 
     protected virtual void Start() {
         _animator = GetComponent<ArmyAnimator>();
         AttackEffect = GetComponentInChildren<ParticleSystem>();
         _armyMovement = GetComponent<ArmyMovement>();
         _audioSource = GetComponent<CharacterAudio>();
+        _audioArmy = GetComponent<AudioArmy>();
     }
 
     public virtual void Acttack(GameObject enemy)
@@ -44,6 +46,8 @@ public abstract class Attack : MonoBehaviour
         while (true)
         {
             _animator.Attack();
+            _audioArmy.Attack();
+
             if (health != null)
             {
                 health.TakeDamage(_damage); 

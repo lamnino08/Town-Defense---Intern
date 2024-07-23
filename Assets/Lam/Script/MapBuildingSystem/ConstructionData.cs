@@ -47,7 +47,21 @@ public class ObjectData
 
 public class ConstructionData : MonoBehaviour
 {
-    [SerializeField] List<ObjectData> _listConstruction = new List<ObjectData>();
+    private static ConstructionData _instance;
+    public static ConstructionData instance;
+    [SerializeField] private List<ObjectData> _listConstruction = new List<ObjectData>();
+    [SerializeField] private GameObject _buildingDestroyEffect; public GameObject buildingDestroyEffect => _buildingDestroyEffect;
+
+    private void Start() 
+    {
+        if (_instance ==  null)
+        {
+            instance = this;
+        }     else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public ObjectData GetObjectDataById(int id)
     {

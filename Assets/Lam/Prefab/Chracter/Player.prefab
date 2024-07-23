@@ -405,7 +405,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5237516739822313509}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.26
   m_Height: 0.7
@@ -434,7 +434,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5237516739822313509}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.26
   m_Speed: 2
@@ -495,17 +495,16 @@ MonoBehaviour:
   inputManager: {fileID: 0}
   _moveSpeed: 3
   _rotateSpeed: 150
-  _playerWork: {fileID: 0}
-  _playerAnimator: {fileID: 0}
-  _navmeshAgent: {fileID: 0}
   _EnemyMask:
     serializedVersion: 2
     m_Bits: 0
   _natureMask:
     serializedVersion: 2
+    m_Bits: 4096
+  _pointMask:
+    serializedVersion: 2
     m_Bits: 20480
   _natureTarget: {fileID: 0}
-  isMoving: 0
 --- !u!114 &5237516739822313514
 MonoBehaviour:
   m_ObjectHideFlags: 0

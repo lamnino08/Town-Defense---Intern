@@ -37,7 +37,6 @@ public abstract class ArmyEnemyDynamic : ArmyDynamicMovement
                     _attack.StopActtack();
                     _isAttacking = false;
                     _animatorCharacter.Idle();
-                    _isAttacking = false;
                 }
                 _previouseTarget = target;
             }
@@ -49,39 +48,21 @@ public abstract class ArmyEnemyDynamic : ArmyDynamicMovement
             if (colliders.Length != 0 && enemyClose)
             {
                 DirectToTarget();
-                if (_navMeshAgent.enabled)
-                {
-                    if (!_isStartDisEnabelChase)
-                    {
-                        StartCoroutine(DisEnableChase());
-                    }
-                    _isStartEnabelChase = false;
-                } 
+                
+                IdleState();
+                _navMeshAgent.isStopped = true;
                 if (!_isAttacking)
                 {
                     _isAttacking = true;
-                    Debug.Log(enemyClose.gameObject.name);
                     _attack.Acttack(enemyClose.gameObject);
                 }
 
-                IdleState();
             }
             else
             {
-                if (_navMeshAgent.enabled)
-                {
                     _navMeshAgent.isStopped = false;
                     _navMeshAgent.SetDestination(target.position);
-                    // NavMeshPath path = new NavMeshPath();
-                    // if (NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path))
-                    // {                   
-                    //     if (path != null)
-                    //     {
-                    //         Debug.Log("here");
-                    //     } else
-                    //     {
-                    //     }
-                    // }
+                   
 
                     if (_isAttacking)
                     {
@@ -90,19 +71,7 @@ public abstract class ArmyEnemyDynamic : ArmyDynamicMovement
                     } 
 
                     RunState();
-
-                    _isStartEnabelChase = false;
-                } else 
-                {
-                    _isStartDisEnabelChase = false;
-                    if (!_isStartEnabelChase)
-                    {
-                        StartCoroutine(EnableChase());
-                    }
-                }      
-                
             }
-            _isStartWaitForDefineEnegy = true;
         }
         else
         {
@@ -114,10 +83,10 @@ public abstract class ArmyEnemyDynamic : ArmyDynamicMovement
 
             IdleState();
 
-            if (!_isStartEnabelChase)
-            {
-                StartCoroutine(EnableChase());
-            }
+            // if (!_isStartEnabelChase)
+            // {
+            //     StartCoroutine(EnableChase());
+            // }
             
             DefineEnemy();
         }
