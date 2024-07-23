@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17915516, g: 0.22432908, b: 0.30609313, a: 1}
+  m_IndirectSpecularColor: {r: 0.17915496, g: 0.22432867, b: 0.30609235, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14892,6 +14892,7 @@ MonoBehaviour:
       rock: 0
       wooden: 0
       gold: 0
+  _buildingDestroyEffect: {fileID: 0}
 --- !u!1 &475198980
 GameObject:
   m_ObjectHideFlags: 0
