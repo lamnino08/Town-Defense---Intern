@@ -6,12 +6,11 @@ using UnityEngine.AI;
 public abstract class ArmyLeagueDynamicMovement : ArmyDynamicMovement, ICharacterUnit
 {
     protected bool isOrder = false;
-    protected Vector3 _orderTager;
-    GameObject _selectCircle;
+     protected Vector3 _orderTager;
+    [SerializeField] GameObject _selectCircle;
     protected override void Start()
     {
         base.Start();
-        _selectCircle = transform.GetChild(0).gameObject;
         _selectCircle.SetActive(false);
     }
     protected override void Update()

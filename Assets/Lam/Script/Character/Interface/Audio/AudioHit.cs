@@ -12,6 +12,6 @@ public class AudioHit : MonoBehaviour
 
     public void HitSound()
     {
-
+        _audioSource.PlayOneShot(AudioAssitance.Instance.GetClipByName("HitByAllow"));
     }
 }
