@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] InputManagement _inputManager;
     [SerializeField] private float _moveSpeed = 3;
-    [SerializeField] private float _rotateSpeed = 150;
+    [SerializeField] private float _rotateSpeed = 1000;
     
     [SerializeField] private LayerMask _EnemyMask;
     [SerializeField] private LayerMask _natureMask;
@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAnimator _playerAnimator;
     private NavMeshAgent _navmeshAgent;
     private PlayerAudio _playerAudio;
+    private float rotationDuration = 0.3f;
+    private float rotationTime = 0f;
 
     private void Awake() 
     {
@@ -65,12 +67,12 @@ public class PlayerMovement : MonoBehaviour
         //     }
         // }
 
-         float vertical = _inputManager.verticalInput;
+        float vertical = _inputManager.verticalInput;
         float horizontal = _inputManager.horizontalInput;
 
         Vector3 movement = new Vector3(horizontal, 0, vertical);
 
-        if (movement.magnitude > 0)
+        if (movement != Vector3.zero)
         {
             Move(movement);
         }
@@ -137,19 +139,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(Vector3 movement)
     {
-        isMoving = true;
-        _playerAnimator.Run();
-        _playerAudio.Move(true);
+        if (!isMoving)
+        {
+            _playerAnimator.Run();
+            _playerAudio.Move(true);
+            isMoving = true;
+        };
 
         // Di chuyển nhân vật
-        _navmeshAgent.isStopped = false;
-        _navmeshAgent.velocity = movement * _moveSpeed;
-
+        // _navmeshAgent.isStopped = false;
+        // _navmeshAgent.velocity = movement * _moveSpeed;
+        transform.position += movement * _moveSpeed * Time.deltaTime;
         // Xoay nhân vật theo hướng di chuyển
-        if (movement != Vector3.zero)
-        {
-            Quaternion newRotation = Quaternion.LookRotation(movement);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, _rotateSpeed * Time.deltaTime);
-        }
+        Quaternion newRotation = Quaternion.LookRotation(movement);
+            transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, rotationDuration);
     }
 }
