@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] InputManagement inputManager;
+    [SerializeField] InputManagement _inputManager;
     [SerializeField] private float _moveSpeed = 3;
     [SerializeField] private float _rotateSpeed = 150;
     
@@ -37,33 +37,54 @@ public class PlayerMovement : MonoBehaviour
 
     public void HandleMovement()
     {
-        if (Input.GetMouseButtonDown(0))
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     if (EventSystem.current.IsPointerOverGameObject() || Input.GetKey(KeyCode.LeftShift))
+        //     {
+        //         return; // Exit if the click is on UI
+        //     }
+        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //     if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _pointMask))
+        //     {
+        //         if (hitInfo.transform != _natureTarget || hitInfo.transform.CompareTag("plane"))
+        //         {
+        //             if (_natureTarget != null)
+        //             {
+        //                 _playerWork.StopManufacture();
+        //             }
+        //             _natureTarget = hitInfo.transform;
+        //             MoveToTarget();
+        //         } 
+        //     } else
+        //     {
+        //         if (_natureTarget != null)
+        //         {
+        //             _playerWork.StopManufacture();
+        //             _natureTarget = null;
+        //         }
+        //     }
+        // }
+
+         float vertical = _inputManager.verticalInput;
+        float horizontal = _inputManager.horizontalInput;
+
+        Vector3 movement = new Vector3(horizontal, 0, vertical);
+
+        if (movement.magnitude > 0)
         {
-            if (EventSystem.current.IsPointerOverGameObject() || Input.GetKey(KeyCode.LeftShift))
+            Move(movement);
+        }
+        else
+        {
+            if (isMoving)
             {
-                return; // Exit if the click is on UI
-            }
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _pointMask))
-            {
-                if (hitInfo.transform != _natureTarget || hitInfo.transform.CompareTag("plane"))
-                {
-                    if (_natureTarget != null)
-                    {
-                        _playerWork.StopManufacture();
-                    }
-                    _natureTarget = hitInfo.transform;
-                    MoveToTarget();
-                } 
-            } else
-            {
-                if (_natureTarget != null)
-                {
-                    _playerWork.StopManufacture();
-                    _natureTarget = null;
-                }
+                isMoving = false;
+                _playerAnimator.Idle();
+                _playerAudio.Move(false);
             }
         }
+
+
 
         if (_natureTarget == null)
         {
@@ -99,18 +120,36 @@ public class PlayerMovement : MonoBehaviour
             
     }
 
-    private void MoveToTarget()
-    {
-        _navmeshAgent.isStopped = false;
-        _destination = PlacementSystem.instance.GetPositionGrid();
-        _navmeshAgent.SetDestination(_destination);
+    // private void MoveToTarget()
+    // {
+    //     _navmeshAgent.isStopped = false;
+    //     _destination = PlacementSystem.instance.GetPositionGrid();
+    //     _navmeshAgent.SetDestination(_destination);
 
-        if (!isMoving)
-        {
-            _playerAnimator.Run();
-            _playerAudio.Move(true);
-            isMoving = true;
+    //     if (!isMoving)
+    //     {
+    //         _playerAnimator.Run();
+    //         _playerAudio.Move(true);
+    //         isMoving = true;
         
+    //     }
+    // }
+
+    private void Move(Vector3 movement)
+    {
+        isMoving = true;
+        _playerAnimator.Run();
+        _playerAudio.Move(true);
+
+        // Di chuyển nhân vật
+        _navmeshAgent.isStopped = false;
+        _navmeshAgent.velocity = movement * _moveSpeed;
+
+        // Xoay nhân vật theo hướng di chuyển
+        if (movement != Vector3.zero)
+        {
+            Quaternion newRotation = Quaternion.LookRotation(movement);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, _rotateSpeed * Time.deltaTime);
         }
     }
 }
