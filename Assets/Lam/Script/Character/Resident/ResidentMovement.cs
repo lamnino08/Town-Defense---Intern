@@ -1,20 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, ICharacterUnit
+public abstract class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, ICharacterUnit
 {
     protected NavMeshAgent _navMeshAgent;
     protected NavMeshObstacle _navMeshObstacle;
     protected IDynamicAnimator _animatorDynamic;
-    [SerializeField] private LayerMask _natureMask;
-    [SerializeField] private ResidentWork _Work;
-    private Vector3 _destination;
-    [SerializeField] private Transform _natureTarget;
+    [SerializeField] protected LayerMask _natureMask;
+    [SerializeField] protected LayerMask _constructionMask;
+    [SerializeField] protected ResidentWork _Work;
+    protected Vector3 _destination;
+    [SerializeField] protected Transform _natureTarget;
+    [SerializeField] protected Transform _previousNatureTarget;
     [SerializeField] GameObject _selectCircle;
-    private ResidentAnimator _animator;
-    private bool isMoving;
+    protected ResidentAnimator _animator;
+    public List<Transform> listTarget = new List<Transform>();
+    protected bool isMoving;
+    protected Transform OwnHome;
+    protected bool isBackToHome = false;
 
-    private void Start() 
+
+    protected void Start() 
     {
         _animator = GetComponent<ResidentAnimator>();
 
@@ -26,32 +33,72 @@ public class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, IChara
         _selectCircle.SetActive(false);
     }
 
-    private void Update() 
+    protected void Update() 
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f, _natureMask);
-
-        foreach (var collider in hitColliders)
+        if (isBackToHome)
         {
-            // Kiểm tra nếu collider là _natureTarget.
-            if (collider.transform == _natureTarget)
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, .1f, _constructionMask);
+
+            foreach (var collider in hitColliders)
             {
-                _navMeshAgent.isStopped = true;
-                _animator.Idle();
-                _Work.Manufacture(_natureTarget);
+                if (collider.transform == OwnHome)
+                {
+                    isBackToHome = false;
+                    _animator.Run();
+                    if (_natureTarget == null)
+                    {
+                        listTarget.RemoveAt(0);
+                        _natureTarget = listTarget[0];
+                    } 
+                    _navMeshAgent.SetDestination(_natureTarget.position);
+                }
             }
+        } else 
+        {
+            if (_natureTarget != null)
+            {
+                CheckDetectTarget();
+            } else
+            {
+                _Work.StopManufacture();
+            }
+            
+
         }
     }
+
+    protected abstract void CheckDetectTarget();
+
+    protected abstract void DefineNatureArea();
 
     public void ChaseTarget()
     {
 
     }
 
+    public void DoneTarget()
+    {
+        listTarget.Remove(_previousNatureTarget);
+        _previousNatureTarget = null;
+
+        if (listTarget.Count > 0)
+        {
+            _natureTarget = listTarget[0];
+            _navMeshAgent.isStopped = false;
+            _animator.Run();
+            isBackToHome = true;
+            _navMeshAgent.SetDestination(OwnHome.position);
+
+        }
+    }
+
     public void SetOrderPostion(Vector3 target)
     {
         _destination = new Vector3(target.x, 0, target.z);
+        _Work.StopManufacture();
         _navMeshAgent.SetDestination(_destination);
         _animator.Run();
+        isBackToHome = false;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _natureMask))
@@ -67,5 +114,10 @@ public class ResidentMovement : MonoBehaviour, ICharacterDynamicMovement, IChara
             _selectCircle.SetActive(isSelect);
             return;
         }
+    }
+
+    public void SetOwnHome(Transform home)
+    {
+        OwnHome = home;
     }
 }

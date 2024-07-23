@@ -5,6 +5,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+
+[Serializable]
+public class Cost
+{
+    public int rock;
+    public int wooden;
+    public int gold;
+
+    public bool Check()
+    {
+        if (rock > 0 && rock > Penhouse.instance.rock) return false;
+        if (wooden > 0 && wooden > Penhouse.instance.wooden) return false;
+        if (gold > 0 && gold > Penhouse.instance.gold) return false;
+
+        return true;
+    }
+    
+}
+
 [Serializable]
 public class ObjectData
 {
@@ -22,12 +41,27 @@ public class ObjectData
     public float[] health {get; private set; }
     [field: SerializeField]
     public GameObject prefab {get; private set;}
-    public UnitTile tile;
+    [field: SerializeField]
+    public Cost costToBuild {get; private set;}
 }
 
 public class ConstructionData : MonoBehaviour
 {
-    [SerializeField] List<ObjectData> _listConstruction = new List<ObjectData>();
+    private static ConstructionData _instance;
+    public static ConstructionData instance;
+    [SerializeField] private List<ObjectData> _listConstruction = new List<ObjectData>();
+    [SerializeField] private GameObject _buildingDestroyEffect; public GameObject buildingDestroyEffect => _buildingDestroyEffect;
+
+    private void Start() 
+    {
+        if (_instance ==  null)
+        {
+            instance = this;
+        }     else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public ObjectData GetObjectDataById(int id)
     {

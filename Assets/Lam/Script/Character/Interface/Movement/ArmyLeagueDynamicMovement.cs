@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent( typeof(NavMeshAgent), typeof(NavMeshObstacle))]
 public abstract class ArmyLeagueDynamicMovement : ArmyDynamicMovement, ICharacterUnit
 {
     protected bool isOrder = false;
@@ -32,7 +31,7 @@ public abstract class ArmyLeagueDynamicMovement : ArmyDynamicMovement, ICharacte
                 {
                     _animatorDynamic.Run();
                     _isMoving = true;
-                    StartCoroutine(EnableChase());
+                    // StartCoroutine(EnableChase());
                 }
 
                 NavMeshPath path = new NavMeshPath();

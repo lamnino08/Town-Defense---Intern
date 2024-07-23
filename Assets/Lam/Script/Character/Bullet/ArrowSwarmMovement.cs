@@ -6,7 +6,6 @@ public class ArrowSwarmMovement : AArrowMovement
 {
     protected override void ArrowFlyCurve()
     {
-        Debug.Log(_target.gameObject.name);
         Vector3 direction = (_endPos - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
 

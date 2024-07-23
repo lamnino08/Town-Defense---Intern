@@ -11,11 +11,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] float tweenDuration;
     void Update()
     {
-        // You can add code here for updating the pause menu during gameplay if needed
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
+        }
     }
 
     public void Pause()
     {
+        AudioAssitance.Instance.PlaySFX("Sound click mouse");
         pausePanel.SetActive(true);
         Time.timeScale = 0f; // Pause the game by setting timeScale to 0
         PausepanelIntro();
@@ -23,6 +27,7 @@ public class PauseMenu : MonoBehaviour
 
     public async void PlayContinue()
     {
+        AudioAssitance.Instance.PlaySFX("Sound click mouse");
         await PausepanelOutro();
         pausePanel.SetActive(false);
         Time.timeScale = 1f; // Resume the game by setting timeScale back to 1
@@ -30,6 +35,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Exit()
     {
+         AudioAssitance.Instance.PlaySFX("Sound click mouse");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     void PausepanelIntro()

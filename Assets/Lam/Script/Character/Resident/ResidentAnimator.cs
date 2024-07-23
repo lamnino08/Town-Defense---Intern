@@ -17,9 +17,9 @@ public class ResidentAnimator : MonoBehaviour, IDynamicAnimator, IWorkerAnimator
         _isDeadkHash = Animator.StringToHash("isDead");
         _animator = GetComponentInChildren<Animator>();
     }
-    public void Work(bool isWork)
+    public void Work()
     {
-        _animator.SetBool(_isWorkHash, isWork);
+        _animator.SetTrigger(_isWorkHash);
     }
 
     public void Walk()

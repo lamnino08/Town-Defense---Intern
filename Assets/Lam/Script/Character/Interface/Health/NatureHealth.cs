@@ -29,44 +29,19 @@ public abstract class NatureHealth : MonoBehaviour
 
     }
 
-    public float TakeDamage(float _damage)
+    public void TakeDamage(float damage)
     {
-        float timeToManufacture = _maxHealth/_damage;
-        isAttackProcess = StartCoroutine(ProcessManufacture(timeToManufacture));
-        isAttackProcessSound = StartCoroutine(ProcessManufactureSound());
-        return timeToManufacture;
-    }
-
-    private IEnumerator ProcessManufacture(float time)
-    {
+        _currentHealth -= damage;
+        healthBar.value = _currentHealth;
         healthBarUI.SetActive(true);
 
-        float elapsedTime = 0f;
-        float startingHealth = _currentHealth;
 
-        while (elapsedTime < time)
-        {
-            elapsedTime += Time.deltaTime;
-            _currentHealth = Mathf.Lerp(startingHealth, 0, elapsedTime / time);
-            healthBar.value = _currentHealth;
-            yield return null;
-        }
-
+        AudioAssitance.Instance.PlaySFX("Sound cut tree");
         if (_currentHealth <= 0)
         {
             _nature.Manufacture();
             TilemapManager.instance.RemoveTileNatureInPos(Vector3Int.RoundToInt(transform.position));
             Destroy(gameObject);
-        }
-    }
-
-    private IEnumerator ProcessManufactureSound()
-    {
-        while (true)
-        {
-            healthBar.value = _currentHealth;
-            AudioAssitance.Instance.PlaySFX("Sound cut tree");
-            yield return new WaitForSeconds(1);
         }
     }
 

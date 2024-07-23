@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 254262579186852852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1627654251520149698}
@@ -270,9 +270,9 @@ GameObject:
   - component: {fileID: 1627654251520149696}
   - component: {fileID: 1627654251520149697}
   - component: {fileID: 1627654251520149694}
-  - component: {fileID: 426204470159165737}
   - component: {fileID: 1643830392}
   - component: {fileID: 1643830393}
+  - component: {fileID: 4574790869239171304}
   m_Layer: 16
   m_Name: village
   m_TagString: league
@@ -341,7 +341,7 @@ NavMeshAgent:
   m_Radius: 0.6
   m_Speed: 2
   m_Acceleration: 8
-  avoidancePriority: 10
+  avoidancePriority: 99
   m_AngularSpeed: 300
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -350,7 +350,7 @@ NavMeshAgent:
   m_Height: 2.09
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!208 &1627654251520149694
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -367,24 +367,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.97, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &426204470159165737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627654251520149688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e993402e7980b41408ac90535e6eb9b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _natureMask:
-    serializedVersion: 2
-    m_Bits: 4224
-  _Work: {fileID: 0}
-  _natureTarget: {fileID: 0}
-  _selectCircle: {fileID: 5638806846622889921}
 --- !u!114 &1643830392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +392,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 2
+--- !u!114 &4574790869239171304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627654251520149688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3adb6ec04cd8d54ab1274750abf38bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _natureMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  _constructionMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _Work: {fileID: 0}
+  _natureTarget: {fileID: 0}
+  _previousNatureTarget: {fileID: 0}
+  _selectCircle: {fileID: 5638806846622889921}
+  listTarget: []
 --- !u!1 &1627654252245691350
 GameObject:
   m_ObjectHideFlags: 0

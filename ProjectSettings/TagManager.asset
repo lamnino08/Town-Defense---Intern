@@ -11,6 +11,8 @@ TagManager:
   - Gate
   - plane
   - planeTile
+  - construction
+  - tree
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - Plane
   - PlaneTile
   - Resident
-  - 
+  - Player
   - 
   - 
   - 

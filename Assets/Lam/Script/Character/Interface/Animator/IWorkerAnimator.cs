@@ -1,5 +1,5 @@
 public interface IWorkerAnimator 
 {
-        void Work(bool isWork);
+        void Work();
 
 }

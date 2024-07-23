@@ -4,14 +4,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent( typeof(NavMeshAgent), typeof(NavMeshObstacle))]
+[RequireComponent( typeof(NavMeshAgent))]
 public abstract class ArmyDynamicMovement : ArmyMovement, ICharacterMovement, ICharacterDynamicMovement
 {
     [SerializeField] protected LayerMask _layerAttack;
     [SerializeField] protected float _distanceStoppingToStop;
     [SerializeField] protected float speedMove;
     protected NavMeshAgent _navMeshAgent;
-    protected NavMeshObstacle _navMeshObstacle;
     protected IDynamicAnimator _animatorDynamic;
     protected bool _isMoving = false;
     protected bool _isAttacking = false;
@@ -28,16 +27,14 @@ public abstract class ArmyDynamicMovement : ArmyMovement, ICharacterMovement, IC
         _animatorDynamic = GetComponentInChildren<ArmyDynamicAnimator>();
 
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _navMeshObstacle = GetComponent<NavMeshObstacle>();
 
         // StartCoroutine(EnableChase());   
         _navMeshAgent.speed = speedMove;
-        _navMeshObstacle.carving = true;
     }   
 
     protected virtual void Update()
     {
-            if (_navMeshAgent.enabled && _navMeshObstacle.enabled) _navMeshObstacle .enabled = false;
+            // if (_navMeshAgent.enabled && _navMeshObstacle.enabled) _navMeshObstacle .enabled = false;
         ChaseTarget();
     }
 
@@ -47,17 +44,15 @@ public abstract class ArmyDynamicMovement : ArmyMovement, ICharacterMovement, IC
         {
             DefineEnemy();
             
-                if (target != _previouseTarget)
+            if (target != _previouseTarget)
+            {
+                if (_isAttacking)
                 {
-                    if (_isAttacking)
-                    {
-                        _attack.StopActtack();
-                        _isAttacking = false;
-                        _animatorCharacter.Idle();
-                        _isAttacking = false;
-                    }
-                    _previouseTarget = target;
+                    _attack.StopActtack();
+                    _isAttacking = false;
                 }
+                _previouseTarget = target;
+            }
 
             
 
@@ -66,26 +61,18 @@ public abstract class ArmyDynamicMovement : ArmyMovement, ICharacterMovement, IC
             if (colliders.Length != 0 && enemyClose)
             {
                 DirectToTarget();
-                if (_navMeshAgent.enabled)
-                {
-                    if (!_isStartDisEnabelChase)
-                    {
-                        StartCoroutine(DisEnableChase());
-                    }
-                    _isStartEnabelChase = false;
-                } 
+                _navMeshAgent.isStopped = true;
+
+                IdleState();
+
                 if (!_isAttacking)
                 {
                     _isAttacking = true;
                     _attack.Acttack(enemyClose.gameObject);
                 }
-
-                IdleState();
             }
             else
             {
-                if (_navMeshAgent.enabled)
-                {
                     _navMeshAgent.isStopped = false;
                     _navMeshAgent.SetDestination(target.position);
 
@@ -96,23 +83,12 @@ public abstract class ArmyDynamicMovement : ArmyMovement, ICharacterMovement, IC
                     } 
 
                     RunState();
-
-                    _isStartEnabelChase = false;
-                } else 
-                {
-                    _isStartDisEnabelChase = false;
-                    if (!_isStartEnabelChase)
-                    {
-                        StartCoroutine(EnableChase());
-                    }
-                }      
-                
             }
-            _isStartWaitForDefineEnegy = true;
+            // _isStartWaitForDefineEnegy = true;
         }
         else
         {
-            _navMeshObstacle.enabled = false;
+            // _navMeshObstacle.enabled = false;
             if (_isAttacking)
             {
                 _isAttacking = false;
@@ -121,12 +97,6 @@ public abstract class ArmyDynamicMovement : ArmyMovement, ICharacterMovement, IC
             }
 
             IdleState();
-
-            if (!_isStartEnabelChase)
-            {
-                StartCoroutine(EnableChase());
-            }
-            
             DefineEnemy();
         }
     }
@@ -168,32 +138,6 @@ public abstract class ArmyDynamicMovement : ArmyMovement, ICharacterMovement, IC
             _animatorDynamic.Run();
             _isMoving = true;
         }
-    }
-
-    public IEnumerator WaitForDefineEnemy()
-    {
-        yield return new WaitForSeconds(1f);
-        _isWaitForDefineEnegy = false;
-    }
-    
-    protected IEnumerator EnableChase()
-    {
-        _isStartEnabelChase = true;
-        _isStartDisEnabelChase = false;
-        _navMeshObstacle.enabled = false;
-        yield return new WaitForSeconds(.07f);
-        _navMeshAgent.enabled = true;
-        _navMeshAgent.isStopped = false;
-        _navMeshAgent.SetDestination(transform.position);
-    }
-
-    protected IEnumerator DisEnableChase()
-    {
-        _isStartDisEnabelChase = true;
-        _isStartEnabelChase = false;
-        _navMeshAgent.enabled = false;
-        yield return new WaitForSeconds(.07f);
-        _navMeshObstacle.enabled = true;
     }
 }
 

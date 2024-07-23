@@ -18,7 +18,9 @@ public abstract class AttackKnight : Attack
         {
             IHealth health = _armyMovement.target.GetComponent<IHealth>();
             _animator.Attack();
+            _audioArmy.Attack();
             effect.Play();
+
             if (health != null)
             {
                 health.TakeDamage(_damage); 

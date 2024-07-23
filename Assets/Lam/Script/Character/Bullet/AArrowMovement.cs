@@ -9,6 +9,7 @@ public abstract class AArrowMovement : MonoBehaviour
     [SerializeField] protected float speed; 
     [SerializeField] protected GameObject effect;
     [SerializeField] protected LayerMask enemyLayer;
+    protected IAudioArmy _audioArmy;
 
     protected Vector3 _startPos;
     protected Vector3 _endPos;
@@ -16,6 +17,7 @@ public abstract class AArrowMovement : MonoBehaviour
     protected virtual void Start()
     {
         _startPos = transform.position;
+        _audioArmy = GetComponent<IAudioArmy>();
         UpdateTargetInfo();
     }
 
@@ -64,7 +66,6 @@ public abstract class AArrowMovement : MonoBehaviour
             {
                 enemyHealth.TakeDamage(_damage);
             }
-            // Debug.Log("Herer");
             Destroy(gameObject);
         }
     }

@@ -12,8 +12,8 @@ public class PlayerAnimator : ArmyDynamicAnimator, IWorkerAnimator
         _isWorkHash = Animator.StringToHash("isWork");
     }
 
-    public void Work(bool isWork)
+    public void Work()
     {
-        _animator.SetBool(_isWorkHash, isWork);
+        _animator.SetTrigger(_isWorkHash);
     }
 }
