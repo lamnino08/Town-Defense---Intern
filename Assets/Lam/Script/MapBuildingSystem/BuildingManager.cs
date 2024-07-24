@@ -6,12 +6,11 @@ public class BuildingManager : MonoBehaviour
     private int _level;
     private Renderer _renderer;
     public ObjectData dataObject; 
-    private PlaneCheckGrid _plane;
+    [SerializeField] private PlaneCheckGrid _plane;
     SpawnSoldierInBuilding _spawnSoldier;
     
     private void Start()
     {
-        _plane = GetComponentInChildren<PlaneCheckGrid>();
     }
 
     public void StartPlace(ObjectData data)
@@ -24,6 +23,7 @@ public class BuildingManager : MonoBehaviour
 
     public bool CheckData()
     {
+        Debug.Log(_plane);
         return !_plane.isCollisonWithOtherBuilding();
     }
 

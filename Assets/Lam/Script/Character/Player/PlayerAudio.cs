@@ -7,7 +7,7 @@ public class PlayerAudio : AudioArmy, IAudioMove
     protected override void Start() 
     {
         base.Start();
-        _moveClipName = "playerMove";  
+        _moveClipName = "PlayerMove";  
         _attackClipName = "KnightAttackClip";  
     }
 

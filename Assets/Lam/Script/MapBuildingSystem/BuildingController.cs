@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -60,6 +61,8 @@ public class BuildingController : MonoBehaviour
                 _buildingManager.PlaceSuccess();
                 PlacementSystem.instance.PlacebuildingSucces();
                 GetComponent<BuildingAnimator>().Created();
+                GetComponent<AudioSource>().PlayOneShot(AudioAssitance.Instance.GetClipByName("PlaceHouse"));
+
             } else
             {
                 Destroy(gameObject);
