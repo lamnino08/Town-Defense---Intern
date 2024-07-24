@@ -21,6 +21,7 @@ public class CheckBtnBuilding : MonoBehaviour
 
    public void Place()
    {
+     Debug.Log($"BTN {id}");
         PlacementSystem.instance.StartPlaceBuilding(id);
    }
 }

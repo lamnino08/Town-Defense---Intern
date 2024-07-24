@@ -39,33 +39,32 @@ public class PlayerMovement : MonoBehaviour
 
     public void HandleMovement()
     {
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     if (EventSystem.current.IsPointerOverGameObject() || Input.GetKey(KeyCode.LeftShift))
-        //     {
-        //         return; // Exit if the click is on UI
-        //     }
-        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //     if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _pointMask))
-        //     {
-        //         if (hitInfo.transform != _natureTarget || hitInfo.transform.CompareTag("plane"))
-        //         {
-        //             if (_natureTarget != null)
-        //             {
-        //                 _playerWork.StopManufacture();
-        //             }
-        //             _natureTarget = hitInfo.transform;
-        //             MoveToTarget();
-        //         } 
-        //     } else
-        //     {
-        //         if (_natureTarget != null)
-        //         {
-        //             _playerWork.StopManufacture();
-        //             _natureTarget = null;
-        //         }
-        //     }
-        // }
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (EventSystem.current.IsPointerOverGameObject() || Input.GetKey(KeyCode.LeftShift))
+            {
+                return; // Exit if the click is on UI
+            }
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hitInfo,  Mathf.Infinity, _natureMask))
+            {
+                if (hitInfo.transform != _natureTarget)
+                {
+                    if (_natureTarget != null)
+                    {
+                        _playerWork.StopManufacture();
+                    }
+                    _natureTarget = hitInfo.transform;
+                } 
+            } else
+            {
+                if (_natureTarget != null)
+                {
+                    _playerWork.StopManufacture();
+                    _natureTarget = null;
+                }
+            }
+        }
 
         float vertical = _inputManager.verticalInput;
         float horizontal = _inputManager.horizontalInput;

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 2386935934633061633}
-  - component: {fileID: 1440960644555676514}
   - component: {fileID: -1541555935652302800}
+  - component: {fileID: 2288035139367207629}
   m_Layer: 0
   m_Name: ArrowStone
   m_TagString: Untagged
@@ -101,23 +101,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.285758, y: 0.09913856, z: 0.39290893}
   m_Center: {x: 0.00000047683716, y: 0.0000000037252903, z: 0.000000007450581}
---- !u!114 &1440960644555676514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e748dccad61af43a4140d3873d20df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  effect: {fileID: 4330954156276129168, guid: d207b6d922c79d44cb6843230dc18016, type: 3}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 640
 --- !u!82 &-1541555935652302800
 AudioSource:
   m_ObjectHideFlags: 0
@@ -214,6 +197,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2288035139367207629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c96eba223f5cb4384525733ad74be7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  effect: {fileID: 3420897414842480812}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &3420897414842480812
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,8 +305,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.13127942
-        value: 0.924541
+        time: 0.22191663
+        value: 0.19851255
         inSlope: 2.1231604
         outSlope: 2.1231604
         tangentMode: 0
@@ -314,8 +314,8 @@ TrailRenderer:
         inWeight: 0.8139454
         outWeight: 0.97962475
       - serializedVersion: 3
-        time: 0.45252228
-        value: 0.83018863
+        time: 0.4464798
+        value: 0.11785877
         inSlope: -2.1138494
         outSlope: -2.1138494
         tangentMode: 0
@@ -323,7 +323,7 @@ TrailRenderer:
         inWeight: 0
         outWeight: 0.24998857
       - serializedVersion: 3
-        time: 1
+        time: 0.622345
         value: 0
         inSlope: 0
         outSlope: 0
@@ -336,7 +336,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.1490196, g: 0.24726239, b: 0.89411765, a: 1}
+      key0: {r: 0.89411765, g: 0.20668161, b: 0.14901957, a: 1}
       key1: {r: 0.9339623, g: 0.8667337, b: 0.5771182, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

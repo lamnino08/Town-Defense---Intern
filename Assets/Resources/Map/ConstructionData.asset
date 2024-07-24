@@ -17,35 +17,23 @@ MonoBehaviour:
     level: 1
     x: 1
     y: 3
-  - id: 10
-    level: 1
-    x: -3
-    y: -1
-  - id: 10
-    level: 1
-    x: 3
-    y: -1
-  - id: 10
-    level: 1
-    x: -3
-    y: 1
-  - id: 10
+  - id: 11
     level: 1
     x: 3
     y: 3
-  - id: 10
-    level: 1
-    x: 1
-    y: 5
-  - id: 10
-    level: 1
-    x: -7
-    y: -3
-  - id: 10
+  - id: 2
     level: 1
     x: 5
     y: 3
+  - id: 6
+    level: 1
+    x: 4
+    y: 0.99999994
   - id: 13
     level: 1
+    x: 7
+    y: 4
+  - id: 12
+    level: 1
     x: 5
-    y: -1
+    y: 5

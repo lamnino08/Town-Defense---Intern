@@ -10,7 +10,7 @@ public abstract class AttackArcher : Attack
         yield return new WaitForSeconds(1);
         while (enemy)
         {
-            _animator.Attack();
+                _animator.Attack();
             _audioArmy.Attack();
 
             GameObject arrow = Instantiate(arrowPrefab, bowTransform.position, bowTransform.rotation * new Quaternion(0,-90,0,0));

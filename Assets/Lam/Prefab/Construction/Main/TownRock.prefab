@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &27615726568739217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 8335451983754586697}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1452325469504974895}
+  m_Layer: 0
+  m_Name: 'ArcherTown (1) (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1452325469504974895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 8335451983754586697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27615726568739217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3779718848712162750}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &166306923288618769
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +365,68 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &2794158408193882161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 6416852804966398107}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9147737997459715386}
+  m_Layer: 0
+  m_Name: 'ArcherTown (2) (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9147737997459715386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 6416852804966398107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794158408193882161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3089741142054438317}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3359778994698044318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 2836714700165410642}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5661804300555460068}
+  m_Layer: 0
+  m_Name: 'ArcherTown (1) (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5661804300555460068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 2836714700165410642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3359778994698044318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3089741142054438317}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4870975605167852027
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,8 +500,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.52, y: 1.9301708, z: 1.41}
-  m_Center: {x: 0.014810681, y: 0.96508515, z: 0.008290112}
+  m_Size: {x: 0.81370354, y: 1.9301708, z: 0.84254205}
+  m_Center: {x: -0.006462276, y: 0.96508515, z: -0.005978763}
 --- !u!208 &3413513464192983071
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -594,6 +687,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &5478891952918801338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 1670117128369231779}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4747983536431329285}
+  m_Layer: 0
+  m_Name: 'ArcherTown (2) (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4747983536431329285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 1670117128369231779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478891952918801338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3779718848712162750}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5613408476462889557
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +871,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &9005251039649524485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 7749551032719837228}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4019736358650093325}
+  m_Layer: 0
+  m_Name: 'ArcherTown (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4019736358650093325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 7749551032719837228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005251039649524485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3779718848712162750}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1524393903612491380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1373,7 +1528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2141248113626954174, guid: a7e50ab38dbf3f44281abeeedca667c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.957
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 2141248113626954174, guid: a7e50ab38dbf3f44281abeeedca667c3, type: 3}
       propertyPath: m_LocalPosition.z

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 84997864329904850}
   - component: {fileID: 3018397391225299214}
   - component: {fileID: 610494941117637029}
-  - component: {fileID: 1023135377451527184}
-  - component: {fileID: 1415244793210921780}
+  - component: {fileID: -8587914563224300710}
+  - component: {fileID: -6012910979399357771}
   m_Layer: 7
-  m_Name: ArcherMagic
+  m_Name: AcherTown
   m_TagString: league
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   _damage: 10
   _acttackSpeed: 2
   _audioSource: {fileID: 0}
-  arrowPrefab: {fileID: 100000, guid: 93db3235d052d7d4d8eec5b4233efd7b, type: 3}
+  arrowPrefab: {fileID: 100000, guid: 57dd91c2f58bb294ca61742c9e7e6585, type: 3}
   bowTransform: {fileID: 2141248113626954174}
 --- !u!114 &610494941117637029
 MonoBehaviour:
@@ -84,7 +84,7 @@ MonoBehaviour:
   target: {fileID: 0}
   previousTarget: {fileID: 0}
   _isAttacking: 0
---- !u!82 &1023135377451527184
+--- !u!82 &-8587914563224300710
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +180,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1415244793210921780
+--- !u!114 &-6012910979399357771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
