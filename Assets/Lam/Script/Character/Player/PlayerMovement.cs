@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAnimator _playerAnimator;
     private NavMeshAgent _navmeshAgent;
     private PlayerAudio _playerAudio;
-    private float rotationDuration = 0.3f;
+    private float rotationDuration = 0.6f;
     private float rotationTime = 0f;
 
     private void Awake() 

@@ -140,6 +140,7 @@ MonoBehaviour:
       rock: 0
       wooden: 0
       gold: 0
+  _plane: {fileID: 1448346022738068929}
 --- !u!82 &-5029810019656995677
 AudioSource:
   m_ObjectHideFlags: 0

@@ -31,46 +31,6 @@ public class ActBuildingUI : MonoBehaviour
         _placemenSystem.StartPlaceBuilding(id);
     }
 
-    /// <summary>
-    /// Confirm button click on UI
-    /// </summary>
-    public void CoinfirmPlaceBuidling()
-    {
-        // _currentBuildingAction.Place();
-
-        //UI
-        // _buildingActionUI.SetActive(_buildingActionUI);
-        // _upgradeBtn.SetActive(false);
-        // _confirmBtn.SetActive(true);
-        // _removeBtn.SetActive(false);
-    }
-
-    /// <summary>
-    /// Remove building click on UI
-    /// </summary>
-    public void RemoveBuildingBtn()
-    {
-        // _currentBuildingAction.Remove();
-        // _buildingActionUI.SetActive(false);
-    }
-
-    /// <summary>
-    /// Set UI for like confirm, cancel button on UI when Place or click a building
-    /// </summary>
-    public void ClickOnBuilding(BuildingController buildingScript)
-    {
-        // if (_currentBuildingAction && !_currentBuildingAction.isPlaced)
-        // {
-        //     Destroy(_currentBuildingAction.gameObject);
-        // }
-        // _currentBuildingAction = buildingScript;
-
-        // //UI
-        // _buildingActionUI.SetActive(true);
-        // _upgradeBtn.SetActive(true);
-        // _removeBtn.SetActive(true);
-    }
-
     public void AllowRemove(bool active)
     {
         _removeBtn.SetActive(active);
@@ -78,11 +38,7 @@ public class ActBuildingUI : MonoBehaviour
 
     public void ExitUI()
     {
-        // if (!_currentBuildingAction.isPlaced)
-        // {
-        //     Destroy(_currentBuildingAction.gameObject);
-        // }
-        // _buildingActionUI.SetActive(false);
+       
     }
 
 }

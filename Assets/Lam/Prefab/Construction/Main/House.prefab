@@ -520,6 +520,7 @@ MonoBehaviour:
       rock: 0
       wooden: 0
       gold: 0
+  _plane: {fileID: 8936822201310263827}
 --- !u!114 &-7665843442329576444
 MonoBehaviour:
   m_ObjectHideFlags: 0

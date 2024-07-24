@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using System.Collections.Generic;
 
 public class Buildingpanel : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Buildingpanel : MonoBehaviour
     [SerializeField] RectTransform BuildingpanelRect;
     [SerializeField] float LeftPosX, middlePosX;
     [SerializeField] float tweenDuration;
+
+    [SerializeField] private List<CheckBtnBuilding> btns = new List<CheckBtnBuilding>();
     void Update()
     {
         // You can add code here for updating the pause menu during gameplay if needed
@@ -17,8 +20,16 @@ public class Buildingpanel : MonoBehaviour
     {
         buildingIntro();
         buildingPanels.SetActive(true);
-        Debug.Log("here");
+        CheckInteracte();
         AudioAssitance.Instance.PlaySFX("Sound click mouse");
+    }
+
+    private void CheckInteracte()
+    {
+        foreach(CheckBtnBuilding e in btns)
+        {
+            e.CheckRecoureToInteract();
+        }
     }
 
     public async void Exit()
