@@ -41,7 +41,6 @@ public abstract class Attack : MonoBehaviour
 
     protected virtual IEnumerator DoActtack(GameObject enemy)
     { 
-        // yield return new WaitForSeconds(1);
         IHealth health = enemy.GetComponent<IHealth>();
         while (true)
         {

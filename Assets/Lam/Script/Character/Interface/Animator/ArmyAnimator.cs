@@ -18,7 +18,10 @@ public abstract class ArmyAnimator : MonoBehaviour, ICharacterAnimator, IArmyAni
 
     public void Attack()
     {
-        _animator.SetTrigger(_isAttackHash);
+        if (_animator)
+        {
+            _animator.SetTrigger(_isAttackHash);
+        }
     }
     
     public void Dead()

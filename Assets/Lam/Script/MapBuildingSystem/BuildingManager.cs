@@ -23,7 +23,6 @@ public class BuildingManager : MonoBehaviour
 
     public bool CheckData()
     {
-        Debug.Log(_plane);
         return !_plane.isCollisonWithOtherBuilding();
     }
 

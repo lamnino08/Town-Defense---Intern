@@ -7,6 +7,4 @@ public abstract class ArmyStaticAnimator : ArmyAnimator, ICharacterAnimator
     public override void Idle()
     {
     }
-
-    
 }

@@ -7425,10 +7425,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4616277}
-        m_TargetAssemblyTypeName: ActBuildingUI, Assembly-CSharp
-        m_MethodName: StartPlaceBuilding
-        m_Mode: 3
+      - m_Target: {fileID: 375650053}
+        m_TargetAssemblyTypeName: CheckBtnBuilding, Assembly-CSharp
+        m_MethodName: Place
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7487,7 +7487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768c80e8ce1e52d4abe284586305dd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 13
 --- !u!1001 &376883692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8731,10 +8731,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4616277}
-        m_TargetAssemblyTypeName: ActBuildingUI, Assembly-CSharp
-        m_MethodName: StartPlaceBuilding
-        m_Mode: 3
+      - m_Target: {fileID: 443237320}
+        m_TargetAssemblyTypeName: CheckBtnBuilding, Assembly-CSharp
+        m_MethodName: Place
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8793,7 +8793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768c80e8ce1e52d4abe284586305dd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 3
 --- !u!4 &445910299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4214021587554833866, guid: ed9df2831207a5a4a9e8346cabdb0717, type: 3}
@@ -9337,10 +9337,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4616277}
-        m_TargetAssemblyTypeName: ActBuildingUI, Assembly-CSharp
-        m_MethodName: StartPlaceBuilding
-        m_Mode: 3
+      - m_Target: {fileID: 478288565}
+        m_TargetAssemblyTypeName: CheckBtnBuilding, Assembly-CSharp
+        m_MethodName: Place
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9399,7 +9399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768c80e8ce1e52d4abe284586305dd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 11
 --- !u!1 &478942676
 GameObject:
   m_ObjectHideFlags: 0
@@ -18687,10 +18687,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4616277}
-        m_TargetAssemblyTypeName: ActBuildingUI, Assembly-CSharp
-        m_MethodName: StartPlaceBuilding
-        m_Mode: 3
+      - m_Target: {fileID: 919064070}
+        m_TargetAssemblyTypeName: CheckBtnBuilding, Assembly-CSharp
+        m_MethodName: Place
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18749,7 +18749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768c80e8ce1e52d4abe284586305dd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 6
 --- !u!1 &919379893
 GameObject:
   m_ObjectHideFlags: 0
@@ -24048,10 +24048,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4616277}
-        m_TargetAssemblyTypeName: ActBuildingUI, Assembly-CSharp
-        m_MethodName: StartPlaceBuilding
-        m_Mode: 3
+      - m_Target: {fileID: 1192298695}
+        m_TargetAssemblyTypeName: CheckBtnBuilding, Assembly-CSharp
+        m_MethodName: Place
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24110,7 +24110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768c80e8ce1e52d4abe284586305dd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 12
 --- !u!1001 &1197773534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25398,10 +25398,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4616277}
-        m_TargetAssemblyTypeName: ActBuildingUI, Assembly-CSharp
-        m_MethodName: StartPlaceBuilding
-        m_Mode: 3
+      - m_Target: {fileID: 1235024287}
+        m_TargetAssemblyTypeName: CheckBtnBuilding, Assembly-CSharp
+        m_MethodName: Place
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26982,10 +26982,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4616277}
-        m_TargetAssemblyTypeName: ActBuildingUI, Assembly-CSharp
-        m_MethodName: StartPlaceBuilding
-        m_Mode: 3
+      - m_Target: {fileID: 1278652225}
+        m_TargetAssemblyTypeName: CheckBtnBuilding, Assembly-CSharp
+        m_MethodName: Place
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -27044,7 +27044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768c80e8ce1e52d4abe284586305dd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 2
 --- !u!4 &1283727103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8727983642847217052, guid: 212b1f757afbc0a439661fa1d58946af, type: 3}
@@ -38517,7 +38517,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 1d3500a9d9ecc3a4480de652d6e0f007, type: 3}
   - name: Sound pay money
     clip: {fileID: 8300000, guid: 45e97640529cb1c40843f371a30a262f, type: 3}
-  - name: Sound the house destroyed
+  - name: BuildingDestroy
     clip: {fileID: 8300000, guid: 560a1ccf981c0094599473136f8b4109, type: 3}
   - name: Sound build house
     clip: {fileID: 8300000, guid: 8b9581307a6874f4c8f60957200377bc, type: 3}
@@ -43294,6 +43294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5237516739822313516, guid: a30cdf997cf6a0e428d2dd7b65f97d49, type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 5237516739822313518, guid: a30cdf997cf6a0e428d2dd7b65f97d49, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -43340,7 +43344,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5237516739822313519, guid: a30cdf997cf6a0e428d2dd7b65f97d49, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5237516739822313519, guid: a30cdf997cf6a0e428d2dd7b65f97d49, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a30cdf997cf6a0e428d2dd7b65f97d49, type: 3}

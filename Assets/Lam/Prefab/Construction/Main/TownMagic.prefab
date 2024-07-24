@@ -204,6 +204,68 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1666101456461906906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 1670117128369231779}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7132961599474201168}
+  m_Layer: 0
+  m_Name: 'ArcherTown (2) (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7132961599474201168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 1670117128369231779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666101456461906906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3779718848712162750}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4607050430833598959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 6416852804966398107}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 980622374325438824}
+  m_Layer: 0
+  m_Name: 'ArcherTown (2) (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &980622374325438824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 6416852804966398107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607050430833598959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3089741142054438317}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4870975605167852027
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,8 +339,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.52, y: 1.9301708, z: 1.41}
-  m_Center: {x: 0.014810681, y: 0.96508515, z: 0.008290112}
+  m_Size: {x: 0.8207606, y: 1.9301708, z: 0.86639607}
+  m_Center: {x: -0.01665324, y: 0.96508515, z: 0.0014374256}
 --- !u!208 &3413513464192983071
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -286,7 +348,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4870975605167852027}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.555, y: 1.15, z: 0.655}
@@ -540,6 +602,68 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5862711037080947584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 8335451983754586697}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8179229794453662476}
+  m_Layer: 0
+  m_Name: 'ArcherTown (1) (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8179229794453662476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 8335451983754586697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862711037080947584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3779718848712162750}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6585430046088617446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 7749551032719837228}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969881385138323892}
+  m_Layer: 0
+  m_Name: 'ArcherTown (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969881385138323892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 7749551032719837228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585430046088617446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3779718848712162750}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6623057538581362842
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +741,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8074215003956786315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954178, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 2836714700165410642}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3031451758540230654}
+  m_Layer: 0
+  m_Name: 'ArcherTown (1) (Missing Prefab with guid: 232e040054db64c41837a9363251149e)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3031451758540230654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2141248113626954174, guid: 232e040054db64c41837a9363251149e, type: 3}
+  m_PrefabInstance: {fileID: 2836714700165410642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074215003956786315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3089741142054438317}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8323183504174927638
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2141248113626954174, guid: 5566df924a29b9b4f9f6020720a697aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.146
+      value: 1.555
       objectReference: {fileID: 0}
     - target: {fileID: 2141248113626954174, guid: 5566df924a29b9b4f9f6020720a697aa, type: 3}
       propertyPath: m_LocalPosition.z
