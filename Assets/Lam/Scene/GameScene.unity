@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17915516, g: 0.22432908, b: 0.30609313, a: 1}
+  m_IndirectSpecularColor: {r: 0.17915496, g: 0.22432867, b: 0.30609235, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9003,14 +9003,14 @@ MonoBehaviour:
     <height>k__BackingField: 3
     <width>k__BackingField: 3
     <health>k__BackingField:
-    - 100
+    - 200
     - 200
     - 300
     <prefab>k__BackingField: {fileID: 2077621540098482617, guid: 33f7ba73d518aa149a9669a51961e95a, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 5
+      wooden: 5
+      gold: 5
   - <id>k__BackingField: 2
     <height>k__BackingField: 2
     <width>k__BackingField: 2
@@ -9020,21 +9020,21 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 5696993903520604138, guid: eb3b1b14d8da2774e803726981c80420, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 5
+      wooden: 7
+      gold: 5
   - <id>k__BackingField: 3
     <height>k__BackingField: 2
     <width>k__BackingField: 2
     <health>k__BackingField:
-    - 50
+    - 100
     - 100
     - 150
     <prefab>k__BackingField: {fileID: 3949441240733454769, guid: 573a9fefba69f7741baf2164033b1525, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 5
+      wooden: 7
+      gold: 5
   - <id>k__BackingField: 4
     <height>k__BackingField: 2
     <width>k__BackingField: 2
@@ -9044,33 +9044,33 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 5806208722561866864, guid: 355c49e2d4ee7ce438db093cbeb80efa, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 5
+      wooden: 5
+      gold: 5
   - <id>k__BackingField: 5
     <height>k__BackingField: 2
     <width>k__BackingField: 2
     <health>k__BackingField:
-    - 100
+    - 70
     - 200
     - 300
     <prefab>k__BackingField: {fileID: 1304877606714205621, guid: 205cedf81ecbb834cb5037b831c12840, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 5
+      wooden: 5
+      gold: 10
   - <id>k__BackingField: 6
     <height>k__BackingField: 2
     <width>k__BackingField: 2
     <health>k__BackingField:
-    - 100
+    - 150
     - 200
     - 300
     <prefab>k__BackingField: {fileID: 4870975605167852027, guid: 5fe7a8627b72b024e8709404728dc924, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 8
+      wooden: 7
+      gold: 5
   - <id>k__BackingField: 7
     <height>k__BackingField: 1
     <width>k__BackingField: 1
@@ -9080,8 +9080,8 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 1662506871738236114, guid: 69b5d124d5583b24ba1e4928cd798ed2, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
+      rock: 1
+      wooden: 1
       gold: 0
   - <id>k__BackingField: 8
     <height>k__BackingField: 2
@@ -9092,9 +9092,9 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 2521600958711322454, guid: ed48a48a066892c4c92501388c8faac1, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 3
+      wooden: 3
+      gold: 3
   - <id>k__BackingField: 9
     <height>k__BackingField: 3
     <width>k__BackingField: 3
@@ -9104,9 +9104,9 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 252996981377476072, guid: 0ee0c39c0a737a54db9fb42255d39f08, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 4
+      wooden: 4
+      gold: 3
   - <id>k__BackingField: 10
     <height>k__BackingField: 2
     <width>k__BackingField: 2
@@ -9116,9 +9116,9 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 252996981377476072, guid: ee3cf8b934eab4c4984d97c25ee227b8, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
-      gold: 0
+      rock: 3
+      wooden: 5
+      gold: 3
   - <id>k__BackingField: 11
     <height>k__BackingField: 2
     <width>k__BackingField: 2
@@ -9128,8 +9128,8 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 252996981377476072, guid: 6ca446214c32dae4bba90a84edc718d9, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
+      rock: 5
+      wooden: 3
       gold: 0
   - <id>k__BackingField: 12
     <height>k__BackingField: 2
@@ -9140,8 +9140,8 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 4870975605167852027, guid: cc01f4945a315334a9ddf635068122f8, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
+      rock: 8
+      wooden: 7
       gold: 0
   - <id>k__BackingField: 13
     <height>k__BackingField: 2
@@ -9152,8 +9152,8 @@ MonoBehaviour:
     - 300
     <prefab>k__BackingField: {fileID: 4870975605167852027, guid: 33b54756ff702a445a5b207cf5bb46a2, type: 3}
     <costToBuild>k__BackingField:
-      rock: 0
-      wooden: 0
+      rock: 10
+      wooden: 10
       gold: 0
   _buildingDestroyEffect: {fileID: 4116095656334758246, guid: 54e05991cbad3ef4d90d8c6b2945a15b, type: 3}
 --- !u!1 &475198980
