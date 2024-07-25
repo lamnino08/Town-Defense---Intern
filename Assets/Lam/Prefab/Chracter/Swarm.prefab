@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 10
-  _maxHealth: 10
+  _maxHealth: 70
   healthBarUI: {fileID: 6711608121484202042}
   healthBar: {fileID: 1195777235605583474}
 --- !u!114 &1373378383701998438
@@ -493,7 +493,7 @@ MonoBehaviour:
     m_Bits: 640
   target: {fileID: 0}
   _distanceStoppingToStop: 8
-  speedMove: 1.5
+  speedMove: 1
 --- !u!82 &-8941446285700266858
 AudioSource:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a643920a7232b7646a432bad57964c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameClip: 
+  _attackClipName: 
 --- !u!1001 &2726882091902902433
 PrefabInstance:
   m_ObjectHideFlags: 0

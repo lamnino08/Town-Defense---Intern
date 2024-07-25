@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 100
-  _maxHealth: 100
+  _maxHealth: 70
   healthBarUI: {fileID: 3508233194487953065}
   healthBar: {fileID: 3508233193966849660}
 --- !u!114 &3508233193672078039
@@ -269,8 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef16222a57f94be4fae4dc183325e40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
-  _acttackSpeed: 3
+  _damage: 15
+  _acttackSpeed: 1.5
   _audioSource: {fileID: 0}
   arrowPrefab: {fileID: 100000, guid: beacce7da48c0f64e9e5b5b148d3b533, type: 3}
   bowTransform: {fileID: 3535088354802160282}

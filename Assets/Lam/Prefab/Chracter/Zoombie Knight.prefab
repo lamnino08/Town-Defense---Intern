@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 100
-  _maxHealth: 100
+  _maxHealth: 120
   healthBarUI: {fileID: 2067129899509499165}
   healthBar: {fileID: 2067129901356785382}
 --- !u!114 &2067129900867388065
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1db78c095eef144cad0e1a9534d00ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 2
+  _damage: 5
   _acttackSpeed: 1
   _audioSource: {fileID: 0}
 --- !u!114 &2067129900867388067
@@ -541,7 +541,7 @@ MonoBehaviour:
   _layerAttack:
     serializedVersion: 2
     m_Bits: 133760
-  _distanceStoppingToStop: 0.4
+  _distanceStoppingToStop: 0.2
   speedMove: 1.1
 --- !u!114 &-8749060988543079321
 MonoBehaviour:

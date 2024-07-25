@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Rock8
+  m_Name: rock8
   m_EditorClassIdentifier: Assembly-CSharp::UnitTile
   m_Sprite: {fileID: 21300000, guid: bfbfe5549ba25e54c978765c77f2b7fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -31,7 +31,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  m_InstancedGameObject: {fileID: 3555743165627208715, guid: 2f83b6d8fb6b8854c8f79fd2fdd5463e, type: 3}
+  m_InstancedGameObject: {fileID: 6880847354634219047, guid: a67b9bf33efaa394491f624d52107ea2, type: 3}
   m_Flags: 1
   m_ColliderType: 1
   type: 0

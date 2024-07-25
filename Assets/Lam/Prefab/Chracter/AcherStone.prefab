@@ -60,8 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aedf1bbd778f32458c4347622cf099c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
-  _acttackSpeed: 2
+  _damage: 30
+  _acttackSpeed: 4
   _audioSource: {fileID: 0}
   arrowPrefab: {fileID: 100000, guid: 57dd91c2f58bb294ca61742c9e7e6585, type: 3}
   bowTransform: {fileID: 2141248113626954174}

@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 100
-  _maxHealth: 100
+  _maxHealth: 120
   _currentHealth: 0
   healthBarUI: {fileID: 166306923288618769}
   healthBar: {fileID: 5743057323920679536}

@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 0
-  _maxHealth: 0
+  _maxHealth: 150
   healthBarUI: {fileID: 2794777545686030168}
   healthBar: {fileID: 5785926324750387659}
 --- !u!114 &5237516739822313506
@@ -494,9 +494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745b9bc17e53f3949819dccc6e535b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputManager: {fileID: 0}
+  _inputManager: {fileID: 0}
   _moveSpeed: 3
-  _rotateSpeed: 150
+  _rotateSpeed: 50
   _EnemyMask:
     serializedVersion: 2
     m_Bits: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b3af3548464924aa260b23141e04ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 2
+  _damage: 10
 --- !u!82 &1688195196
 AudioSource:
   m_ObjectHideFlags: 0
