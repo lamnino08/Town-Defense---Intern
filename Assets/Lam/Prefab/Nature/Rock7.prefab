@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: -7459403307258387309}
   m_Layer: 12
   m_Name: Rock7
-  m_TagString: Untagged
+  m_TagString: stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,11 +180,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.62700003, z: 0.5}
+  m_Extents: {x: 0.54, y: 0.62700003, z: 0.59}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0.066, y: 0.388, z: 0.032}
+  m_Center: {x: 0.066, y: 0.388, z: 0.15}
   m_TimeToStationary: 0.5
 --- !u!65 &8582900516795611839
 BoxCollider:
@@ -197,8 +197,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5461447, y: 1.2539654, z: 1.984692}
-  m_Center: {x: 0.066456825, y: 0.38837743, z: 0.03189498}
+  m_Size: {x: 1.316202, y: 1.2539654, z: 1.4325197}
+  m_Center: {x: -0.048514545, y: 0.38837743, z: 0.13325998}
 --- !u!54 &-1722720623306353646
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4799ca0452611fb418af06f9fa49394d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 20
+  _maxHealth: 60
   _currentHealth: 40
   healthBarUI: {fileID: 1647911984626130187}
   healthBar: {fileID: 8114965227577412596}

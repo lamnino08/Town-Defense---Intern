@@ -94,7 +94,22 @@ public class TilemapManager : MonoBehaviour
         foreach(var savetiled in map.unitTiles)
         {
             _constructionMap.SetTile(savetiled.pos, savetiled.tile);
-            Debug.Log("Spawn penhouse");
+        }
+    }
+
+    public void LoadBuilding()
+    {
+        ScriptableTile map = Resources.Load<ScriptableTile>($"Map/mapData");
+        if (map == null)
+        {
+            Debug.LogError("Map data is not exist");
+            return;
+        }
+
+        foreach(var savetiled in map.unitTiles)
+        {
+            Debug.Log("uessesesde");
+            _constructionMap.SetTile(savetiled.pos, savetiled.tile);
         }
     }
 

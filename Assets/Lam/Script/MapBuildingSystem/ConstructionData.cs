@@ -15,11 +15,18 @@ public class Cost
 
     public bool Check()
     {
-        if (rock > 0 && rock > Penhouse.instance.rock) return false;
-        if (wooden > 0 && wooden > Penhouse.instance.wooden) return false;
-        if (gold > 0 && gold > Penhouse.instance.gold) return false;
+        if (!Penhouse.instance.CheckUseReSource(rock, gold, wooden)) return false;
 
         return true;
+    }
+
+    public void Use()
+    {
+        Penhouse ph = Penhouse.instance;
+        if (!ph.UserResource(rock, gold, wooden))
+        {
+            Debug.Log("Khong du tai nguyen nhung da xay cong trinh");
+        }
     }
     
 }
@@ -51,8 +58,10 @@ public class ConstructionData : MonoBehaviour
     public static ConstructionData instance;
     [SerializeField] private List<ObjectData> _listConstruction = new List<ObjectData>();
     [SerializeField] private GameObject _buildingDestroyEffect; public GameObject buildingDestroyEffect => _buildingDestroyEffect;
+    [SerializeField] private GameObject _charcaterDestroy; public GameObject charcaterDestroy => _charcaterDestroy;
+    [SerializeField] private GameObject _goldObject; public GameObject gold => _goldObject;
 
-    private void Start() 
+    private void Awake() 
     {
         if (_instance ==  null)
         {

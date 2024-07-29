@@ -1,20 +1,16 @@
 using UnityEngine;
 using Cinemachine;
+using System.Collections;
 
 public class CameraSystem : MonoBehaviour
 {
-    public Transform target;  // Transform mà bạn muốn camera theo dõi
-    public float fixedHeight = 19f;
-    public float followDistance = 10f;  // Khoảng cách giữa camera và mục tiêu
+    [SerializeField] private Transform target;
+    [SerializeField] private float fixedHeight = 19f;
+    [SerializeField] private float followDistance = 10f;
+    [SerializeField] private float lenNormal = 5f;
+    [SerializeField] private float lenBattle = 10f;
+    [SerializeField] private float transitionDuration = 1f;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
-
-    // private void Start()
-    // {
-    //     if (target != null)
-    //     {
-    //         SetUpCinemachine();
-    //     }
-    // }
 
     private void Update()
     {
@@ -30,5 +26,29 @@ public class CameraSystem : MonoBehaviour
         Vector3 targetPosition = target.position;
         targetPosition.y = fixedHeight;
         transform.position = targetPosition + new Vector3(followDistance, 0, -followDistance);
+    }
+
+    public void BattleCamera()
+    {
+        StartCoroutine(SmoothTransition(cinemachineVirtualCamera.m_Lens.OrthographicSize, lenBattle));
+    }
+
+    public void NormalCamera()
+    {
+        StartCoroutine(SmoothTransition(cinemachineVirtualCamera.m_Lens.OrthographicSize, lenNormal));
+    }
+
+    private IEnumerator SmoothTransition(float startSize, float endSize)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < transitionDuration)
+        {
+            cinemachineVirtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(startSize, endSize, elapsedTime / transitionDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        cinemachineVirtualCamera.m_Lens.OrthographicSize = endSize;
     }
 }

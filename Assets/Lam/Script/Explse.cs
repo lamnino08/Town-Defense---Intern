@@ -8,10 +8,12 @@ public class Explse : MonoBehaviour
     public float explosionRadius = 5f; // Bán kính của lực nổ
     public float upwardsModifier = 0.5f; // Thay đổi mức độ bay lên
     [SerializeField] AudioSource _audioSource;
+    [SerializeField] bool isSound;
 
     private void Start()
     {
         DestroyAndExplode();
+        if (isSound)
         _audioSource.PlayOneShot(AudioAssitance.Instance.GetClipByName("BuildingDestroy"));
     }
 

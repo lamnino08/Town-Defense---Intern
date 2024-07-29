@@ -52,9 +52,13 @@ public class OerderUnitClick : MonoBehaviour
                 int targetIndex = 0;
                 foreach (GameObject unit in unitSlection.listSelection)
                 {
-                    ICharacterUnit script = unit.GetComponent<ICharacterUnit>();
-                    script.SetOrderPostion(listtarget[targetIndex]);
-                    targetIndex = (targetIndex +1 ) % listtarget.Count;
+                    if (unit)
+                    {
+                        ICharacterUnit script = unit.GetComponent<ICharacterUnit>();
+                        script.SetOrderPostion(listtarget[targetIndex]);
+                        targetIndex = (targetIndex +1 ) % listtarget.Count;
+                    }
+                   
                 }
             }
         }

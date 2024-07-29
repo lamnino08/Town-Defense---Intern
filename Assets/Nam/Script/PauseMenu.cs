@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
     {
         AudioAssitance.Instance.PlaySFX("Sound click mouse");
         pausePanel.SetActive(true);
-        Time.timeScale = 0f; // Pause the game by setting timeScale to 0
+        Time.timeScale = 0f; 
         PausepanelIntro();
     }
 

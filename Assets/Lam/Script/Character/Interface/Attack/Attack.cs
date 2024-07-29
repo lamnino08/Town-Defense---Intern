@@ -10,7 +10,6 @@ public abstract class Attack : MonoBehaviour
     protected ArmyAnimator _animator;
     protected Coroutine isAttackProcess;
     protected ParticleSystem AttackEffect;
-    [SerializeField] protected CharacterAudio _audioSource;
     protected ArmyMovement _armyMovement;
     protected AudioArmy _audioArmy;
 
@@ -18,7 +17,6 @@ public abstract class Attack : MonoBehaviour
         _animator = GetComponent<ArmyAnimator>();
         AttackEffect = GetComponentInChildren<ParticleSystem>();
         _armyMovement = GetComponent<ArmyMovement>();
-        _audioSource = GetComponent<CharacterAudio>();
         _audioArmy = GetComponent<AudioArmy>();
     }
 

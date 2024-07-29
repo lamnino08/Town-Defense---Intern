@@ -34,14 +34,27 @@ public class BuildingManager : MonoBehaviour
         transform.position = newPosition;
         _plane.NormalColor();
 
+        dataObject.costToBuild.Use();
+
         // Update data
         NodeData node = new NodeData(dataObject.id, 1, transform.position.x, transform.position.z);
         ConstructionSave.instance.AddBuilding(node);
 
         //Spawn soldier
         Spawn();
-
+        GameManager.instance.AddBuilding(gameObject);
         Destroy(GetComponent<BuildingController>());
+    }
+
+    private void UseResourceToBuild()
+    {
+        if (dataObject.costToBuild.Check())
+        {
+            dataObject.costToBuild.Use();
+        } else
+        {
+            Debug.Log("Khong du tai nguyen nhung van xay nha");
+        }
     }
 
     public void Spawn()

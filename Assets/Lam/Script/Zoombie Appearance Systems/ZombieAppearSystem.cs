@@ -5,8 +5,12 @@ using UnityEngine;
 public class ZombieAppearSystem : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _prefabZombies = new List<GameObject>();
-    [SerializeField] private string filePath = "Assets/Lam/zombieSpawnData.txt";
-    [SerializeField] private int level = 1; 
+    [SerializeField] private string filePath = "Assets/Lam/zombieSpawnDataSouth.txt";
+    // [SerializeField] private int level = 1; 
+    [SerializeField] private float xMin = 1; 
+    [SerializeField] private float xMax = 1; 
+    [SerializeField] private float zMin = 1; 
+    [SerializeField] private float zMax = 1; 
     List<ZombieData> zombieDataList;
 
     private void Start()
@@ -15,7 +19,7 @@ public class ZombieAppearSystem : MonoBehaviour
         // SpawnZombies(zombieDataList);
     }
 
-     public void SpawnZombies()
+     public void SpawnZombies(int level)
     {
         ZombieFileReader fileReader = new ZombieFileReader(filePath);
         zombieDataList = fileReader.GetZombieDataForLevel(level);
@@ -24,14 +28,14 @@ public class ZombieAppearSystem : MonoBehaviour
 
     private IEnumerator SpawnZombiesCoroutine()
     {
-        level++;
         foreach (var zombieData in zombieDataList)
         {
             for (int i = 0; i < zombieData.qty; i++)
             {
-                Vector3 randomPosition = new Vector3(Random.Range(15f, 23f), 0, Random.Range(11f, 20f));
-                Instantiate(_prefabZombies[zombieData.type], randomPosition, Quaternion.identity);
-                yield return new WaitForSeconds(0.5f); // Tạm dừng 0.5 giây trước khi xuất hiện zombie tiếp theo
+                Vector3 randomPosition = new Vector3(Random.Range(xMin, xMax), 0, Random.Range(zMin, zMax));
+                GameObject g = Instantiate(_prefabZombies[zombieData.type], randomPosition, Quaternion.identity);
+                GameManager.instance.AddEnemy(g);
+                yield return new WaitForSeconds(0.5f); 
             }
         }
     }

@@ -36,8 +36,6 @@ public class InputManagement : MonoBehaviour
     public void HandleAllInput()
     {
         HandleMoveMentInput();
-        // HandleJupmInput()
-        // HandleJupInput()
     }
     private void HandleMoveMentInput()
     {

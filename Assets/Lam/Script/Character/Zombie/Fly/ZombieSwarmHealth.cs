@@ -1,7 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 
-public class ZombieSwarmHealth : ArmyHealth
+public class ZombieSwarmHealth : ArmyHealthEnemy
 {
     
 }

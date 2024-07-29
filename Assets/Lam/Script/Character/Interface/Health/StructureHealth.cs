@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public abstract class StructureHealth : MonoBehaviour, IHealth
 {
-    [SerializeField] protected float _initialHealth;
     [SerializeField] protected float _maxHealth;
     [SerializeField] protected float _currentHealth;
     protected bool isDead = false;
@@ -22,7 +21,7 @@ public abstract class StructureHealth : MonoBehaviour, IHealth
         _isDeadHash = Animator.StringToHash("isDead");
         // _navMeshObsticle = GetComponent<NavMeshObstacle>(); 
 
-        _currentHealth =_initialHealth;
+        _currentHealth =_maxHealth;
         healthBar.maxValue = _maxHealth;
         healthBar.value = _currentHealth;
 
@@ -38,9 +37,10 @@ public abstract class StructureHealth : MonoBehaviour, IHealth
 
             if (_currentHealth <= 0)
             {
-                // _navMeshObsticle.carving = true;
                 isDead = true;
-                Instantiate(ConstructionData.instance.buildingDestroyEffect, transform.position,Quaternion.identity);
+                GameObject ds = Instantiate(ConstructionData.instance.buildingDestroyEffect, transform.position,Quaternion.identity);
+                GameManager.instance.destroyEffect.Add(ds);
+                GameManager.instance.RemoveBuilding(gameObject);
                 Destroy(gameObject);
             }
         }

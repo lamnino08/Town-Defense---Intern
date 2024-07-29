@@ -1345,6 +1345,7 @@ MonoBehaviour:
   explosionRadius: 200
   upwardsModifier: 0.5
   _audioSource: {fileID: -7895265531322668856}
+  isSound: 1
 --- !u!82 &-7895265531322668856
 AudioSource:
   m_ObjectHideFlags: 0

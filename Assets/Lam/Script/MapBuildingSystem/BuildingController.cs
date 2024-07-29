@@ -58,7 +58,9 @@ public class BuildingController : MonoBehaviour
             }
             if (CheckData())
             {
+                // Set Placement system
                 _buildingManager.PlaceSuccess();
+
                 PlacementSystem.instance.PlacebuildingSucces();
                 GetComponent<BuildingAnimator>().Created();
                 GetComponent<AudioSource>().PlayOneShot(AudioAssitance.Instance.GetClipByName("PlaceHouse"));

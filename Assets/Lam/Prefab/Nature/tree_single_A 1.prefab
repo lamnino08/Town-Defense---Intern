@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 4277813872150316449}
   - component: {fileID: 756139600124989659}
   - component: {fileID: 2665284204762379757}
+  - component: {fileID: -4880454782625020380}
   m_Layer: 12
   m_Name: tree_single_A 1
   m_TagString: tree
@@ -184,8 +185,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 1.1964487, z: 0.94}
-  m_Center: {x: 0.0005467534, y: 0.49561706, z: -0.028211638}
+  m_Size: {x: 1.6503797, y: 1.1964487, z: 1.7107785}
+  m_Center: {x: -0.10443631, y: 0.4956171, z: -0.112520576}
 --- !u!114 &756139600124989659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +217,22 @@ MonoBehaviour:
   _currentHealth: 0
   healthBarUI: {fileID: 4374319656951769657}
   healthBar: {fileID: 2094507173007899238}
+--- !u!208 &-4880454782625020380
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199153495780207494}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2003831892969745015
 GameObject:
   m_ObjectHideFlags: 0

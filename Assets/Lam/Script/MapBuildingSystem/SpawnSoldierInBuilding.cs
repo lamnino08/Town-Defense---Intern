@@ -11,7 +11,8 @@ public class SpawnSoldierInBuilding : MonoBehaviour
     {
         foreach(Transform e in marks)
         {
-            Instantiate(soldierPrefab, e.position, Quaternion.identity);
+            GameObject p = Instantiate(soldierPrefab, e.position, Quaternion.identity);
+            GameManager.instance.soldier.Add(p);
         }
     }
 

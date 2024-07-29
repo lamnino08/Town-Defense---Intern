@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAudio : AudioArmy, IAudioMove
+public class PlayerAudio : ArcherAudio, IAudioMove
 {
     [SerializeField] string _moveClipName;
 
@@ -8,7 +8,6 @@ public class PlayerAudio : AudioArmy, IAudioMove
     {
         base.Start();
         _moveClipName = "PlayerMove";  
-        _attackClipName = "KnightAttackClip";  
     }
 
     public void Move(bool ismOve)

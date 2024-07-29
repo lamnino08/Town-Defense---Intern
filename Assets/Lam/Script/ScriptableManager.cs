@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ManagerData", menuName = "ScriptableManager")]
 public class ScriptableManager : ScriptableObject 
 {
-    private int _rock; public int rock => _rock;
+    public int _rock; public int rock => _rock;
     public int _gold; public int gold => _gold;
     public int _wooden; public int wooden => _wooden;
 

@@ -58,6 +58,7 @@ public class ConstructionSave : MonoBehaviour
         {
             Vector3 pos = new Vector3(e.x, 0, e.y);
             GameObject buildongobj = Instantiate(_constructionData.GetObjectDataById(e.id).prefab,pos,Quaternion.identity);
+            GameManager.instance.AddBuilding(buildongobj);
             buildongobj.GetComponent<BuildingManager>().Spawn();
         }
     }

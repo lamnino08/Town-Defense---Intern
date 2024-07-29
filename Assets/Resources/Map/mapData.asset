@@ -74,6 +74,10 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
   - pos: {x: 9, y: -13, z: 0}
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
+  - pos: {x: 12, y: -13, z: 0}
+    tile: {fileID: 11400000, guid: 09e50249062a30e44b76ddf02e019d4f, type: 2}
+  - pos: {x: -20, y: -12, z: 0}
+    tile: {fileID: 11400000, guid: 09e50249062a30e44b76ddf02e019d4f, type: 2}
   - pos: {x: -17, y: -12, z: 0}
     tile: {fileID: 11400000, guid: f3dab6d23eebeaa4aa0ec78b2dde278c, type: 2}
   - pos: {x: -15, y: -12, z: 0}
@@ -116,6 +120,8 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
   - pos: {x: 9, y: -11, z: 0}
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
+  - pos: {x: -20, y: -10, z: 0}
+    tile: {fileID: 11400000, guid: 09e50249062a30e44b76ddf02e019d4f, type: 2}
   - pos: {x: -13, y: -10, z: 0}
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
   - pos: {x: -11, y: -10, z: 0}
@@ -204,6 +210,8 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: 14cebeb6c69f5f54babe2a19337872c0, type: 2}
   - pos: {x: -6, y: 5, z: 0}
     tile: {fileID: 11400000, guid: d1e37843fd47d044fa57728b38745808, type: 2}
+  - pos: {x: -17, y: 6, z: 0}
+    tile: {fileID: 11400000, guid: 09e50249062a30e44b76ddf02e019d4f, type: 2}
   - pos: {x: -7, y: 8, z: 0}
     tile: {fileID: 11400000, guid: 14cebeb6c69f5f54babe2a19337872c0, type: 2}
   - pos: {x: -1, y: 8, z: 0}
@@ -322,6 +330,8 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
   - pos: {x: 10, y: 13, z: 0}
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
+  - pos: {x: 13, y: 13, z: 0}
+    tile: {fileID: 11400000, guid: 09e50249062a30e44b76ddf02e019d4f, type: 2}
   - pos: {x: -14, y: 14, z: 0}
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
   - pos: {x: -11, y: 14, z: 0}
@@ -344,6 +354,10 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: f3dab6d23eebeaa4aa0ec78b2dde278c, type: 2}
   - pos: {x: 9, y: 14, z: 0}
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
+  - pos: {x: 12, y: 14, z: 0}
+    tile: {fileID: 11400000, guid: 09e50249062a30e44b76ddf02e019d4f, type: 2}
+  - pos: {x: -21, y: 15, z: 0}
+    tile: {fileID: 11400000, guid: 09e50249062a30e44b76ddf02e019d4f, type: 2}
   - pos: {x: -15, y: 15, z: 0}
     tile: {fileID: 11400000, guid: f3dab6d23eebeaa4aa0ec78b2dde278c, type: 2}
   - pos: {x: -12, y: 15, z: 0}
@@ -362,6 +376,8 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
   - pos: {x: 8, y: 15, z: 0}
     tile: {fileID: 11400000, guid: c42a0d8449ec81d4eb0aeefa5f233a9a, type: 2}
+  - pos: {x: 14, y: 15, z: 0}
+    tile: {fileID: 11400000, guid: 09e50249062a30e44b76ddf02e019d4f, type: 2}
   - pos: {x: -14, y: 16, z: 0}
     tile: {fileID: 11400000, guid: f3dab6d23eebeaa4aa0ec78b2dde278c, type: 2}
   - pos: {x: -9, y: 16, z: 0}

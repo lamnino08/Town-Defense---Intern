@@ -8,7 +8,9 @@ public class SpawnSoldierInBuildingResident : SpawnSoldierInBuilding
     {
         foreach(Transform e in marks)
         {
-            Instantiate(soldierPrefab, e.position, Quaternion.identity).GetComponent<ResidentMovement>().SetOwnHome(transform);
+            GameObject p = Instantiate(soldierPrefab, e.position, Quaternion.identity);
+            p.GetComponent<ResidentMovement>().SetOwnHome(transform);
+            GameManager.instance.Residents.Add(p);
         }
     }
 

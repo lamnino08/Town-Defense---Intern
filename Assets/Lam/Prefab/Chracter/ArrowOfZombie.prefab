@@ -116,7 +116,7 @@ MonoBehaviour:
   effect: {fileID: 4330954156276129168, guid: d207b6d922c79d44cb6843230dc18016, type: 3}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 2688
+    m_Bits: 133760
 --- !u!82 &1545967804816660762
 AudioSource:
   m_ObjectHideFlags: 0

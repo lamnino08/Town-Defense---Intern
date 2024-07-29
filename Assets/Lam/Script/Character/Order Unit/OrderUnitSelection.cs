@@ -26,7 +26,6 @@ public class OrderUnitSelection : MonoBehaviour
         ICharacterUnit script = objectAdd.GetComponent<ICharacterUnit>();
         if (script != null)
         {
-                Debug.Log("here");
             if (listSelection.Contains(objectAdd))
             {
                 script.SetSelect(false);
@@ -44,7 +43,7 @@ public class OrderUnitSelection : MonoBehaviour
     {
         foreach(GameObject leagueObj in listSelection)
         {
-            ArmyLeagueDynamicMovement script = leagueObj.GetComponent<ArmyLeagueDynamicMovement>();
+            ICharacterUnit script = leagueObj.GetComponent<ICharacterUnit>();
             script.SetSelect(false);
         }
         listSelection.Clear();

@@ -57,13 +57,14 @@ public abstract class ResidentMovement : MonoBehaviour, ICharacterDynamicMovemen
         {
             if (_natureTarget != null)
             {
+                float distance = Vector3.Distance(transform.position, _destination);
+                if (isMoving && distance < 0.2)
+                _animator.Idle();
                 CheckDetectTarget();
             } else
             {
                 _Work.StopManufacture();
             }
-            
-
         }
     }
 
@@ -98,6 +99,7 @@ public abstract class ResidentMovement : MonoBehaviour, ICharacterDynamicMovemen
         _Work.StopManufacture();
         _navMeshAgent.SetDestination(_destination);
         _animator.Run();
+        isMoving = true;
         isBackToHome = false;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -109,11 +111,7 @@ public abstract class ResidentMovement : MonoBehaviour, ICharacterDynamicMovemen
 
     public void SetSelect(bool isSelect)
     {
-        if (!isSelect) 
-        {
             _selectCircle.SetActive(isSelect);
-            return;
-        }
     }
 
     public void SetOwnHome(Transform home)

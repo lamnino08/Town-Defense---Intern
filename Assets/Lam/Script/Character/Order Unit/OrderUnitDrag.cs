@@ -7,6 +7,7 @@ public class OrderUnitDrag : MonoBehaviour
 {
     [SerializeField] public RectTransform selectionAreaTransform;
     [SerializeField] private LayerMask leagueLayerMask;
+    [SerializeField] private LayerMask _layerPlane;
     private OrderUnitSelection _unitSlection;
     Camera mainCam;
     Rect selectionBox;
@@ -66,18 +67,20 @@ public class OrderUnitDrag : MonoBehaviour
         Vector3 startWorldPos = GetMouseWorldPosition(_startPos);
         Vector3 endWorldPos = GetMouseWorldPosition(_endPos);
 
-        Vector3 center = (startWorldPos + endWorldPos) / 2;
+        Vector3 centerrr = (startWorldPos + endWorldPos) / 2;
+        Vector3 center = new Vector3(centerrr.x, 0.3f, centerrr.z);
         Vector3 size = new Vector3(
             Mathf.Abs(startWorldPos.x - endWorldPos.x),
-            Mathf.Abs(0.3f),
+            0.4f,
             Mathf.Abs(startWorldPos.z - endWorldPos.z)
         );
-        // Debug.Log(size);
 
+        // Debug.Log(center);
         Collider[] hitColliders = Physics.OverlapBox(center, size / 2, Quaternion.identity, leagueLayerMask);
 
         foreach (var hitCollider in hitColliders)
         {
+            Debug.Log(hitCollider.transform);
             _unitSlection.ClickSelection(hitCollider.gameObject);
         }
     }
@@ -87,7 +90,7 @@ public class OrderUnitDrag : MonoBehaviour
      private Vector3 GetMouseWorldPosition(Vector2 screenPosition)
     {
         Ray ray = mainCam.ScreenPointToRay(screenPosition);
-        if (Physics.Raycast(ray, out RaycastHit hitInfo))
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, _layerPlane))
         {
             return hitInfo.point + new Vector3(0,0.5f,0);
         }

@@ -16,6 +16,7 @@ public class ResidentMovementStone : ResidentMovement
                     {
                         _navMeshAgent.isStopped = true;
                         _animator.Idle();
+                        isMoving = false;
                         _Work.Manufacture(_natureTarget);
                         _previousNatureTarget = _natureTarget;
 
